@@ -1,5 +1,5 @@
 <template>
-	<div class="flex h-20 w-full bg-white">
+	<div class="flex h-20 w-full bg-white fixed">
 		<v-container class="items-center">
 			<the-header-logo class="mr-14"/>
 			<ul class="flex">
@@ -33,6 +33,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

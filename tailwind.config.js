@@ -97,24 +97,23 @@ module.exports = {
       },
     },
     screens: {
-      laptop: { max: "1439px" },
-      tablet: { max: "1023px" },
-      mobile: { max: "767px" },
+      'sm': '640px',
+      // => @media (max-width: 640px) { ... }
 
-      // 'sm': '640px',
-      // // => @media (min-width: 640px) { ... }
+      'md': '768px',
+      // => @media (max-width: 768px) { ... }
 
-      // 'md': '768px',
-      // // => @media (min-width: 768px) { ... }
+      'lg': '1024px',
+      // => @media (max-width: 1024px) { ... }
 
-      // 'lg': '1024px',
-      // // => @media (min-width: 1024px) { ... }
+      'xl': '1280px',
+      // => @media (max-width: 1280px) { ... }
 
-      // 'xl': '1280px',
-      // // => @media (min-width: 1280px) { ... }
+      '2xl': '1536px',
+      // => @media (max-width: 1840px) { ... }
 
-      // '2xl': '1840px',
-      // // => @media (min-width: 1840px) { ... }
+      '3xl': '1840px',
+      // => @media (max-width: 1840px) { ... }
     },
     fontFamily: {
       sans: "Rubik, Arial, sans-serif",
@@ -122,8 +121,11 @@ module.exports = {
 
     extend: {
       spacing: {
+        3.75:'0,9375rem',//15px
+        7.5:'1.875rem', //30px
         13: "3.125rem",
         15: "3.75rem",
+        90:'22.5rem', //360px
         105: "26.25rem",
       },
 
