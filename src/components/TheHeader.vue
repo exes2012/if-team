@@ -1,4 +1,5 @@
 <template>
+
 	<div class="flex h-20 w-full bg-white fixed">
 		<v-container class="items-center">
 			<the-header-logo class="mr-14"/>
@@ -7,6 +8,7 @@
 			</ul>
 		</v-container>
 		</div>
+
 </template>
 
 <script>
@@ -14,25 +16,27 @@ import TheHeaderLogo from "./TheHeaderLogo.vue";
 import VContainer from "./VContainer.vue";
 
 export default {
-	name: "TheHeader",
-	components:{
-		VContainer,
-		TheHeaderLogo
-	},
-	data(){
-		return{
-			routes:[
-				{name:'Projects', url:'/'},
-				{name:'Tasks', url:'/tasks'},
-				{name:'Payments', url:'/payments'},
-				{name:'Login', url:'/login'},
-				{name:'Register', url:'/register'},
-			]
-		}
-	}
-}
+  name: "TheHeader",
+  components: {
+    VContainer,
+    TheHeaderLogo,
+  },
+  data() {
+    return {
+      routes: [
+        { name: "Projects", url: "/" },
+        { name: "Tasks", url: "/tasks" },
+        { name: "Payments", url: "/payments" },
+        { name: "Login", url: "/login" },
+        { name: "Register", url: "/register" },
+      ],
+    };
+  },
+};
 </script>
+
 
 <style scoped lang="scss">
 
 </style>
+

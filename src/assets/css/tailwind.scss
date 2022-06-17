@@ -2,26 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Rubik";
-  src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
-    url("../fonts/Rubik-Regular.woff") format("woff"),
-    url("../fonts/Rubik-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
-    url("../fonts/Rubik-Medium.woff") format("woff"),
-    url("../fonts/Rubik-Medium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
 @layer base {
   h1 {
     @apply font-sans
@@ -57,7 +37,7 @@
     font-normal
     text-xl
     text-gray-900
-    mobile:text-lg;
+    md:text-lg;
   }
 
   .text-2 {
@@ -326,7 +306,7 @@
     transition
     disabled:text-gray-400
     disabled:border-none
-    mobile:text-lg;
+    md:text-lg;
   }
 
   .link-2 {
@@ -429,7 +409,7 @@
     pr-12;
   }
 
-  .btn-password {
+  .btn-field {
     @apply h-13
     w-12
     pl-2
@@ -439,7 +419,7 @@
     z-10;
   }
 
-  .btn-password:hover svg {
+  .btn-field:hover svg {
     @apply fill-blue-400;
   }
 
@@ -523,6 +503,17 @@
     border-b-2
     border-solid
     border-gray-100    
-    mobile:px-[15px];
+    md:px-[15px];
+  }
+
+  .upload-photo {
+    @apply w-[166px]
+    h-[166px]
+    bg-gray-100
+    border
+    border-dashed
+    border-gray-400
+    rounded-full
+    cursor-pointer;
   }
 }

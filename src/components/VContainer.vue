@@ -1,15 +1,13 @@
 <template>
-	<div class="container mx-auto flex">
-		<slot></slot>
-	</div>
+  <div class="container mx-auto flex">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-	name: "VContainer"
-}
+  name: "VContainer",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
