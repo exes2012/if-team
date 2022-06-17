@@ -16,9 +16,7 @@
       <div
         class="w-10 h-10 bg-blue-400 rounded-full flex justify-center items-center"
       >
-        <svg width="24" height="24" class="fill-white">
-          <use xlink:href="../assets/img/sprite.svg#check"></use>
-        </svg>
+        <p class="icon-check text-white"></p>
       </div>
       <div class="w-[106px] h-px bg-gray-200"></div>
       <div
