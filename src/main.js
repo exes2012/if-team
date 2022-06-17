@@ -10,4 +10,5 @@ import PrimeVue from 'primevue/config';
 import './assets/css/style.scss'
 
 
-createApp(App).use(PrimeVue).use(router).mount('#app')
+const app=createApp(App)
+app.use(PrimeVue).use(router).mount('#app')

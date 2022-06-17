@@ -97,12 +97,14 @@ module.exports = {
       },
     },
     screens: {
+
       "3xl": { max: "1840px" },
       "2xl": { max: "1535px" },
       xl: { max: "1279px" },
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "639px" },
+
     },
     fontFamily: {
       sans: "Rubik, Arial, sans-serif",
@@ -110,8 +112,11 @@ module.exports = {
 
     extend: {
       spacing: {
+        3.75:'0,9375rem',//15px
+        7.5:'1.875rem', //30px
         13: "3.125rem",
         15: "3.75rem",
+        90:'22.5rem', //360px
         105: "26.25rem",
       },
 

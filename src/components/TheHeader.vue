@@ -1,16 +1,14 @@
 <template>
-  <div
-    class="flex h-20 w-full bg-white border-b-2 border-solid border-gray-100"
-  >
-    <v-container class="items-center">
-      <the-header-logo class="mr-14" />
-      <ul class="flex">
-        <li v-for="route in routes" :key="route.id" class="mr-4 bg-red-300">
-          <router-link :to="route.url">{{ route.name }}</router-link>
-        </li>
-      </ul>
-    </v-container>
-  </div>
+
+	<div class="flex h-20 w-full bg-white fixed">
+		<v-container class="items-center">
+			<the-header-logo class="mr-14"/>
+			<ul class="flex">
+				<li v-for="route in routes" :key="route.id" class="mr-4 bg-red-300 "><router-link :to="route.url">{{route.name}}</router-link></li>
+			</ul>
+		</v-container>
+		</div>
+
 </template>
 
 <script>
@@ -37,4 +35,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+
+<style scoped lang="scss">
+
+</style>
+
