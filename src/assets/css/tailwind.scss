@@ -433,6 +433,36 @@
     bg-left-5.5;
   }
 
+  .checkbox {
+    @apply absolute
+    -z-10
+    opacity-0;
+  }
+
+  .checkbox + label {
+    @apply block
+    w-[15px]
+    h-[15px]
+    bg-gray-100
+    rounded-[3px]
+    border
+    border-solid
+    border-transparent
+    cursor-pointer
+    hover:border-blue-400
+    transition;
+  }
+
+  .checkbox:checked + label {
+    @apply bg-blue-400
+    before:content-['']
+    before:block
+    before:bg-[url('../img/icons/check-mark.svg')]
+    before:w-[13px]
+    before:h-[13px]
+    before:bg-center;
+  }
+
   .upload-photo {
     @apply relative
     overflow-hidden
