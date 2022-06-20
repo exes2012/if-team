@@ -75,9 +75,7 @@
             required
           />
           <button class="btn-field" type="button">
-            <svg width="18" height="18">
-              <use xlink:href="../assets/img/sprite.svg#calendar"></use>
-            </svg>
+            <p class="icon-calendar"></p>
           </button>
         </div>
 
@@ -95,10 +93,15 @@
             required
           />
           <button class="btn-field" type="button">
-            <svg width="12" height="8">
-              <use xlink:href="../assets/img/sprite.svg#btn-arrow"></use>
-            </svg>
+            <p class="icon-arrow-down"></p>
           </button>
+
+          <ul class="dropdown hidden">
+            <li>Копирайтинг</li>
+            <li>SMM</li>
+            <li>Back-end</li>
+            <li>Front-end</li>
+          </ul>
         </div>
 
         <div class="relative mb-12">
@@ -115,10 +118,15 @@
             required
           />
           <button class="btn-field" type="button">
-            <svg width="12" height="8">
-              <use xlink:href="../assets/img/sprite.svg#btn-arrow"></use>
-            </svg>
+            <p class="icon-arrow-down"></p>
           </button>
+
+          <ul class="dropdown">
+            <li>Копирайтинг</li>
+            <li>SMM</li>
+            <li>Back-end</li>
+            <li>Front-end</li>
+          </ul>
         </div>
 
         <button class="btn-primary w-full h-15">Next</button>
@@ -171,9 +179,7 @@
             required
           />
           <button class="btn-field" type="button">
-            <svg width="20" height="16">
-              <use xlink:href="../assets/img/sprite.svg#password-show"></use>
-            </svg>
+            <p class="icon-password-show"></p>
           </button>
         </div>
         <button class="btn-primary w-full h-15">Next</button>

@@ -114,10 +114,18 @@
     disabled:hover:bg-transparent;
   }
 
-  .btn-secondary svg {
-    @apply fill-blue-400
+  .btn-secondary > p {
+    @apply text-left
+    text-2xl
+    text-blue-400
+    leading-0
     transition
-    mr-2;
+    mr-1.5;
+  }
+
+  .btn-secondary:hover > p {
+    @apply text-white
+    transition;
   }
 
   .btn-secondary:hover svg {
@@ -383,7 +391,7 @@
     border-solid
     border-transparent
     pl-5
-    pr-5
+    pr-12
     font-sans
     font-normal
     text-base
@@ -416,11 +424,20 @@
     absolute
     bottom-0
     right-0
-    z-10;
+    z-10
+    transition;
   }
 
-  .btn-field:hover svg {
-    @apply fill-blue-400;
+  .btn-field > p {
+    @apply text-left
+    text-xl
+    text-gray-500
+    leading-0;
+  }
+
+  .btn-field:hover > p {
+    @apply text-blue-400
+    transition;
   }
 
   .field-search {
@@ -440,26 +457,27 @@
   }
 
   .checkbox + label {
-    @apply block
-    w-[15px]
-    h-[15px]
-    bg-gray-100
-    rounded-[3px]
-    border
-    border-solid
-    border-transparent
-    cursor-pointer
-    hover:border-blue-400
+    @apply cursor-pointer
+    select-none
+    flex
+    items-center
+    before:content-['']    
+    before:inline-block
+    before:w-[15px]
+    before:h-[15px]
+    before:bg-gray-100
+    before:rounded-[3px]
+    before:border
+    before:border-solid
+    before:border-transparent
+    before:mr-2
+    hover:before:border-blue-400
     transition;
   }
 
   .checkbox:checked + label {
-    @apply bg-blue-400
-    before:content-['']
-    before:block
+    @apply before:bg-blue-400
     before:bg-[url('../img/icons/check-mark.svg')]
-    before:w-[13px]
-    before:h-[13px]
     before:bg-center;
   }
 
@@ -680,5 +698,29 @@
 
   .passwords-message.match .text-3 {
     @apply text-green-600;
+  }
+
+  .dropdown {
+    @apply absolute
+    top-full
+    left-0
+    z-10
+    w-full
+    mt-[5px]
+    py-[15px]
+    bg-white
+    rounded-md
+    shadow-dropdown;
+  }
+
+  .dropdown li {
+    @apply pt-[13px]
+    pb-3.5
+    px-5
+    cursor-pointer
+    text-gray-900
+    hover:text-blue-400
+    hover:bg-gray-100
+    transition;
   }
 }
