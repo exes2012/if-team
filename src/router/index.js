@@ -10,13 +10,13 @@ import ViewPeople from "../views/ViewPeople.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", name: "projects", component: ViewProjects },
-    { path: "/tasks", name: "tasks", component: ViewTasks },
-    { path: "/payments", name: "payments", component: ViewPayments },
-    { path: "/people", name: "people", component: ViewPeople },
-    { path: "/login", name: "login", component: ViewLogin },
-    { path: "/register", name: "register", component: ViewRegister },
-    { path: "/reset", name: "reset", component: ViewReset },
+    { path: "/", name: "projects",meta:{ layout:'main'}, component: ViewProjects },
+    { path: "/tasks", name: "tasks",meta:{ layout:'main'}, component: ViewTasks },
+    { path: "/payments", name: "payments",meta:{ layout:'main'}, component: ViewPayments },
+    { path: "/people", name: "people",meta:{ layout:'main'}, component: ViewPeople },
+    { path: "/login", name: "login",meta:{ layout:'empty'}, component: ViewLogin },
+    { path: "/register", name: "register",meta:{ layout:'empty'}, component: ViewRegister },
+    { path: "/reset", name: "reset",meta:{ layout:'empty'}, component: ViewReset },
   ],
 });
 

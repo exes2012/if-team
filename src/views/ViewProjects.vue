@@ -8,7 +8,7 @@
 					<v-search class="field field-search h-10 w-90 ml-auto"/>
 				</div>
 				<div class="mx-8 mt-7.5">
-					<v-checkbox label="New york"/>
+					<vtable :columns="this.$store.state.tableColumns.projectsTableColumns" :table-data="this.$store.state.projects.projectsList"/>
 				</div>
 			</v-card>
 		</v-container>
@@ -20,6 +20,9 @@ import VCard from "../components/VCard.vue";
 import VContainer from "../components/VContainer.vue";
 import VSearch from "../components/VSearch.vue";
 import VCheckbox from "../components/VCheckbox.vue";
+import Vtable from "../components/Vtable.vue";
+import {mapState} from "vuex";
+
 
 export default {
 	name: "ViewProjects",
@@ -27,11 +30,37 @@ export default {
 		VCard,
 		VContainer,
 		VSearch,
-		VCheckbox
+		VCheckbox,
+		Vtable
+	},
+
+	methods:{
+		...mapState(['tableColumns/projectsTableColumns'])
 	}
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+:deep(.p-datatable-wrapper) {
+	.p-datatable-thead {
+		tr{
+			th{
+				padding-bottom: 24px;
+				font-weight: 400;
+				font-size: 12px;
+				line-height:16.8px;
+				color: #ACB2C3;
+			}
+		}
+	}
+	.p-datatable-tbody {
+		tr {
+			height: 50px;
+			font-weight: 400;
+			font-size: 14px;
+			color: #303139;
+			border-bottom: 1px solid #D7DAE3;
+		}
+	}
+}
 </style>

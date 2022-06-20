@@ -120,6 +120,7 @@ module.exports = {
 
       fontSize: {
         tiny: "0.625rem",
+        icon:"1.2rem"
       },
       lineHeight: {
         0: "0",

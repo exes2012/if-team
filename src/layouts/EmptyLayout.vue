@@ -1,10 +1,16 @@
 <template>
-$END$
+	<the-header/>
+	<router-view/>
 </template>
 
 <script>
+import TheHeader from "../components/TheHeader.vue";
 export default {
-name: "EmptyLayout"
+	name: "EmptyLayout",
+	components: {
+		TheHeader
+	}
+
 }
 </script>
 

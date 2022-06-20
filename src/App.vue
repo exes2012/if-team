@@ -1,15 +1,22 @@
 <template>
-	<the-header/>
-	<router-view/>
+	<component :is="layout">
+	</component>
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
+import EmptyLayout from "./layouts/EmptyLayout.vue";
+import MainLayout from "./layouts/MainLayout.vue";
 
 export default {
 	components:{
-		TheHeader,
-}
+		EmptyLayout,
+		MainLayout
+},
+	computed:{
+		layout(){
+			return (this.$route.meta.layout || 'empty') + '-layout'
+		}
+	}
 }
 </script>
 

@@ -6,7 +6,7 @@
       <h1 class="mb-5 md:mb-3">If.Team</h1>
       <p class="text-1 mb-20 md:mb-16">
         Войдите или
-        <a href="#" class="link-1">зарегистрируйтесь</a>
+        <router-link to="/register" class="link-1">зарегистрируйтесь</router-link>
       </p>
       <form action="#" method="post">
         <div class="mb-7 md:mb-5">
