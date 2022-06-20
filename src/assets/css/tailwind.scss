@@ -605,4 +605,51 @@
     before:top-1/2
     before:-z-10;
   }
+
+  .passwords-message {
+    @apply w-full
+    h-13
+    pl-5
+    bg-red-100
+    rounded-md
+    flex
+    items-center
+    mb-12;
+  }
+
+  .passwords-message .icon-error {
+    @apply text-red-800
+    text-base
+    leading-0
+    mr-2;
+  }
+
+  .passwords-message .icon-check {
+    @apply text-green-600
+    text-base
+    leading-0
+    mr-2
+    hidden;
+  }
+
+  .passwords-message .text-3 {
+    @apply text-red-800
+    leading-normal;
+  }
+
+  .passwords-message.match {
+    @apply bg-green-100;
+  }
+
+  .passwords-message.match .icon-error {
+    @apply hidden;
+  }
+
+  .passwords-message.match .icon-check {
+    @apply block;
+  }
+
+  .passwords-message.match .text-3 {
+    @apply text-green-600;
+  }
 }

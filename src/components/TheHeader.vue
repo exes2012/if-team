@@ -29,6 +29,7 @@ export default {
         { name: "Payments", url: "/payments" },
         { name: "Login", url: "/login" },
         { name: "Register", url: "/register" },
+        { name: "Reset", url: "/reset" },
       ],
     };
   },

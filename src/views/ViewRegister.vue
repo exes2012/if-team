@@ -1,6 +1,8 @@
 <template>
   <div class="container flex">
-    <aside class="max-w-[412px] w-full pt-14 pr-5 pb-10 pl-10">
+    <aside
+      class="max-w-[392px] w-full pt-28 pr-5 pb-10 pl-10 border-r-2 border-solid border-gray-100"
+    >
       <p class="text-2">
         Здесь может быть
         <br />
