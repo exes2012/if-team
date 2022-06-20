@@ -9,8 +9,7 @@
 
       <div class="flex items-center">
         <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" />
-        <label for="checkbox"></label>
-        <p class="text-2 ml-2">some text</p>
+        <label for="checkbox">some text</label>
       </div>
     </aside>
     <main class="p-28 w-full lg:py-20 lg:px-10 md:px-[15px]">
