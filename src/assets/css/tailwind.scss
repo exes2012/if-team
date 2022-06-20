@@ -374,7 +374,7 @@
   }
 
   .field {
-    @apply
+    @apply w-full
     h-13
     mt-2.5
     rounded-md
@@ -431,6 +431,83 @@
     bg-[url('src/img/icons/search.svg')]
     bg-no-repeat
     bg-left-5.5;
+  }
+
+  .upload-photo {
+    @apply relative
+    overflow-hidden
+    w-[166px]
+    h-[166px]
+    flex
+    justify-center
+    items-center
+    bg-gray-100
+    rounded-full
+    cursor-pointer
+    border
+    border-dashed
+    border-gray-400
+    hover:border-blue-400
+    transition;
+  }
+
+  .upload-photo-icon {
+    @apply absolute
+    top-1/2
+    -translate-y-1/2
+    left-1/2
+    -translate-x-1/2
+    z-10
+    text-[40px]
+    text-gray-200
+    leading-0
+    transition;
+  }
+
+  .upload-photo-btn {
+    @apply absolute
+    -bottom-[10px]
+    left-1/2
+    -translate-x-1/2
+    z-10
+    w-5
+    h-5
+    bg-gray-100
+    rounded-full
+    opacity-0
+    transition;
+  }
+
+  .upload-photo:hover .upload-photo-icon {
+    @apply text-blue-400
+    transition;
+  }
+
+  .upload-photo.active {
+    @apply border-0;
+  }
+
+  .upload-photo.active .upload-photo-icon {
+    @apply opacity-0
+    text-white;
+  }
+
+  .upload-photo.active img {
+    @apply transition;
+  }
+
+  .upload-photo.active:hover img {
+    @apply brightness-75
+    transition;
+  }
+
+  .upload-photo.active:hover .upload-photo-icon {
+    @apply opacity-100;
+  }
+
+  .upload-photo.active:hover + .upload-photo-btn,
+  .upload-photo-btn:hover {
+    @apply opacity-100;
   }
 
   .status {
@@ -506,14 +583,72 @@
     md:px-[15px];
   }
 
-  .upload-photo {
-    @apply w-[166px]
-    h-[166px]
-    bg-gray-100
-    border
-    border-dashed
-    border-gray-400
+  .register-progress {
+    @apply relative
+    w-10
+    h-10
     rounded-full
-    cursor-pointer;
+    flex
+    justify-center
+    items-center;
+  }
+
+  .register-progress:not(:first-of-type) {
+    @apply ml-[106px]
+    before:content-['']
+    before:block
+    before:w-[106px]
+    before:h-px
+    before:bg-gray-200
+    before:absolute
+    before:right-full
+    before:top-1/2
+    before:-z-10;
+  }
+
+  .passwords-message {
+    @apply w-full
+    h-13
+    pl-5
+    bg-red-100
+    rounded-md
+    flex
+    items-center;
+  }
+
+  .passwords-message .icon-error {
+    @apply text-red-800
+    text-base
+    leading-0
+    mr-2;
+  }
+
+  .passwords-message .icon-check {
+    @apply text-green-600
+    text-base
+    leading-0
+    mr-2
+    hidden;
+  }
+
+  .passwords-message .text-3 {
+    @apply text-red-800
+    leading-normal;
+  }
+
+  .passwords-message.match {
+    @apply bg-green-100;
+  }
+
+  .passwords-message.match .icon-error {
+    @apply hidden;
+  }
+
+  .passwords-message.match .icon-check {
+    @apply block;
+  }
+
+  .passwords-message.match .text-3 {
+    @apply text-green-600;
   }
 }
