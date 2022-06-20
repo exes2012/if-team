@@ -36,10 +36,8 @@
             placeholder=" "
             required
           />
-          <button class="btn-password" type="button">
-            <svg width="20" height="16">
-              <use xlink:href="img/sprite.svg#password-show"></use>
-            </svg>
+          <button class="btn-field" type="button">
+            <p class="icon-password-show"></p>
           </button>
         </div>
         <p class="text-3 mb-8 text-red-800 invisible md:mb-6">
@@ -48,9 +46,7 @@
         <button class="btn-primary w-full h-15 mb-10 md:mb-7">Войти</button>
         <p class="text-3 text-center mb-10 md:mb-7">или войдите с помощью</p>
         <button class="btn-secondary w-full h-15">
-          <svg width="20" height="20">
-            <use xlink:href="img/sprite.svg#google"></use>
-          </svg>
+          <p class="icon-google"></p>
           Google
         </button>
       </form>
