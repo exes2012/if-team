@@ -4,7 +4,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
     colors: {
-      white: "#FFFFFF",
+      white: "#ffffff",
       black: "#000000",
       transparent: "transparent",
       blue: {
@@ -96,14 +96,25 @@ module.exports = {
         900: "#591072",
       },
     },
+
     screens: {
-      "3xl": { max: "1840px" },
-      "2xl": { max: "1535px" },
-      xl: { max: "1279px" },
-      lg: { max: "1023px" },
-      md: { max: "767px" },
-      sm: { max: "639px" },
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+      '3xl': '1840px',
     },
+
     fontFamily: {
       sans: "Rubik, Arial, sans-serif",
     },
