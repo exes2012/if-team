@@ -28,8 +28,6 @@
     @apply fill-gray-500
     transition;
   }
-
-
 }
 
 @layer components {
@@ -180,6 +178,7 @@
     text-base
     text-gray-900
     disabled:text-gray-400
+    placeholder:text-sm
     hover:border-blue-400
     transition
     focus:outline-none
@@ -466,7 +465,9 @@
   }
 
   .dropdown li {
-    @apply pt-[13px]
+    @apply flex
+    items-center
+    pt-[13px]
     pb-3.5
     px-5
     cursor-pointer
