@@ -12,6 +12,7 @@ export default {
                     id: uuid(),
                     userAssigned:null
                 }
+
             ]
         }
     ]
