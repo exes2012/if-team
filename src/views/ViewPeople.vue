@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-100 w-full h-screen">
-    <v-container>
+  <div class="bg-gray-100 w-full min-h-screen">
+    <v-container class="flex-col">
       <v-card class="w-fit mt-32 p-8 relative">
         <h2 class="mb-7">Add iteration</h2>
         <button class="absolute top-5 right-5">
@@ -129,20 +129,122 @@
           <v-button class="btn-primary w-48 h-13">Add</v-button>
         </form>
       </v-card>
+      <v-card class="max-w-[817px] w-full mt-32 p-10">
+        <div class="flex justify-between items-center mb-5">
+          <p class="text-1">Description</p>
+          <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+        </div>
+        <textarea
+          name="description"
+          id="description"
+          placeholder="Project description"
+          class="field resize-none p-5 h-[107px] mb-10"
+        ></textarea>
+        <div class="flex">
+          <div class="w-1/2 border-r border-solid border-gray-200 pr-10">
+            <div class="flex justify-between">
+              <p class="text-1">Files</p>
+              <v-button class="btn-add-1">+ Add File</v-button>
+            </div>
+            <ul class="mt-5">
+              <li
+                class="flex justify-between items-center py-[5px] border-b border-solid border-gray-100"
+              >
+                <p class="text-3 max-w-[290px] break-all">Filename.png</p>
+                <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
+                  <v-icon
+                    name="close"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 20 20"
+                  ></v-icon>
+                </v-button>
+              </li>
+              <li
+                class="flex justify-between items-center py-[5px] border-b border-solid border-gray-100"
+              >
+                <p class="text-3 max-w-[290px] break-all">Filename.png</p>
+                <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
+                  <v-icon
+                    name="close"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 20 20"
+                  ></v-icon>
+                </v-button>
+              </li>
+              <li
+                class="flex justify-between items-center py-[5px] border-b border-solid border-gray-100"
+              >
+                <p class="text-3 max-w-[290px] break-all">
+                  ioghjf98wyfufjh98wejhfr98erg45g389ewf4r9oj489.png
+                </p>
+                <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
+                  <v-icon
+                    name="close"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 20 20"
+                  ></v-icon>
+                </v-button>
+              </li>
+              <li
+                class="flex justify-between items-center py-[5px] border-b border-solid border-gray-100"
+              >
+                <p class="text-3 max-w-[290px] break-all">Filename.png</p>
+                <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
+                  <v-icon
+                    name="close"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 20 20"
+                  ></v-icon>
+                </v-button>
+              </li>
+            </ul>
+          </div>
+          <div class="w-1/2 pl-10">
+            <div class="flex justify-between">
+              <p class="text-1">Services</p>
+              <v-button class="btn-add-1">+ Add Services</v-button>
+            </div>
+            <ul class="flex flex-wrap mt-5 gap-x-2.5 gap-y-2">
+              <li class="btn-service chosen">Дизайн</li>
+              <li class="btn-service chosen">Front-end</li>
+              <li class="btn-service chosen">ererehertgdgrthgrtghrtegreg</li>
+              <li class="btn-service chosen">SMM</li>
+              <li class="btn-service chosen">SEO</li>
+            </ul>
+          </div>
+        </div>
+      </v-card>
+      <v-card class="max-w-[462px] w-full mt-10 p-8 relative">
+        <h2 class="mb-7">Services</h2>
+        <button class="absolute top-5 right-5">
+          <v-icon name="close" width="20" height="20"></v-icon>
+        </button>
+        <div class="pt-7 border-t border-solid border-gray-200">
+          <ul class="flex flex-wrap gap-x-2.5 gap-y-2">
+            <li class="btn-service selected">Дизайн</li>
+            <li class="btn-service selected">Front-end</li>
+            <li class="btn-service">Back-end</li>
+            <li class="btn-service selected">SMM</li>
+            <li class="btn-service selected">SEO</li>
+            <li class="btn-service">Project management</li>
+            <li class="btn-service">Mobile</li>
+          </ul>
+        </div>
+      </v-card>
     </v-container>
   </div>
 </template>
 
 <script>
-import VContainer from "../components/VContainer.vue";
-import VCard from "../components/VCard.vue";
 import VButton from "../components/VButton.vue";
 
 export default {
   name: "ViewPeople",
   components: {
-    VContainer,
-    VCard,
     VButton,
   },
 };

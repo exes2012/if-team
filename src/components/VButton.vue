@@ -1,24 +1,22 @@
 <template>
-	<button>
-		<slot></slot>
-	</button>
+  <button>
+    <slot></slot>
+  </button>
 </template>
 
 <script>
 export default {
-	name: "VButton",
-}
+  name: "VButton",
+};
 </script>
 
 <style scoped lang="css">
-
-button{
-	@apply flex items-center justify-center;
+button {
+  @apply flex items-center justify-center;
 }
 
 .btn-primary {
-	@apply
-	bg-blue-400
+  @apply bg-blue-400
 	rounded-md
 	font-sans
 	font-medium
@@ -31,11 +29,7 @@ button{
 }
 
 .btn-secondary {
-	@apply flex
-	justify-center
-	items-center
-
-	bg-transparent
+  @apply bg-transparent
 	rounded-md
 	border
 	border-solid
@@ -56,7 +50,7 @@ button{
 }
 
 .btn-secondary > p {
-	@apply text-left
+  @apply text-left
 	text-2xl
 	text-blue-400
 	leading-0
@@ -65,16 +59,16 @@ button{
 }
 
 .btn-secondary:hover > p {
-	@apply text-white
+  @apply text-white
 	transition;
 }
 
 .btn-secondary:hover svg {
-	@apply fill-white;
+  @apply fill-white;
 }
 
 .btn-secondary-2 {
-	@apply block
+  @apply block
 	bg-transparent
 	rounded-md
 	border
@@ -94,7 +88,9 @@ button{
 }
 
 .btn-add-1 {
-	@apply block
+  @apply block
+	py-2.5
+	px-5
 	bg-gray-500
 	rounded-md
 	font-sans
@@ -109,7 +105,7 @@ button{
 }
 
 .btn-add-2 {
-	@apply block
+  @apply block
 	bg-blue-400
 	rounded-l-md
 	font-sans
@@ -120,23 +116,19 @@ button{
 	transition;
 }
 
-
 .btn-arrow {
-	@apply flex
-	justify-center
-	items-center
-	bg-blue-400
+  @apply bg-blue-400
 	rounded-r-md
 	hover:bg-blue-700
 	transition;
 }
 
 .btn-arrow svg {
-	@apply fill-white;
+  @apply fill-white;
 }
 
 .btn-plus {
-	@apply relative
+  @apply relative
 	w-5
 	h-5
 	bg-gray-100
@@ -171,7 +163,7 @@ button{
 }
 
 .btn-plus-dropdown {
-	@apply max-w-[227px]
+  @apply max-w-[227px]
 	w-full
 	rounded-md
 	bg-white
@@ -179,12 +171,12 @@ button{
 }
 
 .btn-plus-dropdown li {
-	@apply py-2
+  @apply py-2
 	px-2.5;
 }
 
 .btn-plus-dropdown a {
-	@apply block
+  @apply block
 	rounded-md
 	font-sans
 	font-normal
@@ -198,7 +190,7 @@ button{
 }
 
 .btn-view-wrapper {
-	@apply w-fit
+  @apply w-fit
 	flex
 	justify-center
 	items-center
@@ -209,7 +201,7 @@ button{
 }
 
 .btn-view {
-	@apply w-[180px]
+  @apply w-[180px]
 	h-13
 	flex
 	justify-center
@@ -228,16 +220,16 @@ button{
 }
 
 .btn-view:hover svg {
-	@apply fill-blue-400
+  @apply fill-blue-400
 	transition;
 }
 
 .btn-view.active svg {
-	@apply fill-white;
+  @apply fill-white;
 }
 
 .btn-view.active {
-	@apply bg-blue-400
+  @apply bg-blue-400
 	text-white
 	outline-blue-400;
 }

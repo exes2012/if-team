@@ -19,11 +19,11 @@ export default {
     },
     width: {
       type: Number,
-      default: 18,
+      default: 20,
     },
     height: {
       type: Number,
-      default: 18,
+      default: 20,
     },
   },
   data() {
