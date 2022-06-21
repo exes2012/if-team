@@ -8,6 +8,7 @@
 					<v-search class="field field-search h-10 w-90 ml-auto"/>
 				</div>
 				<div class="mx-8 mt-7.5">
+					<v-checkbox label="checkbox"/>
 					<vtable :columns="this.$store.state.tableColumns.projectsTableColumns" :table-data="this.$store.state.projects.projectsList"/>
 				</div>
 			</v-card>

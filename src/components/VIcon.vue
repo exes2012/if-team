@@ -1,20 +1,36 @@
 <template>
-	<div v-html="path"></div>
+	<svg :width="width" :height="height" xmlns="http://www.w3.org/2000/svg"
+			v-html="path" fill="none"
+	>
+	</svg>
 </template>
 
 <script>
-import icons from "@/assets/icons/icons";
+import icons from "../assets/icons/icons";
 export default {
 	name: "VIcon",
-	props:['name'],
+	props: {
+		name:{
+			type:String,
+			default:'apply'
+		},
+		width:{
+			type:Number,
+			default: 18
+		},
+		height:{
+			type:Number,
+			default: 18
+		}
+},
 	data(){
 		return{
+			path:icons[this.name]
 		}
 	},
-	computed:{
-		path(){
-			return icons[this.name]
-		}
-	}
 }
 </script>
+
+<style>
+
+</style>
