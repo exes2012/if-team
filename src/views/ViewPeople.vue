@@ -610,6 +610,279 @@
           </div>
         </form>
       </v-card>
+
+      <!-- Rates -->
+      <v-card class="w-fit mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5">
+          <v-icon
+            name="close"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-5 pb-5 border-b border-solid border-gray-200">
+          <h2 class="mb-7">Rates</h2>
+          <div class="grid grid-cols-[180px_130px_130px_25px] gap-x-5">
+            <p class="text-3 text-gray-400">Name</p>
+            <div class="flex items-center gap-x-1">
+              <p class="text-3 text-gray-400">Out</p>
+              <v-button type="button">
+                <v-icon
+                  name="error"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  class="hover:fill-blue-400"
+                ></v-icon>
+              </v-button>
+            </div>
+            <div class="flex items-center gap-x-1">
+              <p class="text-3 text-gray-400">In</p>
+              <v-button type="button">
+                <v-icon
+                  name="error"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  class="hover:fill-blue-400"
+                ></v-icon>
+              </v-button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-[180px_130px_130px_25px] gap-x-5 items-center mb-5"
+        >
+          <input type="text" class="field" placeholder="Rate name" />
+
+          <div class="relative">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              class="field pr-20"
+              placeholder=" "
+              required
+            />
+            <div class="absolute bottom-0 right-0">
+              <v-button class="btn-primary w-16 h-13" type="button"
+                >USD</v-button
+              >
+              <ul class="hidden dropdown w-[166px] absolute">
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-usa.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag usa"
+                  />
+                  USD ($)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-ua.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag ua"
+                  />
+                  UAH (₴)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-eu.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag eu"
+                  />
+                  EUR (€)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-gb.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag gb"
+                  />
+                  GBP (£)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              class="field pr-20"
+              placeholder=" "
+              required
+            />
+            <div class="absolute bottom-0 right-0">
+              <v-button class="btn-primary w-16 h-13" type="button"
+                >USD</v-button
+              >
+              <ul class="hidden dropdown w-[166px] absolute">
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-usa.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag usa"
+                  />
+                  USD ($)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-ua.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag ua"
+                  />
+                  UAH (₴)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-eu.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag eu"
+                  />
+                  EUR (€)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-gb.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag gb"
+                  />
+                  GBP (£)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-[180px_130px_130px_25px] gap-x-5 items-center mb-5"
+        >
+          <input type="text" class="field" placeholder="Rate name" />
+
+          <div class="relative">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              class="field pr-20"
+              placeholder=" "
+              required
+            />
+            <div class="absolute bottom-0 right-0">
+              <v-button class="btn-primary w-16 h-13" type="button"
+                >USD</v-button
+              >
+              <ul class="hidden dropdown w-[166px] absolute">
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-usa.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag usa"
+                  />
+                  USD ($)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-ua.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag ua"
+                  />
+                  UAH (₴)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-eu.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag eu"
+                  />
+                  EUR (€)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-gb.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag gb"
+                  />
+                  GBP (£)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              class="field pr-20"
+              placeholder=" "
+              required
+            />
+            <div class="absolute bottom-0 right-0">
+              <v-button class="btn-primary w-16 h-13" type="button"
+                >USD</v-button
+              >
+              <ul class="hidden dropdown w-[166px] absolute">
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-usa.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag usa"
+                  />
+                  USD ($)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-ua.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag ua"
+                  />
+                  UAH (₴)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-eu.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag eu"
+                  />
+                  EUR (€)
+                </li>
+                <li class="text-2">
+                  <img
+                    src="../assets/img/icons/flag-gb.svg"
+                    class="w-5 h-[13px] inline-block mr-2.5"
+                    alt="flag gb"
+                  />
+                  GBP (£)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <v-button type="button" class="w-[25px] h-[25px] bg-gray-100 rounded"
+            ><v-icon
+              name="close"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              class="hover:fill-blue-400"
+            ></v-icon>
+          </v-button>
+        </div>
+
+        <v-button
+          class="w-fit py-2 px-12 mb-10 border border-dashed border-gray-500 rounded-md text-4 text-gray-500 hover:border-blue-400 hover:text-blue-400 transition"
+          >+ Add rate</v-button
+        >
+
+        <v-button class="btn-primary w-[200px] h-13">Save</v-button>
+      </v-card>
     </v-container>
   </div>
 </template>
