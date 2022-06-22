@@ -502,6 +502,52 @@
             </div>
 
             <div class="relative">
+              <div
+                class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-gray-100"
+              >
+                <div
+                  class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                >
+                  <img
+                    src="../assets/img/file-upload-demo.jpg"
+                    alt="file icon"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <p class="text-4 mr-2.5">Unnamed.png (2.33 Mb)</p>
+                <v-button type="button"
+                  ><v-icon
+                    name="close"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 12 12"
+                    class="hover:fill-blue-400"
+                  ></v-icon>
+                </v-button>
+              </div>
+              <div
+                class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-gray-100"
+              >
+                <div
+                  class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                >
+                  <img
+                    src="../assets/img/icons/file.svg"
+                    alt="file icon"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <p class="text-4 mr-2.5">File.pdf (2 Mb)</p>
+                <v-button type="button"
+                  ><v-icon
+                    name="close"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 12 12"
+                    class="hover:fill-blue-400"
+                  ></v-icon>
+                </v-button>
+              </div>
               <input
                 type="file"
                 name="upload-file"

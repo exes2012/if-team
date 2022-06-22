@@ -18,12 +18,12 @@ export default {
       default: "apply",
     },
     width: {
-      type: Number,
-      default: 20,
+      type: String,
+      default: "20",
     },
     height: {
-      type: Number,
-      default: 20,
+      type: String,
+      default: "20",
     },
   },
   data() {
