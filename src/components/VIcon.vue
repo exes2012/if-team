@@ -34,9 +34,4 @@ export default {
 };
 </script>
 
-<style>
-svg {
-  @apply hover:fill-blue-400
-	transition;
-}
-</style>
+<style></style>

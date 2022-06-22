@@ -226,10 +226,7 @@
     @apply placeholder:text-sm
     placeholder:text-gray-500
     text-sm
-    pl-12
-    bg-[url('src/img/icons/search.svg')]
-    bg-no-repeat
-    bg-left-5.5;
+    pl-12;
   }
 
   .upload-photo {
@@ -309,14 +306,34 @@
     @apply opacity-100;
   }
 
+  .upload-file {
+    @apply flex
+    justify-center
+    items-center
+    cursor-pointer
+    w-full
+    h-14
+    rounded-md
+    border
+    border-dashed
+    border-gray-400
+    font-sans
+    font-normal
+    text-sm
+    text-gray-400
+    hover:border-blue-400
+    hover:bg-blue-100
+    hover:text-blue-400
+    transition;
+  }
+
   .status {
-    @apply h-6
-    rounded
+    @apply rounded
     font-sans
     font-medium
     text-xs
-    pl-2.5
-    pr-2.5
+    px-2.5
+    py-[5px]
     hover:text-white
     transition;
   }
@@ -369,6 +386,14 @@
     @apply bg-aqua-100
     text-aqua-500
     hover:bg-aqua-500
+    rounded-full;
+  }
+
+  .status-light-blue {
+    @apply bg-blue-100
+    text-gray-900
+    hover:text-gray-900
+    font-normal
     rounded-full;
   }
 
@@ -509,5 +534,18 @@
     @apply bg-blue-100
     border-transparent
     hover:text-gray-900;
+  }
+
+  .btn-more {
+    @apply px-2
+    py-3
+    bg-gray-100
+    rounded
+    transition;
+  }
+
+  .btn-more:hover > svg {
+    @apply fill-blue-400
+    transition;
   }
 }
