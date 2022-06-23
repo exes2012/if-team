@@ -83,7 +83,8 @@
   }
 
   .link-1 {
-    @apply h-fit
+    @apply w-fit
+    h-fit
     font-sans
     font-normal
     text-xl
@@ -100,7 +101,8 @@
   }
 
   .link-2 {
-    @apply h-fit
+    @apply w-fit
+    h-fit
     font-sans
     font-normal
     text-xs
@@ -117,7 +119,8 @@
   }
 
   .link-3 {
-    @apply h-fit
+    @apply w-fit
+    h-fit
     font-sans
     font-normal
     text-sm
@@ -134,7 +137,8 @@
   }
 
   .link-4 {
-    @apply h-fit
+    @apply w-fit
+    h-fit
     font-sans
     font-normal
     text-sm
@@ -547,5 +551,29 @@
   .btn-more:hover > svg {
     @apply fill-blue-400
     transition;
+  }
+
+  .btn-switch {
+    @apply w-[42px]
+    h-[25px]
+    p-px
+    bg-gray-100
+    rounded-full
+    cursor-pointer
+    transition-all;
+  }
+
+  .btn-switch > span {
+    @apply block
+    w-[23px]
+    h-[23px]
+    bg-gray-500
+    rounded-full;
+  }
+
+  .btn-switch:hover > span {
+    @apply bg-blue-400
+    ml-auto
+    transition-all;
   }
 }

@@ -883,6 +883,150 @@
 
         <v-button class="btn-primary w-[200px] h-13">Save</v-button>
       </v-card>
+
+      <!-- Rates -->
+      <v-card class="w-fit mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5">
+          <v-icon
+            name="close"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div
+          class="grid grid-cols-[168px_214px] gap-x-5 mb-7 pb-5 border-b border-solid border-gray-200"
+        >
+          <h2 class="mr-[134px]">Rate</h2>
+          <div>
+            <p class="text-3 text-gray-400 mb-1">Rate now</p>
+            <p class="text-4 text-gray-400">
+              <span class="text-1 mr-2">1 000 $</span>
+              per month
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-[168px_214px] gap-x-5 gap-y-10 mb-10 pb-10 border-b border-solid border-gray-200"
+        >
+          <div>
+            <p class="text-3 text-gray-400 mb-6">Fixed/Hour rate</p>
+            <div class="btn-switch">
+              <span></span>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <label for="add-amount" class="label text-gray-400"
+                >Add amount</label
+              >
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <div class="flex items-center">
+              <div class="relative mr-3">
+                <input
+                  type="text"
+                  name="add-amount"
+                  id="add-amount"
+                  class="field text-xl pr-20"
+                  placeholder=" "
+                  required
+                />
+                <div class="absolute bottom-0 right-0">
+                  <v-button class="btn-primary w-16 h-13" type="button"
+                    >USD</v-button
+                  >
+                  <ul class="dropdown w-[166px] absolute">
+                    <li class="text-2">
+                      <img
+                        src="../assets/img/icons/flag-usa.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      USD ($)
+                    </li>
+                    <li class="text-2">
+                      <img
+                        src="../assets/img/icons/flag-ua.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag ua"
+                      />
+                      UAH (₴)
+                    </li>
+                    <li class="text-2">
+                      <img
+                        src="../assets/img/icons/flag-eu.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag eu"
+                      />
+                      EUR (€)
+                    </li>
+                    <li class="text-2">
+                      <img
+                        src="../assets/img/icons/flag-gb.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag gb"
+                      />
+                      GBP (£)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="text-4 text-gray-400 whitespace-nowrap">/ Month</p>
+            </div>
+          </div>
+
+          <v-button class="btn-primary w-[168px] h-13">Set</v-button>
+        </div>
+
+        <div class="pb-5 border-b border-solid border-gray-200">
+          <p class="text-1">History</p>
+        </div>
+
+        <ul class="w-full mb-7">
+          <li
+            class="flex justify-between items-center gap-x-2 border-b border-solid border-gray-200"
+          >
+            <p class="py-2.5">10 000 $</p>
+            <p class="py-2.5">31.02.22</p>
+            <p class="py-2.5">Fixed rate</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-x-2 border-b border-solid border-gray-200"
+          >
+            <p class="py-2.5">15 000 $</p>
+            <p class="py-2.5">15.03.22</p>
+            <p class="py-2.5">Fixed rate</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-x-2 border-b border-solid border-gray-200"
+          >
+            <p class="py-2.5">12 000 $</p>
+            <p class="py-2.5">24.11.22</p>
+            <p class="py-2.5">Fixed rate</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-x-2 border-b border-solid border-gray-200"
+          >
+            <p class="py-2.5">10 000 $</p>
+            <p class="py-2.5">31.02.22</p>
+            <p class="py-2.5">Fixed rate</p>
+          </li>
+          <li
+            class="flex justify-between items-center gap-x-2 border-b border-solid border-gray-200"
+          >
+            <p class="py-2.5">15 000 $</p>
+            <p class="py-2.5">15.03.22</p>
+            <p class="py-2.5">Fixed rate</p>
+          </li>
+        </ul>
+
+        <a href="#" class="link-3 text-gray-400 border-gray-400">Load more</a>
+      </v-card>
     </v-container>
   </div>
 </template>
