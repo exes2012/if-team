@@ -312,6 +312,8 @@
 
   .status {
     @apply h-6
+    flex
+      items-center
     rounded
     font-sans
     font-medium

@@ -2,9 +2,6 @@
 	<the-header-navigation :routes="routes"/>
 	<v-search class="field field-search h-10 w-90 ml-auto"/>
 	<v-button class="btn-primary h-12 w-32 ml-10">+ Add</v-button>
-	<v-button class="btn-secondary h-12 w-32 ml-10">+ Add</v-button>
-	<v-button class="btn-plus h-12 w-32 ml-10"></v-button>
-	<v-icon name="apply" width="32" height="32" class="fill-aqua-600 hover:fill-green-600"/>
 	<the-header-notifications/>
 	<the-header-avatar/>
 </template>

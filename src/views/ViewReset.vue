@@ -72,7 +72,7 @@
             />
             <button class="btn-field" type="button">
               <svg width="20" height="16">
-                <use xlink:href="../assets/img/sprite.svg#password-show"></use>
+<!--                <use xlink:href="../assets/img/sprite.svg#password-show"></use>-->
               </svg>
             </button>
           </div>
@@ -91,7 +91,7 @@
             />
             <button class="btn-field" type="button">
               <svg width="20" height="16">
-                <use xlink:href="../assets/img/sprite.svg#password-show"></use>
+<!--                <use xlink:href="../assets/img/sprite.svg#password-show"></use>-->
               </svg>
             </button>
           </div>
