@@ -45,7 +45,7 @@
         class="max-w-[910px] w-full pt-12 border-t-2 border-solid border-gray-100 grid grid-cols-2 gap-x-5"
       >
         <div class="mb-7">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="name" class="label">Full name</label>
             <span class="message-invalid invisible">Неверный формат</span>
           </div>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="relative mb-7">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="birth" class="label">Date of birth</label>
             <span class="message-invalid invisible">Неверный формат</span>
           </div>
@@ -78,7 +78,7 @@
         </div>
 
         <div class="relative mb-12">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="role" class="label">Role</label>
             <span class="message-invalid invisible">Неверный формат</span>
           </div>
@@ -103,7 +103,7 @@
         </div>
 
         <div class="relative mb-12">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="department" class="label">Department</label>
             <span class="message-invalid invisible">Неверный формат</span>
           </div>
@@ -136,7 +136,7 @@
         class="hidden max-w-[445px] w-full pt-12 border-t-2 border-solid border-gray-100"
       >
         <div class="mb-7">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="email" class="label">E-mail</label>
             <span class="message-invalid invisible">Неверный формат</span>
           </div>
@@ -150,7 +150,7 @@
           />
         </div>
         <div class="mb-7">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="phone" class="label">Phone</label>
             <span class="message-invalid invisible">Неверный формат</span>
           </div>
@@ -164,7 +164,7 @@
           />
         </div>
         <div class="relative mb-14">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-2">
             <label for="password" class="label">Password</label>
             <span class="message-invalid invisible">Не менее 6 символов</span>
           </div>

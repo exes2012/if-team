@@ -2,10 +2,9 @@
   <svg
     :width="width"
     :height="height"
-    fill="currentColor"
-    viewBox="0 0 18 18"
     xmlns="http://www.w3.org/2000/svg"
     v-html="path"
+    fill="none"
   ></svg>
 </template>
 
@@ -20,12 +19,12 @@ export default {
       default: "apply",
     },
     width: {
-      type: Number,
-      default: 18,
+      type: String,
+      default: "20",
     },
     height: {
-      type: Number,
-      default: 18,
+      type: String,
+      default: "20",
     },
   },
   data() {
