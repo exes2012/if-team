@@ -141,8 +141,10 @@
       </v-card>
 
       <!-- Description -->
-      <v-card class="max-w-[817px] w-full mt-32 p-10">
-        <div class="flex justify-between items-center mb-5">
+      <v-card
+        class="max-w-[817px] w-full mt-32 p-10 max-h-[108px] overflow-hidden hover:max-h-full transition-all"
+      >
+        <div class="flex justify-between items-center mb-10">
           <p class="text-1">Description</p>
           <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
         </div>
@@ -884,7 +886,7 @@
         <v-button class="btn-primary w-[200px] h-13">Save</v-button>
       </v-card>
 
-      <!-- Rates -->
+      <!-- Rate -->
       <v-card class="w-fit mt-10 p-8 relative">
         <v-button class="absolute top-5 right-5">
           <v-icon
