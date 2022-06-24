@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 w-full min-h-screen">
+  <div class="bg-gray-300 w-full min-h-screen">
     <v-container class="flex-col">
       <!-- Add Iteration -->
       <v-card class="w-fit mt-32 p-8 relative">
@@ -1092,7 +1092,9 @@
         </div>
 
         <div class="mb-5 pb-5 border-b border-solid border-gray-200">
-          <p class="text-4 text-gray-400 mb-2.5">Comment</p>
+          <label for="comment" class="text-4 text-gray-400 mb-2.5"
+            >Comment</label
+          >
           <textarea
             name="comment"
             id="comment"
@@ -1142,7 +1144,9 @@
           ></v-icon>
         </div>
 
-        <ul class="mb-10 border-y border-solid border-gray-200">
+        <ul
+          class="max-h-[350px] overflow-y-auto mb-10 border-y border-solid border-gray-200 scroll-thin"
+        >
           <li
             class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
           >
@@ -1290,6 +1294,80 @@
               <p class="text-4 text-right">hot-ivy@gmail.com</p>
             </div>
           </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Smith Andrew</p>
+              </div>
+              <p class="text-4 text-right">work.srbd.ids@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Robert John Downey Junior Holmsovich</p>
+              </div>
+              <p class="text-4 text-right">
+                robert_john_downey-junior@yahoo.com
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Megan Fox</p>
+              </div>
+              <p class="text-4 text-right">foxxxy-666@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Keanu Reeves</p>
+              </div>
+              <p class="text-4 text-right">keanuReevesNeo@gmail.com</p>
+            </div>
+          </li>
         </ul>
 
         <v-button class="btn-secondary-2 h-10 mb-10">+ Add client</v-button>
@@ -1302,6 +1380,373 @@
 
           <v-button class="btn-primary w-52 h-13">Apply</v-button>
         </div>
+      </v-card>
+
+      <!-- Add client -->
+      <v-card class="w-fit mt-10 py-10 px-8 relative bg-gray-100">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <button
+          class="flex items-center gap-x-4 [&:hover>svg]:fill-blue-400 [&:hover>h2]:text-blue-400 mb-12"
+        >
+          <v-icon
+            name="arrowLeft"
+            viewBox="0 0 20 20"
+            class="transition"
+          ></v-icon>
+          <h2 class="transition">Add client</h2>
+        </button>
+
+        <form>
+          <div class="flex gap-x-7 mb-7">
+            <div>
+              <div class="grid grid-cols-[280px_280px] gap-x-5 gap-y-7 mb-7">
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label for="name" class="label">Full name</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="field bg-white"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label for="email" class="label">E-mail</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="field bg-white"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label for="phone" class="label">Phone</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    class="field bg-white"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div class="relative">
+                  <div class="flex justify-between mb-2">
+                    <label for="country" class="label">Country</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    name="country"
+                    id="country"
+                    class="field bg-white"
+                    placeholder="Country"
+                  />
+                  <v-button
+                    class="btn-field [&:hover+ul]:visible"
+                    type="button"
+                  >
+                    <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+
+                  <ul class="dropdown invisible">
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-usa.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">USA</p>
+                    </li>
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-ua.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">Ukraine</p>
+                    </li>
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-eu.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">Europe</p>
+                    </li>
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-gb.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">Great Britian</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex flex-col">
+                <p class="label mb-2.5">Comment</p>
+                <textarea
+                  placeholder="Comment"
+                  class="field bg-white text-sm resize-none px-5 py-4 h-[250px]"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="p-7 pb-10 bg-white rounded-md">
+              <div class="flex justify-between items-center mb-10">
+                <p class="text-1">Clients’ projects</p>
+                <v-button class="btn-plus"></v-button>
+              </div>
+
+              <div
+                class="grid grid-cols-[310px_220px_25px] items-center pb-5 border-b border-solid border-gray-200"
+              >
+                <v-checkbox
+                  label="Task Name"
+                  class="text-4 text-gray-400"
+                ></v-checkbox>
+                <p class="text-4 text-gray-400">Responsible</p>
+              </div>
+
+              <ul class="max-h-[306px] overflow-y-auto scroll-thin">
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Task Name"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <v-button class="btn-primary w-52 h-13">Add client</v-button>
+        </form>
       </v-card>
     </v-container>
   </div>

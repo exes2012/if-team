@@ -211,19 +211,8 @@
     bottom-0
     right-0
     z-10
-    transition;
-  }
-
-  .btn-field > p {
-    @apply text-left
-    text-xl
-    text-gray-500
-    leading-0;
-  }
-
-  .btn-field:hover > p {
-    @apply text-blue-400
-    transition;
+    transition
+    [&:hover>svg]:fill-blue-400;
   }
 
   .field-search {
@@ -594,5 +583,18 @@
     @apply text-blue-700
     border-solid
     border-blue-700;
+  }
+
+  .scroll-thin::-webkit-scrollbar {
+    @apply w-[13px];
+  }
+  .scroll-thin::-webkit-scrollbar-thumb {
+    @apply border-[5px]
+    border-solid
+    border-white
+    rounded-full
+    bg-gray-500
+    hover:bg-gray-600
+    transition;
   }
 }

@@ -22,6 +22,7 @@ button {
 	font-medium
 	text-base
 	text-white
+	shrink-0
 	hover:bg-blue-700
 	transition
 	disabled:bg-gray-200
@@ -34,6 +35,7 @@ button {
 	border
 	border-solid
 	border-blue-400
+	shrink-0
 
 	font-sans
 	font-medium
@@ -74,6 +76,7 @@ button {
 	border
 	border-solid
 	border-blue-400
+	shrink-0
 	font-sans
 	font-medium
 	text-xs
@@ -93,6 +96,7 @@ button {
 	px-5
 	bg-gray-500
 	rounded-md
+	shrink-0
 	font-sans
 	font-medium
 	text-xs
@@ -108,6 +112,7 @@ button {
   @apply block
 	bg-blue-400
 	rounded-l-md
+	shrink-0
 	font-sans
 	font-medium
 	text-base
