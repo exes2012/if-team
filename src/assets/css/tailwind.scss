@@ -332,14 +332,7 @@
   }
 
   .status {
-<<<<<<< HEAD
-    @apply h-6
-    flex
-      items-center
-    rounded
-=======
     @apply rounded
->>>>>>> 649b8097f24e8298fa30145080058f6ee08e3998
     font-sans
     font-medium
     text-xs
@@ -582,5 +575,19 @@
     @apply bg-blue-400
     ml-auto
     transition-all;
+  }
+
+  .btn-edit > svg {
+    @apply mr-[5px];
+  }
+
+  .btn-edit:hover > svg {
+    @apply fill-blue-700;
+  }
+
+  .btn-edit:hover > p {
+    @apply text-blue-700
+    border-solid
+    border-blue-700;
   }
 }

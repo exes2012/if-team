@@ -6,9 +6,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -168,9 +168,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -182,9 +182,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -198,9 +198,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -212,9 +212,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -242,9 +242,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -269,9 +269,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -520,9 +520,9 @@
                 <v-button type="button"
                   ><v-icon
                     name="close"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 12 12"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -543,9 +543,9 @@
                 <v-button type="button"
                   ><v-icon
                     name="close"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 12 12"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -618,9 +618,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -870,9 +870,9 @@
           <v-button type="button" class="w-[25px] h-[25px] bg-gray-100 rounded"
             ><v-icon
               name="close"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
+              width="19"
+              height="19"
+              viewBox="0 0 20 20"
               class="hover:fill-blue-400"
             ></v-icon>
           </v-button>
@@ -891,9 +891,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -1028,6 +1028,91 @@
         </ul>
 
         <a href="#" class="link-3 text-gray-400 border-gray-400">Load more</a>
+      </v-card>
+
+      <!-- Client -->
+      <v-card class="w-fit mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div
+          class="grid grid-cols-[320px_180px] gap-x-7 mb-5 pb-5 border-b border-solid border-gray-200"
+        >
+          <div>
+            <p class="text-4 text-gray-400 mb-1 ml-[34px]">Client</p>
+            <div class="flex items-center">
+              <v-button
+                class="flex justify-center items-center p-0.5 bg-gray-100 rounded-md mr-2.5"
+              >
+                <v-icon
+                  name="change"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  class="hover:fill-blue-400"
+                ></v-icon>
+              </v-button>
+              <h2>Smith Andrew</h2>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-4 text-gray-400 mb-1">Project</p>
+            <p class="text-2">Webnauts</p>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-[320px_180px] gap-x-7 mb-5 pb-5 border-b border-solid border-gray-200"
+        >
+          <div>
+            <p class="text-4 text-gray-400 mb-2.5">Contacts</p>
+            <p class="text-3 mb-2">work.srbd.ids@gmail.com</p>
+            <p class="text-3">+38 093 150 8776</p>
+          </div>
+
+          <div>
+            <p class="text-4 text-gray-400 mb-2.5">Country</p>
+            <div class="flex items-center">
+              <img
+                src="../assets/img/icons/flag-usa.svg"
+                class="w-5 h-[13px] inline-block mr-2.5"
+                alt="flag usa"
+              />
+              <p class="text-3">USA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 pb-5 border-b border-solid border-gray-200">
+          <p class="text-4 text-gray-400 mb-2.5">Comment</p>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Comment"
+            class="field text-sm resize-none px-5 py-4 h-20"
+          ></textarea>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <a href="#" class="link-3 text-gray-400">Other clients’ projects</a>
+          <v-button class="btn-edit">
+            <v-icon
+              name="edit"
+              width="15"
+              height="15"
+              viewBox="0 0 20 20"
+            ></v-icon>
+            <p class="link-3 text-gray-400">Edit</p>
+          </v-button>
+        </div>
       </v-card>
     </v-container>
   </div>
