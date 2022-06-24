@@ -1114,17 +1114,208 @@
           </v-button>
         </div>
       </v-card>
+
+      <!-- Select a client -->
+      <v-card class="max-w-[588px] w-full mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <h2 class="mb-2.5">Select a client</h2>
+        <div class="flex items-center mb-7">
+          <p class="text-4 text-gray-400 mr-2.5">Project</p>
+          <p class="text-3">Webnauts</p>
+        </div>
+
+        <div class="relative mb-7">
+          <v-search class="field field-search h-10" />
+          <v-icon
+            name="search"
+            viewBox="0 0 20 20"
+            class="absolute top-1/2 left-5 -translate-y-1/2"
+          ></v-icon>
+        </div>
+
+        <ul class="mb-10 border-y border-solid border-gray-200">
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Smith Andrew</p>
+              </div>
+              <p class="text-4 text-right">work.srbd.ids@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Robert John Downey Junior Holmsovich</p>
+              </div>
+              <p class="text-4 text-right">
+                robert_john_downey-junior@yahoo.com
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Megan Fox</p>
+              </div>
+              <p class="text-4 text-right">foxxxy-666@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Keanu Reeves</p>
+              </div>
+              <p class="text-4 text-right">keanuReevesNeo@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Leonardo Dicaprio Titanic</p>
+              </div>
+              <p class="text-4 text-right">
+                leonardo_dicaprio_from_titanic@gmail.com
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Jet Li</p>
+              </div>
+              <p class="text-4 text-right">li@i.ua</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Jason Statham</p>
+              </div>
+              <p class="text-4 text-right">jason_statham@yahoo.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Madison Ivy</p>
+              </div>
+              <p class="text-4 text-right">hot-ivy@gmail.com</p>
+            </div>
+          </li>
+        </ul>
+
+        <v-button class="btn-secondary-2 h-10 mb-10">+ Add client</v-button>
+
+        <div class="flex justify-between">
+          <div>
+            <p class="text-4 text-gray-400 mb-2.5">Selected client</p>
+            <h3>Smith Andrew</h3>
+          </div>
+
+          <v-button class="btn-primary w-52 h-13">Apply</v-button>
+        </div>
+      </v-card>
     </v-container>
   </div>
 </template>
 
 <script>
 import VButton from "../components/VButton.vue";
+import VSearch from "../components/VSearch.vue";
 
 export default {
   name: "ViewPeople",
   components: {
     VButton,
+    VSearch,
   },
 };
 </script>

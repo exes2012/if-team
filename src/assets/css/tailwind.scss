@@ -233,6 +233,11 @@
     pl-12;
   }
 
+  .field-search:hover + svg,
+  .field-search:focus + svg {
+    @apply fill-blue-400;
+  }
+
   .upload-photo {
     @apply relative
     overflow-hidden
