@@ -1904,6 +1904,37 @@
         <div class="mb-7 pb-7 border-b border-solid border-gray-200">
           <p class="text-2 mb-5">Description</p>
           <div class="rounded bg-gray-100">
+            <div
+              class="px-5 py-2.5 border-b border-solid border-gray-200 flex items-center gap-x-3"
+            >
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="bold" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="italic" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="checkbox" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="strikethrough" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="quotes" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="color" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="markeredList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="orderedList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="link" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+            </div>
             <div class="p-5">
               <textarea
                 placeholder="Your comment"
