@@ -28,6 +28,19 @@
     @apply fill-gray-500
     transition;
   }
+
+  textarea::-webkit-scrollbar {
+    @apply w-[13px];
+  }
+  textarea::-webkit-scrollbar-thumb {
+    @apply border-[5px]
+    border-solid
+    border-white
+    rounded-full
+    bg-gray-500
+    hover:bg-gray-600
+    transition;
+  }
 }
 
 @layer components {
@@ -535,16 +548,11 @@
   }
 
   .btn-more {
-    @apply px-2
-    py-3
+    @apply p-[3px]
     bg-gray-100
     rounded
-    transition;
-  }
-
-  .btn-more:hover > svg {
-    @apply fill-blue-400
-    transition;
+    transition
+    [&:hover>svg]:fill-blue-400;
   }
 
   .btn-switch {

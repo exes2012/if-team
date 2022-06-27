@@ -12,7 +12,7 @@ export default {
 
 <style scoped lang="css">
 button {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center transition flex-shrink-0;
 }
 
 .btn-primary {
