@@ -2285,6 +2285,64 @@
                 </div>
               </div>
             </div>
+            <div class="px-5 py-2.5 border-t border-solid border-gray-200">
+              <div class="flex items-center gap-x-5">
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/file-upload-demo.jpg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">Unnamed.png (2.33 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/icons/file.svg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">File.pdf (2 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+              </div>
+              <input
+                type="file"
+                id="drop-file"
+                class="invisible opacity-0 absolute"
+              />
+              <label for="drop-file" class="upload-file bg-white"
+                >Drop here</label
+              >
+            </div>
           </div>
         </div>
 
