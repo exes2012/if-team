@@ -2003,7 +2003,7 @@
         </ul>
       </v-card>
 
-      <!-- New task -->
+      <!-- New task | PM -->
       <v-card class="max-w-[824px] w-full mt-10 p-8 relative">
         <v-button
           class="absolute top-5 right-5 p-1 [&:hover>svg]:fill-blue-400"
@@ -2231,6 +2231,256 @@
                 <p class="text-4 text-gray-400 whitespace-nowrap">/ hour</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="mb-7">
+          <p class="text-2 mb-5">Description</p>
+          <div class="rounded bg-gray-100">
+            <div
+              class="px-5 py-2.5 border-b border-solid border-gray-200 flex items-center gap-x-3"
+            >
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="bold" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="italic" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="checkbox" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="strikethrough" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="quotes" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="color" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="markeredList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="orderedList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="link" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+            </div>
+            <div class="p-5">
+              <textarea
+                placeholder="Your comment"
+                class="w-full h-24 bg-gray-100 mb-4 text-sm resize-none focus:outline-none [&::-webkit-scrollbar-thumb]:border-gray-100"
+              ></textarea>
+              <div class="flex justify-between gap-x-10">
+                <v-button class="btn-add-1">Сохранить</v-button>
+                <div class="flex items-center gap-x-3">
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="emoji" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="attach" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                </div>
+              </div>
+            </div>
+            <div class="px-5 py-2.5 border-t border-solid border-gray-200">
+              <div class="flex items-center gap-x-5">
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/file-upload-demo.jpg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">Unnamed.png (2.33 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/icons/file.svg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">File.pdf (2 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+              </div>
+              <input
+                type="file"
+                id="drop-file"
+                class="invisible opacity-0 absolute"
+              />
+              <label for="drop-file" class="upload-file bg-white"
+                >Drop here</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <v-button class="btn-primary w-48 h-13">Create a task</v-button>
+      </v-card>
+
+      <!-- New task | User -->
+      <v-card class="max-w-[824px] w-full mt-10 p-8 relative">
+        <v-button
+          class="absolute top-5 right-5 p-1 [&:hover>svg]:fill-blue-400"
+        >
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-7 pb-7 border-b border-solid border-gray-200">
+          <h2>New task</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-5 gap-y-7 mb-8">
+          <div>
+            <div class="flex justify-between mb-2">
+              <label class="label">Task name</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label class="label">Status</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">В работе</li>
+              <li class="text-2 leading-none">Отменено</li>
+              <li class="text-2 leading-none">Завершено</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label class="label">Project</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">Webnauts</li>
+              <li class="text-2 leading-none">Google</li>
+              <li class="text-2 leading-none">Facebook</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label for="country" class="label">Iteration</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input
+              type="text"
+              name="country"
+              id="country"
+              class="field"
+              placeholder=" "
+            />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">Итерация 1</li>
+              <li class="text-2 leading-none">Итерация 2</li>
+              <li class="text-2 leading-none">Итерация 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 py-7 px-8 mb-7 -mx-8 flex gap-x-12">
+          <div class="max-w-[107px] w-full">
+            <p class="text-3 mb-5 text-gray-400">Responsible</p>
+            <v-button
+              class="p-[5px] rounded-full bg-white [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="plus" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+          </div>
+
+          <div class="max-w-[107px] w-full">
+            <p class="text-3 mb-5 text-gray-400 whitespace-nowrap">
+              Project Manager
+            </p>
+            <v-button
+              class="p-[5px] rounded-full bg-white [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="plus" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+          </div>
+
+          <div class="w-px bg-gray-200"></div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <label class="label text-gray-400">Deadline</label>
+            </div>
+            <input
+              type="text"
+              name="date"
+              class="field bg-white py-3.5 px-5"
+              placeholder="No time limit"
+            />
+          </div>
+
+          <div class="flex">
+            <div>
+              <div class="flex justify-between mb-2">
+                <label class="label text-gray-400">Time</label>
+              </div>
+              <input
+                type="text"
+                name="Time"
+                class="field bg-white text-xl py-3.5 px-5 max-w-[77px]"
+                placeholder=" "
+              />
+            </div>
+            <p class="text-3 text-gray-400 pt-12 ml-2 inline-block">h</p>
           </div>
         </div>
 
