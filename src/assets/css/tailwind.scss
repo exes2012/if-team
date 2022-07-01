@@ -24,7 +24,6 @@
     text-gray-900;
   }
 
-
   textarea::-webkit-scrollbar {
     @apply w-[13px];
   }
@@ -198,8 +197,8 @@
     [&:not(:focus):not(:placeholder-shown)]:invalid:border-red-800;
   }
 
-  .field-error input{
-    @apply border border-red-400
+  .field-error input {
+    @apply border border-red-400;
   }
 
   .message-invalid {
