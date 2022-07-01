@@ -1,250 +1,65 @@
 <template>
-  <div class="container flex">
-    <aside
-      class="max-w-[392px] w-full pt-28 pr-5 pb-10 border-r-2 border-solid border-gray-100 lg:max-w-full lg:border-r-0 lg:border-t-2 lg:py-20 lg:px-0"
-    >
-      <p class="text-2 max-w-[230px] mb-10">
-        Здесь может быть какая-то справочная инфа
-      </p>
-    </aside>
-    <main class="p-28 w-full">
-      <h1 class="mb-5">If.Team</h1>
-      <p class="text-1 mb-12">
-        Register or
-        <a href="#" class="link-1">login</a>
-      </p>
-      <div class="mb-2 flex items-center">
-        <div class="register-progress bg-blue-400">
-          <div class="hidden w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-          <p class="icon-check text-2xl text-white leading-0"></p>
-        </div>
-        <div class="register-progress bg-blue-100">
-          <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-          <p class="hidden icon-check text-2xl text-white leading-0"></p>
-        </div>
-        <div class="register-progress bg-blue-100">
-          <div class="hidden w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-          <p class="hidden icon-check text-2xl text-white leading-0"></p>
-        </div>
-      </div>
-      <div class="mb-8 flex items-start">
-        <p class="text-4 text-blue-400 mr-[80px]">
-          Main <br />
-          information
-        </p>
-        <p class="text-4 text-blue-400 mr-[120px]">Data</p>
-        <p class="text-4 text-gray-500">
-          Completing <br />
-          registration
-        </p>
-      </div>
+  <the-header />
+  <div class="container flex lg:flex-col-reverse">
+    <the-aside label="Здесь может быть что угодно" />
+    <main class="m-28 w-[445px]">
+      <login-form-header
+        company-name="If.Team"
+        link-label="Register or"
+        :link="link"
+      />
+      <v-stepper :steps="steps" :step="registrationStep" />
       <!-- Step 1 -->
-      <form
-        action="#"
-        method="post"
-        class="max-w-[910px] w-full pt-12 border-t-2 border-solid border-gray-100 grid grid-cols-2 gap-x-5"
-      >
-        <div class="mb-7">
-          <div class="flex justify-between mb-2">
-            <label for="name" class="label">Full name</label>
-            <span class="message-invalid invisible">Неверный формат</span>
-          </div>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="field"
-            placeholder=" "
-            required
-          />
-        </div>
-
-        <div class="relative mb-7">
-          <div class="flex justify-between mb-2">
-            <label for="birth" class="label">Date of birth</label>
-            <span class="message-invalid invisible">Неверный формат</span>
-          </div>
-          <input
-            type="text"
-            name="birth"
-            id="birth"
-            class="field"
-            placeholder=" "
-            required
-          />
-          <button class="btn-field" type="button">
-            <p class="icon-calendar"></p>
-          </button>
-        </div>
-
-        <div class="relative mb-12">
-          <div class="flex justify-between mb-2">
-            <label for="role" class="label">Role</label>
-            <span class="message-invalid invisible">Неверный формат</span>
-          </div>
-          <input
-            type="text"
-            name="role"
-            id="role"
-            class="field"
-            placeholder=" "
-            required
-          />
-          <button class="btn-field" type="button">
-            <p class="icon-arrow-down"></p>
-          </button>
-
-          <ul class="dropdown hidden">
-            <li>Копирайтинг</li>
-            <li>SMM</li>
-            <li>Back-end</li>
-            <li>Front-end</li>
-          </ul>
-        </div>
-
-        <div class="relative mb-12">
-          <div class="flex justify-between mb-2">
-            <label for="department" class="label">Department</label>
-            <span class="message-invalid invisible">Неверный формат</span>
-          </div>
-          <input
-            type="text"
-            name="department"
-            id="department"
-            class="field"
-            placeholder=" "
-            required
-          />
-          <button class="btn-field" type="button">
-            <p class="icon-arrow-down"></p>
-          </button>
-
-          <ul class="dropdown">
-            <li>Копирайтинг</li>
-            <li>SMM</li>
-            <li>Back-end</li>
-            <li>Front-end</li>
-          </ul>
-        </div>
-
-        <button class="btn-primary w-full h-15">Next</button>
-      </form>
-      <!-- Step 2 -->
-      <form
-        action="#"
-        method="post"
-        class="hidden max-w-[445px] w-full pt-12 border-t-2 border-solid border-gray-100"
-      >
-        <div class="mb-7">
-          <div class="flex justify-between mb-2">
-            <label for="email" class="label">E-mail</label>
-            <span class="message-invalid invisible">Неверный формат</span>
-          </div>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="field"
-            placeholder="Your e-mail"
-            required
-          />
-        </div>
-        <div class="mb-7">
-          <div class="flex justify-between mb-2">
-            <label for="phone" class="label">Phone</label>
-            <span class="message-invalid invisible">Неверный формат</span>
-          </div>
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            class="field"
-            placeholder="+38 000 00 00 000"
-            required
-          />
-        </div>
-        <div class="relative mb-14">
-          <div class="flex justify-between mb-2">
-            <label for="password" class="label">Password</label>
-            <span class="message-invalid invisible">Не менее 6 символов</span>
-          </div>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="field field-password"
-            placeholder=" "
-            required
-          />
-          <button class="btn-field" type="button">
-            <p class="icon-password-show"></p>
-          </button>
-        </div>
-        <button class="btn-primary w-full h-15">Next</button>
-      </form>
-      <!-- Step 3 -->
-      <form
-        action="#"
-        method="post"
-        class="hidden max-w-[445px] w-full pt-20 border-t-2 border-solid border-gray-100"
-      >
-        <div class="mb-20 relative flex items-center">
-          <div class="relative mr-10">
-            <input
-              type="file"
-              name="file"
-              id="file"
-              class="invisible opacity-0 absolute"
-              required
-            />
-            <label for="file" class="upload-photo active">
-              <img
-                src="../assets/img/user-photo.jpg"
-                class="w-full h-full object-cover"
-                alt="user photo"
-              />
-              <p class="icon-camera upload-photo-icon"></p>
-            </label>
-            <button class="upload-photo-btn" type="button">
-              <p class="icon-close text-xs leading-0"></p>
-            </button>
-          </div>
-          <div class="flex flex-col justify-center">
-            <p class="text-3 max-w-[220px] mb-5">
-              Just a little bit left. Add a photo, and complete your
-              registration
-            </p>
-            <p class="text-4 text-gray-400">
-              No more than 5 Mb.
-              <br />
-              (jpg, png, jpeg)
-            </p>
-          </div>
-        </div>
-        <button class="btn-primary w-full h-15">
-          Complete the registration
-        </button>
-      </form>
-      <!-- Complete -->
-      <div
-        class="hidden max-w-[445px] w-full pt-20 border-t-2 border-solid border-gray-100"
-      >
-        <p class="text-1 max-w-[340px] mb-8">
-          A confirmation letter has been sent to your email.
-        </p>
-        <p class="text-2 text-gray-400 mb-20">
-          Follow the link in the email to activate your profile.
-        </p>
-        <button class="btn-primary w-full h-15">Sign up again</button>
-      </div>
+      <register-form-data v-if="registrationStep === 1" />
+      <register-form-main-info v-if="registrationStep === 2" />
+      <register-form-photo v-if="registrationStep === 3" />
+      <register-form-finish v-if="registrationStep === 4" />
     </main>
   </div>
 </template>
 
-<script>
-export default {
-  name: "ViewRegister",
-};
+<script setup>
+import RegisterFormData from "../components/RegisterFormData.vue";
+import RegisterFormMainInfo from "../components/RegisterFormMainInfo.vue";
+import RegisterFormPhoto from "../components/RegisterFormPhoto.vue";
+import RegisterFormFinish from "../components/RegisterFormFinish.vue";
+
+import { useStore } from "vuex";
+import { computed, reactive } from "vue";
+import VStepper from "../components/VStepper.vue";
+import TheHeader from "../components/TheHeader.vue";
+import TheAside from "../components/TheAside.vue";
+import LoginFormHeader from "../components/AuthFormHeader.vue";
+
+const store = useStore();
+
+const registrationStep = computed(() => store.state.userAuth.registrationStep);
+
+const steps = reactive([
+  {
+    number: 1,
+    label: "Data",
+    asideLabel: "Справочная информация на шаге 1",
+    description: "Здесь может быть описание",
+  },
+  {
+    number: 2,
+    label: "Main information",
+    asideLabel: "Справочная информация на шаге 2",
+    description: "Здесь может быть описание",
+  },
+  {
+    number: 3,
+    label: "Complete registration",
+    asideLabel: "Справочная информация на шаге 3",
+    description: "Здесь может быть описание",
+  },
+]);
+
+const link = reactive({
+  label: "login",
+  url: "/login",
+});
 </script>
 
 <style scoped></style>

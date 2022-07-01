@@ -1,19 +1,9 @@
 <template>
-	<the-header/>
-	<router-view/>
+  <router-view />
 </template>
 
 <script>
-import TheHeader from "../components/TheHeader.vue";
-export default {
-	name: "EmptyLayout",
-	components: {
-		TheHeader
-	}
-
-}
+export default {};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

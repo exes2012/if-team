@@ -1,0 +1,124 @@
+.dp__input{
+  border:1px solid #F3F5F9;
+  line-height: 1.4rem;
+  padding: 14px 20px;
+  background: #F3F5F9;
+  border-radius: 6px;
+  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
+  &:hover{
+    border:1px solid #2956EF;
+  }
+}
+
+.dp__input_wrap{
+  .dp__input_icon{
+    left:unset;
+    right: 0;
+    fill: #77809C;
+  }
+  .dp__clear_icon{
+    right:unset;
+    left: 0;
+  }
+}
+
+.dp__calendar{
+  font-family: 'Rubik', sans-serif;
+}
+
+.dp__menu{
+  border-radius: 6px;
+  padding: 30px 30px 15px 30px;
+}
+
+.dp__calendar_header_item{
+  font-size: 14px;
+  color:#77809C;
+  font-weight: 400;
+  margin: 0 5px;
+  width: 31px;
+  height: 31px;
+}
+
+.dp__month_year_select{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #303139;
+}
+
+.dp__cell_inner{
+  font-size: 14px;
+  width: 31px;
+  height: 31px;
+  margin: 0 5px;
+}
+
+.dp__active_date{
+  background: #2956EF;
+}
+
+.dp__calendar_header_separator{
+  opacity: 0;
+}
+
+.dp__arrow_bottom{
+  visibility: hidden;
+}
+
+.dp__month_year_row{
+  height:31px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.dp__inner_nav svg{
+  width: 15px;
+  height: 15px;
+}
+
+.dp__overlay_row{
+  margin: 5px 0;
+}
+
+.dp__overlay_col{
+  padding: 0 8px;
+}
+
+.dp__overlay_cell{
+  font-family: 'Rubik', sans-serif;
+  border: 1px solid #D7DAE3;
+  font-size: 14px;
+}
+
+.dp__overlay_cell_active{
+  background: #2956EF;
+  font-size: 14px;
+}
+
+.dp__instance_calendar{
+  border-bottom: 1px solid #D7DAE3;
+}
+
+.dp__selection_preview{
+
+}
+
+.dp__action_row{
+  padding: 15px 10px 10px 10px;
+}
+
+.dp__action_buttons{
+
+}
+
+.dp__today{
+  color:#2956EF;
+  border:none;
+}
+
+.dp__today.dp__active_date{
+  color:white;
+}
+

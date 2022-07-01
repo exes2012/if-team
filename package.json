@@ -5,9 +5,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server.js"
   },
   "dependencies": {
+    "@vuelidate/core": "^2.0.0-alpha.42",
+    "@vuelidate/validators": "^2.0.0-alpha.30",
+    "@vuepic/vue-datepicker": "^3.2.2",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
     "primeicons": "^5.0.0",
     "primevue": "^3.15.0",
     "vue": "^3.2.25",
@@ -17,6 +26,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
+    "nodemon": "^2.0.18",
     "postcss": "^8.4.14",
     "sass": "^1.52.3",
     "tailwindcss": "^3.1.3",

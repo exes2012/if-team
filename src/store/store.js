@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 import tableColumns from "./modules/tablesColumns";
 import projects from "./modules/projects";
+import userAuth from "./modules/userAuth";
 import defaultBoard from "../default-board";
 import { saveStatePlugin, uuid } from "../utils";
 
@@ -9,6 +10,7 @@ export default createStore({
   modules: {
     tableColumns,
     projects,
+    userAuth,
   },
   plugins: [saveStatePlugin],
   state() {

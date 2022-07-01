@@ -7,25 +7,66 @@ import ViewTasks from "../views/ViewTasks.vue";
 import ViewPayments from "../views/ViewPayments.vue";
 import ViewPeople from "../views/ViewPeople.vue";
 import TaskItem from "../components/TaskItem.vue";
+import ViewTasksC from "../views/ViewTasksC.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", name: "projects",meta:{ layout:'main'}, component: ViewProjects },
-    { path: "/tasks", name: "tasks",meta:{ layout:'main'}, component: ViewTasks,
+    {
+      path: "/",
+      name: "projects",
+      meta: { layout: "main" },
+      component: ViewProjects,
+    },
+    {
+      path: "/tasks",
+      name: "tasks",
+      meta: { layout: "main" },
+      component: ViewTasks,
       children: [
         {
-          path: 'task/:id',
-          name:'task',
+          path: "task/:id",
+          name: "task",
           component: TaskItem,
-        }
-      ]
+        },
+      ],
     },
-    { path: "/payments", name: "payments",meta:{ layout:'main'}, component: ViewPayments },
-    { path: "/people", name: "people",meta:{ layout:'main'}, component: ViewPeople },
-    { path: "/login", name: "login",meta:{ layout:'empty'}, component: ViewLogin },
-    { path: "/register", name: "register",meta:{ layout:'empty'}, component: ViewRegister },
-    { path: "/reset", name: "reset",meta:{ layout:'empty'}, component: ViewReset },
+    {
+      path: "/payments",
+      name: "payments",
+      meta: { layout: "main" },
+      component: ViewPayments,
+    },
+    {
+      path: "/tasksc",
+      name: "tasksc",
+      meta: { layout: "main" },
+      component: ViewTasksC,
+    },
+    {
+      path: "/people",
+      name: "people",
+      meta: { layout: "main" },
+      component: ViewPeople,
+    },
+    {
+      path: "/login",
+      name: "login",
+      meta: { layout: "empty" },
+      component: ViewLogin,
+    },
+    {
+      path: "/register",
+      name: "register",
+      meta: { layout: "empty" },
+      component: ViewRegister,
+    },
+    {
+      path: "/reset",
+      name: "reset",
+      meta: { layout: "empty" },
+      component: ViewReset,
+    },
   ],
 });
 

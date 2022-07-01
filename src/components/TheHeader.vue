@@ -1,8 +1,8 @@
 <template>
-  <div class="flex h-20 w-full bg-white fixed">
+  <div class="flex h-20 w-full bg-white fixed border-b-2 border-b-gray-100">
     <v-container class="items-center">
       <the-header-logo class="mr-14" />
-	    <slot></slot>
+      <slot></slot>
     </v-container>
   </div>
 </template>
@@ -18,8 +18,7 @@ export default {
     TheHeaderLogo,
   },
   data() {
-    return {
-    };
+    return {};
   },
 };
 </script>

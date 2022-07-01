@@ -1,17 +1,5 @@
 <template>
   <div class="container flex lg:flex-col-reverse">
-    <aside
-      class="max-w-[392px] w-full pt-28 pr-5 pb-10 border-r-2 border-solid border-gray-100 lg:max-w-full lg:border-r-0 lg:border-t-2 lg:py-20 lg:px-0"
-    >
-      <p class="text-2 max-w-[230px] mb-10">
-        Здесь может быть какая-то справочная инфа
-      </p>
-
-      <div class="flex items-center">
-        <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" />
-        <label for="checkbox">some text</label>
-      </div>
-    </aside>
     <main class="p-28 w-full lg:py-20 lg:px-0">
       <!-- Step 1 -->
       <div class="max-w-[445px] lg:mx-auto">
@@ -72,7 +60,7 @@
             />
             <button class="btn-field" type="button">
               <svg width="20" height="16">
-<!--                <use xlink:href="../assets/img/sprite.svg#password-show"></use>-->
+                <!--                <use xlink:href="../assets/img/sprite.svg#password-show"></use>-->
               </svg>
             </button>
           </div>
@@ -91,7 +79,7 @@
             />
             <button class="btn-field" type="button">
               <svg width="20" height="16">
-<!--                <use xlink:href="../assets/img/sprite.svg#password-show"></use>-->
+                <!--                <use xlink:href="../assets/img/sprite.svg#password-show"></use>-->
               </svg>
             </button>
           </div>

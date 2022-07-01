@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button v-bind="$attrs">
     <slot></slot>
   </button>
 </template>
@@ -7,12 +7,13 @@
 <script>
 export default {
   name: "VButton",
+  inheritAttrs: false,
 };
 </script>
 
-<style scoped lang="css">
+<style scoped lang="scss">
 button {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center cursor-pointer;
 }
 
 .btn-primary {
@@ -46,7 +47,9 @@ button {
 	transition
 	disabled:border-gray-200
 	disabled:text-gray-400
-	disabled:hover:bg-transparent;
+	disabled:hover:bg-transparent
+  fill-blue-400
+	hover:fill-white;
 }
 
 .btn-secondary > p {
@@ -58,13 +61,13 @@ button {
 	mr-1.5;
 }
 
+.btn-secondary > svg {
+  @apply fill-red-500;
+}
+
 .btn-secondary:hover > p {
   @apply text-white
 	transition;
-}
-
-.btn-secondary:hover svg {
-  @apply fill-white;
 }
 
 .btn-secondary-2 {
