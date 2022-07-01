@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-gray-100 w-full min-h-screen">
+  <div class="bg-gray-300 w-full min-h-screen">
     <v-container class="flex-col">
       <!-- Add Iteration -->
       <v-card class="w-fit mt-32 p-8 relative">
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -75,7 +75,6 @@
               <input
                 type="text"
                 name="amount"
-                id="amount"
                 class="field text-xl pr-20"
                 placeholder=" "
                 required
@@ -168,9 +167,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -182,9 +181,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -198,9 +197,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -212,9 +211,9 @@
                 <v-button class="w-[25px] h-[25px] bg-gray-100 rounded-full">
                   <v-icon
                     name="close"
-                    width="9"
-                    height="9"
-                    viewBox="0 0 12 12"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -242,9 +241,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -269,9 +268,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -520,9 +519,9 @@
                 <v-button type="button"
                   ><v-icon
                     name="close"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 12 12"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -543,9 +542,9 @@
                 <v-button type="button"
                   ><v-icon
                     name="close"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 12 12"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 20 20"
                     class="hover:fill-blue-400"
                   ></v-icon>
                 </v-button>
@@ -596,9 +595,9 @@
                     <v-button class="btn-more" type="button">
                       <v-icon
                         name="more"
-                        viewBox="0 0 12 2"
-                        width="12"
-                        height="2"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        height="20"
                       ></v-icon>
                     </v-button>
                   </td>
@@ -618,9 +617,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -665,7 +664,6 @@
             <input
               type="text"
               name="amount"
-              id="amount"
               class="field pr-20"
               placeholder=" "
               required
@@ -715,7 +713,6 @@
             <input
               type="text"
               name="amount"
-              id="amount"
               class="field pr-20"
               placeholder=" "
               required
@@ -771,7 +768,6 @@
             <input
               type="text"
               name="amount"
-              id="amount"
               class="field pr-20"
               placeholder=" "
               required
@@ -821,7 +817,6 @@
             <input
               type="text"
               name="amount"
-              id="amount"
               class="field pr-20"
               placeholder=" "
               required
@@ -870,9 +865,9 @@
           <v-button type="button" class="w-[25px] h-[25px] bg-gray-100 rounded"
             ><v-icon
               name="close"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
+              width="19"
+              height="19"
+              viewBox="0 0 20 20"
               class="hover:fill-blue-400"
             ></v-icon>
           </v-button>
@@ -891,9 +886,9 @@
         <v-button class="absolute top-5 right-5">
           <v-icon
             name="close"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             class="hover:fill-blue-400"
           ></v-icon>
         </v-button>
@@ -1029,17 +1024,1584 @@
 
         <a href="#" class="link-3 text-gray-400 border-gray-400">Load more</a>
       </v-card>
+
+      <!-- Client -->
+      <v-card class="w-fit mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div
+          class="grid grid-cols-[320px_180px] gap-x-7 mb-5 pb-5 border-b border-solid border-gray-200"
+        >
+          <div>
+            <p class="text-4 text-gray-400 mb-1 ml-[34px]">Client</p>
+            <div class="flex items-center">
+              <v-button
+                class="flex justify-center items-center p-0.5 bg-gray-100 rounded-md mr-2.5"
+              >
+                <v-icon
+                  name="change"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  class="hover:fill-blue-400"
+                ></v-icon>
+              </v-button>
+              <h2>Smith Andrew</h2>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-4 text-gray-400 mb-1">Project</p>
+            <p class="text-2">Webnauts</p>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-[320px_180px] gap-x-7 mb-5 pb-5 border-b border-solid border-gray-200"
+        >
+          <div>
+            <p class="text-4 text-gray-400 mb-2.5">Contacts</p>
+            <p class="text-3 mb-2">work.srbd.ids@gmail.com</p>
+            <p class="text-3">+38 093 150 8776</p>
+          </div>
+
+          <div>
+            <p class="text-4 text-gray-400 mb-2.5">Country</p>
+            <div class="flex items-center">
+              <img
+                src="../assets/img/icons/flag-usa.svg"
+                class="w-5 h-[13px] inline-block mr-2.5"
+                alt="flag usa"
+              />
+              <p class="text-3">USA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 pb-5 border-b border-solid border-gray-200">
+          <label for="comment" class="text-4 text-gray-400 mb-2.5"
+            >Comment</label
+          >
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Comment"
+            class="field text-sm resize-none px-5 py-4 h-20"
+          ></textarea>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <a href="#" class="link-3 text-gray-400">Other clients’ projects</a>
+          <v-button class="btn-edit">
+            <v-icon
+              name="edit"
+              width="15"
+              height="15"
+              viewBox="0 0 20 20"
+            ></v-icon>
+            <p class="link-3 text-gray-400">Edit</p>
+          </v-button>
+        </div>
+      </v-card>
+
+      <!-- Select a client -->
+      <v-card class="max-w-[588px] w-full mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <h2 class="mb-2.5">Select a client</h2>
+        <div class="flex items-center mb-7">
+          <p class="text-4 text-gray-400 mr-2.5">Project</p>
+          <p class="text-3">Webnauts</p>
+        </div>
+
+        <div class="relative mb-7">
+          <v-search class="field field-search h-10" />
+          <v-icon
+            name="search"
+            viewBox="0 0 20 20"
+            class="absolute top-1/2 left-5 -translate-y-1/2"
+          ></v-icon>
+        </div>
+
+        <ul
+          class="max-h-[350px] overflow-y-auto mb-10 border-y border-solid border-gray-200 scroll-thin"
+        >
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Smith Andrew</p>
+              </div>
+              <p class="text-4 text-right">work.srbd.ids@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Robert John Downey Junior Holmsovich</p>
+              </div>
+              <p class="text-4 text-right">
+                robert_john_downey-junior@yahoo.com
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Megan Fox</p>
+              </div>
+              <p class="text-4 text-right">foxxxy-666@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Keanu Reeves</p>
+              </div>
+              <p class="text-4 text-right">keanuReevesNeo@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Leonardo Dicaprio Titanic</p>
+              </div>
+              <p class="text-4 text-right">
+                leonardo_dicaprio_from_titanic@gmail.com
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Jet Li</p>
+              </div>
+              <p class="text-4 text-right">li@i.ua</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Jason Statham</p>
+              </div>
+              <p class="text-4 text-right">jason_statham@yahoo.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Madison Ivy</p>
+              </div>
+              <p class="text-4 text-right">hot-ivy@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Smith Andrew</p>
+              </div>
+              <p class="text-4 text-right">work.srbd.ids@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Robert John Downey Junior Holmsovich</p>
+              </div>
+              <p class="text-4 text-right">
+                robert_john_downey-junior@yahoo.com
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Megan Fox</p>
+              </div>
+              <p class="text-4 text-right">foxxxy-666@gmail.com</p>
+            </div>
+          </li>
+
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Keanu Reeves</p>
+              </div>
+              <p class="text-4 text-right">keanuReevesNeo@gmail.com</p>
+            </div>
+          </li>
+        </ul>
+
+        <v-button class="btn-secondary-2 h-10 mb-10">+ Add client</v-button>
+
+        <div class="flex justify-between">
+          <div>
+            <p class="text-4 text-gray-400 mb-2.5">Selected client</p>
+            <h3>Smith Andrew</h3>
+          </div>
+
+          <v-button class="btn-primary w-52 h-13">Apply</v-button>
+        </div>
+      </v-card>
+
+      <!-- Add client -->
+      <v-card class="w-fit mt-10 py-10 px-8 relative bg-gray-100">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <button
+          class="flex items-center gap-x-4 [&:hover>svg]:fill-blue-400 [&:hover>h2]:text-blue-400 mb-12"
+        >
+          <v-icon
+            name="arrowLeft"
+            viewBox="0 0 20 20"
+            class="transition"
+          ></v-icon>
+          <h2 class="transition">Add client</h2>
+        </button>
+
+        <form>
+          <div class="flex gap-x-7 mb-7">
+            <div>
+              <div class="grid grid-cols-[280px_280px] gap-x-5 gap-y-7 mb-7">
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label for="name" class="label">Full name</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="field bg-white"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label for="email" class="label">E-mail</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="field bg-white"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <label for="phone" class="label">Phone</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    class="field bg-white"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div class="relative">
+                  <div class="flex justify-between mb-2">
+                    <label for="country" class="label">Country</label>
+                    <span class="message-invalid invisible"
+                      >Неверный формат</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    name="country"
+                    class="field bg-white"
+                    placeholder="Country"
+                  />
+                  <v-button
+                    class="btn-field [&:hover+ul]:visible"
+                    type="button"
+                  >
+                    <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+
+                  <ul class="dropdown invisible">
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-usa.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">USA</p>
+                    </li>
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-ua.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">Ukraine</p>
+                    </li>
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-eu.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">Europe</p>
+                    </li>
+                    <li class="flex items-center">
+                      <img
+                        src="../assets/img/icons/flag-gb.svg"
+                        class="w-5 h-[13px] inline-block mr-2.5"
+                        alt="flag usa"
+                      />
+                      <p class="text-2 leading-none">Great Britian</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex flex-col">
+                <p class="label mb-2.5">Comment</p>
+                <textarea
+                  placeholder="Comment"
+                  class="field bg-white text-sm resize-none px-5 py-4 h-[250px]"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="p-7 pb-10 bg-white rounded-md">
+              <div class="flex justify-between items-center mb-10">
+                <p class="text-1">Clients’ projects</p>
+                <v-button class="btn-plus"></v-button>
+              </div>
+
+              <div
+                class="grid grid-cols-[310px_220px_25px] items-center pb-5 border-b border-solid border-gray-200"
+              >
+                <v-checkbox
+                  label="Task Name"
+                  class="text-4 text-gray-400"
+                ></v-checkbox>
+                <p class="text-4 text-gray-400">Responsible</p>
+              </div>
+
+              <ul class="max-h-[306px] overflow-y-auto scroll-thin">
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+                <li
+                  class="grid grid-cols-[300px_220px_25px] items-center py-2.5 border-b border-solid border-gray-200 pr-2.5"
+                >
+                  <v-checkbox
+                    label="Webnauts"
+                    class="text-4 text-gray-400"
+                  ></v-checkbox>
+
+                  <div class="flex items-center">
+                    <div
+                      class="w-[30px] h-[30px] rounded-full overflow-hidden mr-2.5"
+                    >
+                      <img
+                        src="../assets/img/file-upload-demo.jpg"
+                        alt="photo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p class="text-3">Олег Фролов</p>
+                  </div>
+
+                  <v-button class="p-[3px] rounded bg-gray-100">
+                    <v-icon name="more" viewBox="0 0 20 20 "></v-icon>
+                  </v-button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <v-button class="btn-primary w-52 h-13">Add client</v-button>
+        </form>
+      </v-card>
+
+      <!-- Task edit -->
+      <v-card class="max-w-[824px] w-full mt-10 p-8 relative">
+        <v-button
+          class="absolute top-5 right-5 p-1 [&:hover>svg]:fill-blue-400"
+        >
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          ></v-icon>
+        </v-button>
+
+        <div class="flex items-center gap-x-2.5 mb-5">
+          <a href="#" class="link-3 text-blue-400 border-blue-400">Webnauts</a>
+          <span class="text-3 text-blue-400">•</span>
+          <a href="#" class="link-3 text-blue-400 border-blue-400"
+            >Итерация 1</a
+          >
+        </div>
+        <div class="flex justify-between gap-x-10 mb-5">
+          <h2>Дополнить информацию о себе для резюме и сайта</h2>
+          <div class="flex gap-x-2">
+            <v-button
+              class="p-[3px] h-[26px] bg-gray-100 rounded [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="notifications" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+            <v-button
+              class="p-[3px] h-[26px] bg-gray-100 rounded [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="more" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+          </div>
+        </div>
+        <div class="flex justify-between gap-x-10 mb-7">
+          <v-button class="status status-green">In Progress</v-button>
+          <p class="text-3 text-gray-400">Created 12 Apr 2022 at 12:43 pm</p>
+        </div>
+
+        <div class="bg-gray-100 py-7 px-8 mb-7 -mx-8 flex gap-x-6">
+          <div class="max-w-[107px] w-full">
+            <p class="text-3 mb-5 text-gray-400">Responsible</p>
+            <div class="relative">
+              <div class="w-[40px] h-[40px] rounded-full overflow-hidden">
+                <img
+                  src="../assets/img/photo-demo.jpg"
+                  alt="photo"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <v-button
+                class="w-[30px] h-[30px] rounded-full bg-white p-1 absolute top-1/2 left-[25px] z-10 -translate-y-1/2 [&:hover>svg]:fill-blue-400"
+              >
+                <v-icon
+                  name="close"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                ></v-icon>
+              </v-button>
+            </div>
+          </div>
+
+          <div class="max-w-[107px] w-full">
+            <p class="text-3 mb-5 text-gray-400">Project Manager</p>
+            <div class="relative">
+              <div class="w-[40px] h-[40px] rounded-full overflow-hidden">
+                <img
+                  src="../assets/img/photo-demo.jpg"
+                  alt="photo"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <v-button
+                class="w-[30px] h-[30px] rounded-full bg-white p-1 absolute top-1/2 left-[25px] z-10 -translate-y-1/2 [&:hover>svg]:fill-blue-400"
+              >
+                <v-icon
+                  name="close"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                ></v-icon>
+              </v-button>
+            </div>
+          </div>
+
+          <div class="w-px bg-gray-200"></div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <label class="label text-gray-400">Deadline</label>
+            </div>
+            <input
+              type="text"
+              name="date"
+              class="field bg-white py-3.5 px-5"
+              placeholder=" "
+            />
+          </div>
+
+          <div class="flex">
+            <div>
+              <div class="flex justify-between mb-2">
+                <label class="label text-gray-400">Time</label>
+              </div>
+              <input
+                type="text"
+                name="Time"
+                class="field bg-white py-3.5 px-5"
+                placeholder=" "
+              />
+            </div>
+            <p class="text-3 text-gray-400 pt-12 ml-2 inline-block">h</p>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-x-1 mb-6">
+              <p class="text-3 text-gray-400 whitespace-nowrap">Rate type</p>
+              <v-button type="button">
+                <v-icon
+                  name="error"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  class="hover:fill-blue-400"
+                ></v-icon>
+              </v-button>
+            </div>
+            <a href="#" class="link-3 text-blue-400 border-blue-400">Design</a>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-x-1 mb-6">
+              <p class="text-3 text-gray-400 whitespace-nowrap">Rate</p>
+              <v-button type="button">
+                <v-icon
+                  name="error"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  class="hover:fill-blue-400"
+                ></v-icon>
+              </v-button>
+            </div>
+            <a href="#" class="link-3">
+              <span>8$</span>
+              <span class="text-xs ml-1 whitespace-nowrap">/ hour</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mb-7 pb-7 border-b border-solid border-gray-200">
+          <p class="text-2 mb-5">Description</p>
+          <div class="rounded bg-gray-100">
+            <div
+              class="px-5 py-2.5 border-b border-solid border-gray-200 flex items-center gap-x-3"
+            >
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="bold" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="italic" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="checkbox" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="strikethrough" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="quotes" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="color" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="markeredList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="orderedList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="link" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+            </div>
+            <div class="p-5">
+              <textarea
+                placeholder="Your comment"
+                class="w-full h-24 bg-gray-100 mb-4 text-sm resize-none focus:outline-none [&::-webkit-scrollbar-thumb]:border-gray-100"
+              ></textarea>
+              <div class="flex justify-between gap-x-10">
+                <v-button class="btn-add-1">Сохранить</v-button>
+                <div class="flex items-center gap-x-3">
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="emoji" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="attach" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-2 mb-5">Actions</p>
+          <textarea
+            placeholder="Your comment"
+            class="w-full field h-[50px] py-3.5 px-5 bg-gray-100 overflow-hidden resize-none [&::-webkit-scrollbar-thumb]:border-gray-100"
+          ></textarea>
+        </div>
+
+        <ul class="border-t border-solid border-gray-100">
+          <li
+            class="py-1 border-b border-solid border-gray-100 flex items-center"
+          >
+            <div class="w-[40px] h-[40px] rounded-full overflow-hidden mr-3">
+              <img
+                src="../assets/img/photo-demo-2.jpg"
+                alt="photo"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-3 mb-0.5">
+                Березовский Дмитрий
+                <span class="text-gray-500 ml-2.5">joined the task</span>
+              </p>
+              <p class="text-4 text-gray-400">9 Feb 2021 at 1:18 pm</p>
+            </div>
+          </li>
+          <li
+            class="py-1 border-b border-solid border-gray-100 flex items-center"
+          >
+            <div class="w-[40px] h-[40px] rounded-full overflow-hidden mr-3">
+              <img
+                src="../assets/img/photo-demo-2.jpg"
+                alt="photo"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-3 mb-0.5">
+                Березовский Дмитрий
+                <span class="text-gray-500 ml-2.5">joined the task</span>
+              </p>
+              <p class="text-4 text-gray-400">9 Feb 2021 at 1:18 pm</p>
+            </div>
+          </li>
+        </ul>
+      </v-card>
+
+      <!-- New task | PM -->
+      <v-card class="max-w-[824px] w-full mt-10 p-8 relative">
+        <v-button
+          class="absolute top-5 right-5 p-1 [&:hover>svg]:fill-blue-400"
+        >
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-7 pb-7 border-b border-solid border-gray-200">
+          <h2>New task</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-5 gap-y-7 mb-8">
+          <div>
+            <div class="flex justify-between mb-2">
+              <label class="label">Task name</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label class="label">Status</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">В работе</li>
+              <li class="text-2 leading-none">Отменено</li>
+              <li class="text-2 leading-none">Завершено</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label class="label">Project</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">Webnauts</li>
+              <li class="text-2 leading-none">Google</li>
+              <li class="text-2 leading-none">Facebook</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label for="country" class="label">Iteration</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input
+              type="text"
+              name="country"
+              class="field"
+              placeholder=" "
+            />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">Итерация 1</li>
+              <li class="text-2 leading-none">Итерация 2</li>
+              <li class="text-2 leading-none">Итерация 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 py-7 px-8 mb-7 -mx-8 flex gap-x-10">
+          <div class="">
+            <p class="text-3 mb-5 text-gray-400">Responsible</p>
+            <v-button
+              class="p-[5px] rounded-full bg-white [&:hover>svg]:fill-blue-400 mb-10"
+            >
+              <v-icon name="plus" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+            <p class="text-3 mb-5 text-gray-400 whitespace-nowrap">
+              Project Manager
+            </p>
+            <v-button
+              class="p-[5px] rounded-full bg-white [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="plus" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+          </div>
+
+          <div class="w-px bg-gray-200"></div>
+
+          <div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <label class="label text-gray-400">Deadline</label>
+              </div>
+              <input
+                type="text"
+                name="date"
+                class="field bg-white py-3.5 px-5"
+                placeholder="No time limit"
+              />
+            </div>
+
+            <div class="flex">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <label class="label text-gray-400">Time</label>
+                </div>
+                <input
+                  type="text"
+                  name="Time"
+                  class="field bg-white text-xl py-3.5 px-5 max-w-[77px]"
+                  placeholder=" "
+                />
+              </div>
+              <p class="text-3 text-gray-400 pt-12 ml-2 inline-block">h</p>
+            </div>
+          </div>
+
+          <div class="w-px bg-gray-200"></div>
+
+          <div>
+            <div class="relative mb-8">
+              <label class="label text-gray-400 flex items-center mb-2">
+                Rate type
+                <v-button type="button">
+                  <v-icon
+                    name="error"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    class="hover:fill-blue-400 ml-1"
+                  ></v-icon>
+                </v-button>
+              </label>
+              <input type="text" class="field bg-white" placeholder=" " />
+              <v-button class="btn-field [&:hover+ul]:visible" type="button">
+                <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+
+              <ul class="dropdown invisible">
+                <li class="text-2 leading-none">Design</li>
+                <li class="text-2 leading-none">Back-End</li>
+                <li class="text-2 leading-none">Front-End</li>
+                <li class="text-2 leading-none">Marketing</li>
+              </ul>
+            </div>
+
+            <div>
+              <label class="label text-gray-400 flex items-center mb-2">
+                Rate
+                <v-button type="button">
+                  <v-icon
+                    name="error"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    class="hover:fill-blue-400 ml-1"
+                  ></v-icon>
+                </v-button>
+              </label>
+              <div class="flex items-center">
+                <div class="max-w-[137px] relative mr-1">
+                  <input
+                    type="text"
+                    name="add-amount"
+                    class="field bg-white text-xl pr-20"
+                    placeholder=" "
+                    required
+                  />
+                  <div class="absolute bottom-0 right-0 [&:hover>ul]:visible">
+                    <v-button class="btn-primary w-16 h-13" type="button"
+                      >USD</v-button
+                    >
+                    <ul class="invisible dropdown w-[166px] absolute">
+                      <li class="text-2">
+                        <img
+                          src="../assets/img/icons/flag-usa.svg"
+                          class="w-5 h-[13px] inline-block mr-2.5"
+                          alt="flag usa"
+                        />
+                        USD ($)
+                      </li>
+                      <li class="text-2">
+                        <img
+                          src="../assets/img/icons/flag-ua.svg"
+                          class="w-5 h-[13px] inline-block mr-2.5"
+                          alt="flag ua"
+                        />
+                        UAH (₴)
+                      </li>
+                      <li class="text-2">
+                        <img
+                          src="../assets/img/icons/flag-eu.svg"
+                          class="w-5 h-[13px] inline-block mr-2.5"
+                          alt="flag eu"
+                        />
+                        EUR (€)
+                      </li>
+                      <li class="text-2">
+                        <img
+                          src="../assets/img/icons/flag-gb.svg"
+                          class="w-5 h-[13px] inline-block mr-2.5"
+                          alt="flag gb"
+                        />
+                        GBP (£)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-4 text-gray-400 whitespace-nowrap">/ hour</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-7">
+          <p class="text-2 mb-5">Description</p>
+          <div class="rounded bg-gray-100">
+            <div
+              class="px-5 py-2.5 border-b border-solid border-gray-200 flex items-center gap-x-3"
+            >
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="bold" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="italic" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="checkbox" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="strikethrough" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="quotes" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="color" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="markeredList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="orderedList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="link" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+            </div>
+            <div class="p-5">
+              <textarea
+                placeholder="Your comment"
+                class="w-full h-24 bg-gray-100 mb-4 text-sm resize-none focus:outline-none [&::-webkit-scrollbar-thumb]:border-gray-100"
+              ></textarea>
+              <div class="flex justify-between gap-x-10">
+                <v-button class="btn-add-1">Сохранить</v-button>
+                <div class="flex items-center gap-x-3">
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="emoji" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="attach" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                </div>
+              </div>
+            </div>
+            <div class="px-5 py-2.5 border-t border-solid border-gray-200">
+              <div class="flex items-center gap-x-5">
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/file-upload-demo.jpg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">Unnamed.png (2.33 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/icons/file.svg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">File.pdf (2 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+              </div>
+              <input
+                type="file"
+                id="drop-file"
+                class="invisible opacity-0 absolute"
+              />
+              <label for="drop-file" class="upload-file bg-white"
+                >Drop here</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <v-button class="btn-primary w-48 h-13">Create a task</v-button>
+      </v-card>
+
+      <!-- New task | User -->
+      <v-card class="max-w-[824px] w-full mt-10 p-8 relative">
+        <v-button
+          class="absolute top-5 right-5 p-1 [&:hover>svg]:fill-blue-400"
+        >
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-7 pb-7 border-b border-solid border-gray-200">
+          <h2>New task</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-5 gap-y-7 mb-8">
+          <div>
+            <div class="flex justify-between mb-2">
+              <label class="label">Task name</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label class="label">Status</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">В работе</li>
+              <li class="text-2 leading-none">Отменено</li>
+              <li class="text-2 leading-none">Завершено</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label class="label">Project</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input type="text" class="field" placeholder=" " />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">Webnauts</li>
+              <li class="text-2 leading-none">Google</li>
+              <li class="text-2 leading-none">Facebook</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="flex justify-between mb-2">
+              <label for="country" class="label">Iteration</label>
+              <span class="message-invalid invisible">Неверный формат</span>
+            </div>
+            <input
+              type="text"
+              name="country"
+              class="field"
+              placeholder=" "
+            />
+            <v-button class="btn-field [&:hover+ul]:visible" type="button">
+              <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+
+            <ul class="dropdown invisible">
+              <li class="text-2 leading-none">Итерация 1</li>
+              <li class="text-2 leading-none">Итерация 2</li>
+              <li class="text-2 leading-none">Итерация 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 py-7 px-8 mb-7 -mx-8 flex gap-x-12">
+          <div class="max-w-[107px] w-full">
+            <p class="text-3 mb-5 text-gray-400">Responsible</p>
+            <v-button
+              class="p-[5px] rounded-full bg-white [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="plus" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+          </div>
+
+          <div class="max-w-[107px] w-full">
+            <p class="text-3 mb-5 text-gray-400 whitespace-nowrap">
+              Project Manager
+            </p>
+            <v-button
+              class="p-[5px] rounded-full bg-white [&:hover>svg]:fill-blue-400"
+            >
+              <v-icon name="plus" viewBox="0 0 20 20"></v-icon>
+            </v-button>
+          </div>
+
+          <div class="w-px bg-gray-200"></div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <label class="label text-gray-400">Deadline</label>
+            </div>
+            <input
+              type="text"
+              name="date"
+              class="field bg-white py-3.5 px-5"
+              placeholder="No time limit"
+            />
+          </div>
+
+          <div class="flex">
+            <div>
+              <div class="flex justify-between mb-2">
+                <label class="label text-gray-400">Time</label>
+              </div>
+              <input
+                type="text"
+                name="Time"
+                class="field bg-white text-xl py-3.5 px-5 max-w-[77px]"
+                placeholder=" "
+              />
+            </div>
+            <p class="text-3 text-gray-400 pt-12 ml-2 inline-block">h</p>
+          </div>
+        </div>
+
+        <div class="mb-7">
+          <p class="text-2 mb-5">Description</p>
+          <div class="rounded bg-gray-100">
+            <div
+              class="px-5 py-2.5 border-b border-solid border-gray-200 flex items-center gap-x-3"
+            >
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="bold" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="italic" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="checkbox" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="strikethrough" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="quotes" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="color" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="markeredList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="orderedList" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+              <v-button class="[&:hover>svg]:fill-blue-400">
+                <v-icon name="link" viewBox="0 0 20 20"></v-icon>
+              </v-button>
+            </div>
+            <div class="p-5">
+              <textarea
+                placeholder="Your comment"
+                class="w-full h-24 bg-gray-100 mb-4 text-sm resize-none focus:outline-none [&::-webkit-scrollbar-thumb]:border-gray-100"
+              ></textarea>
+              <div class="flex justify-between gap-x-10">
+                <v-button class="btn-add-1">Сохранить</v-button>
+                <div class="flex items-center gap-x-3">
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="emoji" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                  <v-button class="[&:hover>svg]:fill-blue-400">
+                    <v-icon name="attach" viewBox="0 0 20 20"></v-icon>
+                  </v-button>
+                </div>
+              </div>
+            </div>
+            <div class="px-5 py-2.5 border-t border-solid border-gray-200">
+              <div class="flex items-center gap-x-5">
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/file-upload-demo.jpg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">Unnamed.png (2.33 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+                <div
+                  class="w-fit mb-2.5 flex items-center py-[5px] px-2.5 rounded-md bg-white"
+                >
+                  <div
+                    class="w-[26px] h-[26px] rounded-md overflow-hidden mr-2.5"
+                  >
+                    <img
+                      src="../assets/img/icons/file.svg"
+                      alt="file icon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p class="text-4 mr-2.5">File.pdf (2 Mb)</p>
+                  <v-button type="button"
+                    ><v-icon
+                      name="close"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 20 20"
+                      class="hover:fill-blue-400"
+                    ></v-icon>
+                  </v-button>
+                </div>
+              </div>
+              <input
+                type="file"
+                id="drop-file"
+                class="invisible opacity-0 absolute"
+              />
+              <label for="drop-file" class="upload-file bg-white"
+                >Drop here</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <v-button class="btn-primary w-48 h-13">Create a task</v-button>
+      </v-card>
     </v-container>
   </div>
 </template>
 
 <script>
 import VButton from "../components/VButton.vue";
+import VSearch from "../components/VSearch.vue";
 
 export default {
   name: "ViewPeople",
   components: {
     VButton,
+    VSearch,
   },
 };
 </script>

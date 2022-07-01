@@ -23,6 +23,27 @@
     text-base
     text-gray-900;
   }
+<<<<<<< HEAD
+=======
+
+  svg {
+    @apply fill-gray-500
+    transition;
+  }
+
+  textarea::-webkit-scrollbar {
+    @apply w-[13px];
+  }
+  textarea::-webkit-scrollbar-thumb {
+    @apply border-[5px]
+    border-solid
+    border-white
+    rounded-full
+    bg-gray-500
+    hover:bg-gray-600
+    transition;
+  }
+>>>>>>> b05c959725fbf356abe8a45dc8be363440a57374
 }
 
 @layer components {
@@ -210,19 +231,8 @@
     bottom-0
     right-0
     z-10
-    transition;
-  }
-
-  .btn-field > p {
-    @apply text-left
-    text-xl
-    text-gray-500
-    leading-0;
-  }
-
-  .btn-field:hover > p {
-    @apply text-blue-400
-    transition;
+    transition
+    [&:hover>svg]:fill-blue-400;
   }
 
   .field-search {
@@ -230,6 +240,11 @@
     placeholder:text-gray-500
     text-sm
     pl-12;
+  }
+
+  .field-search:hover + svg,
+  .field-search:focus + svg {
+    @apply fill-blue-400;
   }
 
   .upload-photo {
@@ -331,10 +346,14 @@
   }
 
   .status {
+<<<<<<< HEAD
     @apply h-6
     flex
   items-center
     rounded
+=======
+    @apply rounded
+>>>>>>> b05c959725fbf356abe8a45dc8be363440a57374
     font-sans
     font-medium
     text-xs
@@ -473,7 +492,7 @@
     @apply absolute
     top-full
     left-0
-    z-10
+    z-20
     w-full
     mt-[5px]
     py-[15px]
@@ -530,16 +549,11 @@
   }
 
   .btn-more {
-    @apply px-2
-    py-3
+    @apply p-[3px]
     bg-gray-100
     rounded
-    transition;
-  }
-
-  .btn-more:hover > svg {
-    @apply fill-blue-400
-    transition;
+    transition
+    [&:hover>svg]:fill-blue-400;
   }
 
   .btn-switch {
@@ -564,5 +578,32 @@
     @apply bg-blue-400
     ml-auto
     transition-all;
+  }
+
+  .btn-edit > svg {
+    @apply mr-[5px];
+  }
+
+  .btn-edit:hover > svg {
+    @apply fill-blue-700;
+  }
+
+  .btn-edit:hover > p {
+    @apply text-blue-700
+    border-solid
+    border-blue-700;
+  }
+
+  .scroll-thin::-webkit-scrollbar {
+    @apply w-[13px];
+  }
+  .scroll-thin::-webkit-scrollbar-thumb {
+    @apply border-[5px]
+    border-solid
+    border-white
+    rounded-full
+    bg-gray-500
+    hover:bg-gray-600
+    transition;
   }
 }
