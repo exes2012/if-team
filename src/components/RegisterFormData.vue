@@ -47,7 +47,6 @@ import { reactive } from "vue";
 import { usePasswordShow } from "../composables/passwordHide";
 import { useVuelidate } from "@vuelidate/core";
 import { useStore } from "vuex";
-import router from "../router";
 
 const state = reactive({
   email: "",
