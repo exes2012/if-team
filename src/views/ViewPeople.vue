@@ -2589,6 +2589,367 @@
 
         <v-button class="btn-primary w-48 h-13">Create a task</v-button>
       </v-card>
+
+      <!-- Select the person in charge -->
+      <v-card class="max-w-[588px] w-full mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-7 pb-7 border-b border-solid border-gray-200">
+          <h2 class="mb-8">Select a client</h2>
+          <div class="flex items-center justify-between">
+            <p class="text-3 text-gray-400">Responsible</p>
+            <p class="text-3">Юлия Замыцкая</p>
+          </div>
+        </div>
+
+        <div class="relative mb-7">
+          <v-search class="field field-search h-10" />
+          <v-icon
+            name="search"
+            viewBox="0 0 20 20"
+            class="absolute top-1/2 left-5 -translate-y-1/2"
+          ></v-icon>
+        </div>
+
+        <ul
+          class="max-h-[247px] overflow-y-auto mb-10 border-y border-solid border-gray-200 scroll-thin"
+        >
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+          <li
+            class="[&:not(:last-of-type)]:border-b border-solid border-gray-200"
+          >
+            <div
+              class="flex justify-between items-center py-2.5 pl-4 gap-x-5 pr-7 rounded-md cursor-pointer hover:bg-gray-100 [&:hover>div>svg]:opacity-100 transition"
+            >
+              <div class="flex items-center gap-x-2.5">
+                <v-icon
+                  name="check"
+                  viewBox="0 0 20 20"
+                  class="fill-blue-400 opacity-0"
+                ></v-icon>
+                <p class="text-3">Юлия Замыцкая</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <v-button class="btn-primary w-48 h-13">Add</v-button>
+      </v-card>
+
+      <!-- Change time -->
+      <v-card class="max-w-[588px] w-full mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-7 pb-6 border-b border-solid border-gray-200">
+          <p class="text-3 text-gray-400 mb-2.5">Task</p>
+          <h2 class="mb-5">Дополнить информацию о себе для резюме и сайта</h2>
+          <div class="w-full flex justify-between items-center gap-x-5">
+            <div class="flex justify-between items-center gap-x-2.5">
+              <p class="text-3">43%</p>
+              <div class="w-[168px] h-[7px] bg-blue-100 rounded-full">
+                <div class="w-[43%] h-full bg-blue-400 rounded-full"></div>
+              </div>
+            </div>
+            <p class="text-5 text-blue-400">
+              36:00
+              <span class="text-5 text-gray-400">/</span>
+              <span class="text-5 text-gray-400 ml-1">52:00</span>
+              <span class="text-3 text-gray-900 ml-1">h</span>
+            </p>
+          </div>
+        </div>
+
+        <ul class="max-h-[350px] overflow-y-auto scroll-thin pl-10 mb-10">
+          <li
+            class="border-b border-solid border-gray-200 flex justify-between items-center pt-4 pb-1"
+          >
+            <p class="text-3 text-gray-400">No comment</p>
+            <div class="gap-x-24 flex justify-between items-center">
+              <p class="text-3">17 мар</p>
+              <p class="text-3 text-right">5:00</p>
+            </div>
+          </li>
+          <li
+            class="border-b border-solid border-gray-200 flex justify-between items-center pt-4 pb-1"
+          >
+            <p class="text-3 text-gray-400">No comment</p>
+            <div class="gap-x-24 flex justify-between items-center">
+              <p class="text-3">17 мар</p>
+              <p class="text-3 text-right">5:00</p>
+            </div>
+          </li>
+          <li
+            class="border-b border-solid border-gray-200 flex justify-between items-center pt-4 pb-1"
+          >
+            <p class="text-3 text-gray-400">No comment</p>
+            <div class="gap-x-24 flex justify-between items-center">
+              <p class="text-3">17 мар</p>
+              <p class="text-3 text-right">5:00</p>
+            </div>
+          </li>
+        </ul>
+
+        <v-button class="btn-primary h-13 w-48">+ Add time</v-button>
+      </v-card>
+
+      <!-- Add time -->
+      <v-card class="max-w-[588px] w-full mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <h2 class="mb-10">Add time</h2>
+
+        <div class="flex justify-between gap-x-10 mb-7">
+          <div class="flex items-center">
+            <input
+              type="text"
+              class="field text-xl py-3.5 px-5 max-w-[68px]"
+              maxlength="3"
+              placeholder=" "
+            />
+            <p class="text-1 mx-4 inline-block">:</p>
+            <input
+              type="text"
+              class="field text-xl py-3.5 px-5 max-w-[68px]"
+              maxlength="2"
+              placeholder=" "
+            />
+            <p class="text-3 ml-2 inline-block pt-2.5">h</p>
+          </div>
+
+          <div class="pl-10 pr-15 border-l border-solid border-gray-200">
+            <p class="text-3 text-gray-400 mb-1.5">Date</p>
+            <p class="text-3">17 марта 2022</p>
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <label class="block text-3 text-gray-400 mb-2.5">Comment</label>
+          <textarea
+            placeholder="Enter a comment"
+            class="field resize-none px-5 py-4 h-[82px] [&::-webkit-scrollbar-thumb]:border-gray-100 placeholder:text-base"
+          ></textarea>
+        </div>
+
+        <v-button class="btn-primary h-13 w-48">Add</v-button>
+      </v-card>
+
+      <!-- Add link -->
+      <v-card class="max-w-[588px] w-full mt-10 p-8 relative">
+        <v-button class="absolute top-5 right-5 p-1">
+          <v-icon
+            name="close"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="hover:fill-blue-400"
+          ></v-icon>
+        </v-button>
+
+        <div class="mb-7 pb-7 border-b border-solid border-gray-200">
+          <h2>Add link</h2>
+        </div>
+
+        <div class="mb-7">
+          <div class="flex justify-between mb-2">
+            <label class="label text-gray-400">Link Text</label>
+            <span class="message-invalid invisible">Неверный формат</span>
+          </div>
+          <input type="text" class="field" placeholder=" " />
+        </div>
+
+        <div class="mb-10">
+          <div class="flex justify-between mb-2">
+            <label class="label text-gray-400">Link Address</label>
+            <span class="message-invalid invisible">Неверный формат</span>
+          </div>
+          <input type="text" class="field" placeholder=" " />
+        </div>
+
+        <v-button class="btn-primary h-13 w-48">Add</v-button>
+      </v-card>
     </v-container>
   </div>
 </template>

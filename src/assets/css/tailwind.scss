@@ -23,13 +23,6 @@
     text-base
     text-gray-900;
   }
-<<<<<<< HEAD
-=======
-
-  svg {
-    @apply fill-gray-500
-    transition;
-  }
 
   textarea::-webkit-scrollbar {
     @apply w-[13px];
@@ -43,7 +36,6 @@
     hover:bg-gray-600
     transition;
   }
->>>>>>> b05c959725fbf356abe8a45dc8be363440a57374
 }
 
 @layer components {
@@ -206,8 +198,8 @@
     [&:not(:focus):not(:placeholder-shown)]:invalid:border-red-800;
   }
 
-  .field-error input{
-    @apply border border-red-400
+  .field-error input {
+    @apply border border-red-400;
   }
 
   .message-invalid {
@@ -346,14 +338,7 @@
   }
 
   .status {
-<<<<<<< HEAD
-    @apply h-6
-    flex
-  items-center
-    rounded
-=======
     @apply rounded
->>>>>>> b05c959725fbf356abe8a45dc8be363440a57374
     font-sans
     font-medium
     text-xs
