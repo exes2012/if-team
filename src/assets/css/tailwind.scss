@@ -315,27 +315,6 @@
     @apply opacity-100;
   }
 
-  .upload-file {
-    @apply flex
-    justify-center
-    items-center
-    cursor-pointer
-    w-full
-    h-14
-    rounded-md
-    border
-    border-dashed
-    border-gray-400
-    font-sans
-    font-normal
-    text-sm
-    text-gray-400
-    hover:border-blue-400
-    hover:bg-blue-100
-    hover:text-blue-400
-    transition;
-  }
-
   .status {
     @apply rounded
     font-sans
