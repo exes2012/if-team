@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import ViewLogin from "../views/ViewLogin.vue";
+import ViewEnter from "../views/ViewEnter.vue";
 import ViewRegister from "../views/ViewRegister.vue";
 import ViewReset from "../views/ViewReset.vue";
 import ViewProjects from "../views/ViewProjects.vue";
@@ -54,6 +55,12 @@ const router = createRouter({
       name: "login",
       meta: { layout: "empty" },
       component: ViewLogin,
+    },
+    {
+      path: "/enter",
+      name: "enter",
+      meta: { layout: "empty" },
+      component: ViewEnter,
     },
     {
       path: "/register",
