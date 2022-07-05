@@ -4,21 +4,24 @@
     <the-aside label="Здесь может быть какая-то справочная инфа" />
     <main class="p-24">
       <div class="w-[445px]" v-if="isOpen">
-        <h1
-          class="mb-20 hover:text-blue-400 cursor-pointer transition"
-          @click="closeCreateTeam"
-        >
-          &#60; Создание команды
-        </h1>
+        <div class="flex items-center gap-x-5 mb-20">
+          <v-button
+            @click="closeCreateTeam"
+            class="p-1 pl-[3px] rounded-full bg-gray-100 [&:hover>svg]:fill-blue-400 transition"
+          >
+            <v-icon
+              name="arrowLeft"
+              viewBox="0 0 20 20"
+              class="fill-gray-500"
+            ></v-icon>
+          </v-button>
+          <h1>Creating a team</h1>
+        </div>
 
-        <v-input
-          label="Название команды"
-          placeholder="Введите название команды"
-        >
-        </v-input>
+        <v-input label="Team name" placeholder="Enter team name"> </v-input>
 
         <div class="mb-5">
-          <p class="text-3 text-gray-500 mb-3">Логотип команды</p>
+          <p class="text-3 text-gray-500 mb-3">Team logo</p>
           <div class="flex gap-x-5">
             <the-upload-photo :shape="'rectangle'"></the-upload-photo>
             <div>
@@ -38,16 +41,18 @@
           <v-checkbox label="Leave company name"></v-checkbox>
         </div>
 
-        <v-button class="btn-primary w-full h-15">Создать</v-button>
+        <v-button class="btn-primary w-full h-15">Create</v-button>
       </div>
 
       <div v-else>
         <h1 class="mb-20 max-w-[445px]">
-          Добро пожаловать на платформу If.Team!
+          Welcome
+          <br />
+          to the platform <span class="text-blue-400">If.Team</span>!
         </h1>
 
         <div class="hidden">
-          <p class="text mb-12">У вас нет доступных команд</p>
+          <p class="text mb-12">You have no teams available</p>
         </div>
 
         <div>
@@ -56,7 +61,7 @@
         </div>
 
         <v-button class="btn-primary w-[445px] h-15" @click="openCreateTeam">
-          Создать новую команду
+          Create a new team
         </v-button>
       </div>
     </main>
