@@ -3,8 +3,8 @@
     <link-header-navigation
       v-for="route in routes"
       :key="route.id"
-      :data="route"
-      class="mr-10 flex"
+      :route="route"
+      class="mr-5 flex"
     >
     </link-header-navigation>
   </ul>
@@ -23,10 +23,6 @@ export default {
     routes: {
       type: Array,
     },
-  },
-
-  created() {
-    console.log("NAV", this.routes);
   },
 };
 </script>
