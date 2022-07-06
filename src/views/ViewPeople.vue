@@ -1378,7 +1378,7 @@
       </v-card>
 
       <!-- Add client -->
-      <v-card class="w-fit mt-10 py-10 px-8 relative bg-gray-100">
+      <v-card class="w-fit mt-10 py-10 px-8 relative !bg-gray-100">
         <v-button class="absolute top-5 right-5 p-1">
           <v-icon
             name="close"
@@ -2062,12 +2062,7 @@
               <label for="country" class="label">Iteration</label>
               <span class="message-invalid invisible">Неверный формат</span>
             </div>
-            <input
-              type="text"
-              name="country"
-              class="field"
-              placeholder=" "
-            />
+            <input type="text" name="country" class="field" placeholder=" " />
             <v-button class="btn-field [&:hover+ul]:visible" type="button">
               <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
             </v-button>
@@ -2406,12 +2401,7 @@
               <label for="country" class="label">Iteration</label>
               <span class="message-invalid invisible">Неверный формат</span>
             </div>
-            <input
-              type="text"
-              name="country"
-              class="field"
-              placeholder=" "
-            />
+            <input type="text" name="country" class="field" placeholder=" " />
             <v-button class="btn-field [&:hover+ul]:visible" type="button">
               <v-icon name="arrowDown" viewBox="0 0 20 20"></v-icon>
             </v-button>
