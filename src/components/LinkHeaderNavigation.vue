@@ -1,11 +1,6 @@
 <template>
   <li>
-    <router-link
-      :to="route.url"
-      class="link"
-      :class="{ active: isActive }"
-      @click="addActiveClass"
-    >
+    <router-link :to="route.url" class="link" active-class="active">
       <v-icon
         :name="route.icon"
         viewBox="0 0 20 20"
@@ -23,16 +18,6 @@ export default {
   props: {
     route: {
       type: Object,
-    },
-  },
-
-  data: () => ({
-    isActive: false,
-  }),
-
-  methods: {
-    addActiveClass() {
-      this.isActive = true;
     },
   },
 };
