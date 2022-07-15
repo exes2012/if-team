@@ -11,6 +11,7 @@
           <v-checkbox label="checkbox" />
           <vtable :columns="columns" :table-data="projects" />
         </div>
+	      <v-select-btn/>
       </v-card>
     </v-container>
   </div>
@@ -20,6 +21,7 @@
 import { useStore } from "vuex";
 import Vtable from "../components/Vtable.vue";
 import VSearch from "../components/VSearch.vue";
+import VSelectBtn from "../components/VSelectBtn.vue";
 
 const store = useStore();
 const projects = store.state.projects.projectsList;

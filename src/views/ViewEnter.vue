@@ -78,7 +78,7 @@ export default {
     EnterCompaniesList,
   },
   data: () => ({
-    isOpen: false,
+    isOpen: true,
   }),
   methods: {
     openCreateTeam() {

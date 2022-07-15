@@ -374,32 +374,6 @@
     @apply text-green-600;
   }
 
-  .dropdown {
-    @apply absolute
-    top-full
-    left-0
-    z-20
-    w-full
-    mt-[5px]
-    py-[15px]
-    bg-white
-    rounded-md
-    shadow-dropdown;
-  }
-
-  .dropdown li {
-    @apply flex
-    items-center
-    pt-[13px]
-    pb-3.5
-    px-5
-    cursor-pointer
-    text-gray-900
-    hover:text-blue-400
-    hover:bg-gray-100
-    transition;
-  }
-
   .btn-service {
     @apply font-sans
     font-normal

@@ -8,7 +8,6 @@ import ViewTasks from "../views/ViewTasks.vue";
 import ViewPayments from "../views/ViewPayments.vue";
 import ViewPeople from "../views/ViewPeople.vue";
 import TaskItem from "../components/TaskItem.vue";
-import ViewTasksC from "../views/ViewTasksC.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -37,12 +36,6 @@ const router = createRouter({
       name: "payments",
       meta: { layout: "main" },
       component: ViewPayments,
-    },
-    {
-      path: "/tasksc",
-      name: "tasksc",
-      meta: { layout: "main" },
-      component: ViewTasksC,
     },
     {
       path: "/people",
