@@ -1,7 +1,7 @@
 <template>
-  <div class="flex h-20 w-full bg-white border-b-2 border-b-gray-100">
+  <div class="flex h-[100px] w-full bg-white border-b-2 border-b-gray-100">
     <v-container class="items-center">
-      <the-header-logo class="mr-14" />
+      <the-header-logo class="mr-14 shrink-0" />
       <slot></slot>
     </v-container>
   </div>

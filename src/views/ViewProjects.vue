@@ -12,6 +12,9 @@
           <vtable :columns="columns" :table-data="projects" />
         </div>
 	      <v-select-btn/>
+        <div class="m-8">
+          <link-responsible></link-responsible>
+        </div>
       </v-card>
     </v-container>
   </div>
@@ -22,6 +25,7 @@ import { useStore } from "vuex";
 import Vtable from "../components/Vtable.vue";
 import VSearch from "../components/VSearch.vue";
 import VSelectBtn from "../components/VSelectBtn.vue";
+import LinkResponsible from "../components/LinkResponsible.vue";
 
 const store = useStore();
 const projects = store.state.projects.projectsList;
