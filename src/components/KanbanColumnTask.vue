@@ -9,13 +9,22 @@
       class="task"
       @click="goToTask(task)"
     >
-      <span class="text-3">{{ task.name }}</span>
+      <div class="flex flex-col">
+        <kanban-column-task-parent-name title="В этом варианте из всего текста получится только одна строка с многоточия"/>
+        <span class=""></span>
+        <span class="text-2 mb-2.5 text-gray-900">{{ task.name }}</span>
+        <kanban-column-task-progress time-plan=120 time-used=60 />
+        <kanban-column-task-end-date/>
+      </div>
     </v-drag>
   </v-drop>
 </template>
 
 <script>
 import movingTaskAndColumnsMixin from "../mixins/movingTaskAndColumnsMixin";
+import KanbanColumnTaskEndDate from "./KanbanColumnTaskEndDate.vue";
+import KanbanColumnTaskProgress from "./KanbanColumnTaskProgress.vue";
+import KanbanColumnTaskParentName from "./KanbanColumnTaskParentName.vue";
 import VDrag from "./VDrag.vue";
 import VDrop from "./VDrop.vue";
 
@@ -24,6 +33,9 @@ export default {
   components: {
     VDrop,
     VDrag,
+    KanbanColumnTaskEndDate,
+    KanbanColumnTaskProgress,
+    KanbanColumnTaskParentName
   },
   mixins: [movingTaskAndColumnsMixin],
   props: {
@@ -46,6 +58,6 @@ export default {
 
 <style scoped lang="css">
 .task {
-  @apply flex items-center flex-wrap mb-2 py-2 px-2 rounded bg-white text-gray-900 no-underline cursor-pointer;
+  @apply  w-full mb-3 p-5 rounded-xl bg-white text-gray-900 no-underline cursor-pointer;
 }
 </style>

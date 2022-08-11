@@ -19,7 +19,7 @@ import { useStore } from "vuex";
 const store = useStore();
 
 const sendRegistrationData = () => {
-  store.commit("userAuth/SET_REGISTRATION_STEP", 4);
+  store.commit("userAuth/SET_REGISTER_STEP", 4);
 };
 </script>
 

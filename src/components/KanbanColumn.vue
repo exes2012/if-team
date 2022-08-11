@@ -7,16 +7,18 @@
         fromColumnIndex: columnIndex,
       }"
     >
-      <div class="column-status status-green mb-4">{{ column.name }}</div>
-      <kanban-column-task
-        v-for="(task, $taskIndex) of column.tasks"
-        :key="$taskIndex"
-        :task="task"
-        :taskIndex="$taskIndex"
-        :columnIndex="columnIndex"
-        :column="column"
-        :board="board"
-      />
+      <kanban-column-status :status='column.name' :color='column.color'/>
+      <div class="task-container">
+        <kanban-column-task
+            v-for="(task, $taskIndex) of column.tasks"
+            :key="$taskIndex"
+            :task="task"
+            :taskIndex="$taskIndex"
+            :columnIndex="columnIndex"
+            :column="column"
+            :board="board"
+        />
+      </div>
       <input
         type="text"
         class="block p-2 w-full bg-transparent outline-none"
@@ -29,9 +31,11 @@
 
 <script>
 import KanbanColumnTask from "./KanbanColumnTask.vue";
+import KanbanColumnStatus from "./KanbanColumnStatus.vue";
 import movingTaskAndColumnsMixin from "../mixins/movingTaskAndColumnsMixin";
 import VDrag from "../components/VDrag.vue";
 import VDrop from "./VDrop.vue";
+
 
 export default {
   name: "KanbanColumn",
@@ -39,6 +43,7 @@ export default {
     KanbanColumnTask,
     VDrag,
     VDrop,
+    KanbanColumnStatus
   },
   mixins: [movingTaskAndColumnsMixin],
   methods: {
@@ -55,9 +60,15 @@ export default {
 
 <style scoped lang="css">
 .column {
-  @apply bg-gray-300 p-2 mr-4 text-left shadow rounded;
+  @apply flex flex-col bg-gray-300 pl-5 pr-2.5 py-5 mr-4 text-left shadow rounded-xl;
   min-width: 300px;
   width: 300px;
+}
+
+.task-container{
+  @apply flex flex-col pr-2.5;
+  max-height:600px;
+  overflow-y:auto;
 }
 
 .column-status {

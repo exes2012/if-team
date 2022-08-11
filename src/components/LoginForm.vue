@@ -7,7 +7,7 @@
       link-label="Войдите или"
       :link="link"
     />
-    <form action="#" method="post" class="mt-16">
+    <form @submit.prevent="login" method="post" class="mt-16">
       <div class="relative mb-2 md:mb-1">
         <v-input
           label="E-mail"
@@ -39,6 +39,7 @@
       </div>
       <p class="text-3 mb-8 text-red-800 md:mb-6">Неверный логин и пароль</p>
       <v-button
+          type="submit"
         class="btn-primary w-full h-15 mb-10 md:mb-7"
         :disabled="v$.$invalid"
         >Войти</v-button
@@ -60,6 +61,7 @@ import { useVuelidate } from "@vuelidate/core";
 import { useStore } from "vuex";
 import router from "../router";
 import { useValidationRules } from "../composables/validationRules";
+import {email, helpers, required} from "@vuelidate/validators";
 
 const link = reactive({
   label: "зарегистрируйтесь",
@@ -74,17 +76,24 @@ const state = reactive({
 const { passwordFieldIcon, passwordFieldType, showPassword } =
   usePasswordShow();
 
-const rules = useValidationRules();
+const rules = {
+  email: {
+    required: helpers.withMessage("Поле не может быть пустым", required),
+    email: helpers.withMessage("Неверный формат электронной почты", email),
+  },
+  password: {
+    required: helpers.withMessage("Поле не может быть пустым", required),
+  },
+};
 
 const v$ = useVuelidate(rules, state);
 
 const store = useStore();
 
-const register = () => {
+const login = () => {
+  console.log('submitted')
   store.dispatch("userAuth/register", { state }).then(() => {
     router.push({ name: "projects" });
   });
 };
 </script>
-
-<style scoped></style>

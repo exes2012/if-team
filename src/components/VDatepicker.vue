@@ -49,6 +49,8 @@ const props = defineProps({
   },
 });
 
+const emit = defineEmits(['selectDate'])
+
 const date = ref(new Date());
 const dp = ref();
 
@@ -81,6 +83,8 @@ const monthName = computed(() => {
 
 const selectDate = () => {
   dp.value.selectDate();
+  emit('selectDate', date.value.toLocaleDateString());
+  console.log(date.value.toLocaleDateString())
 };
 
 const closeMenu = () => {

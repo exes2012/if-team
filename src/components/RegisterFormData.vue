@@ -6,7 +6,7 @@
     <v-input
       label="E-mail"
       placeholder="Your e-mail"
-      v-model="state.email"
+      v-model="data.email"
       @onBlur="v$.email.$touch"
       :class="{ 'field-error': v$.email.$error }"
     >
@@ -15,14 +15,14 @@
     <v-input
       label="Phone"
       placeholder="+38 000 00 00 000"
-      v-model="state.phone"
+      v-model="data.phone"
       @onBlur="v$.phone.$touch"
       :class="{ 'field-error': v$.phone.$error }"
       ><input-error v-if="v$.phone.$error" :errors="v$.phone.$errors" />
     </v-input>
     <v-input
       label="Password"
-      v-model="state.password"
+      v-model="data.password"
       placeholder="******"
       :icon="passwordFieldIcon"
       :type="passwordFieldType"
@@ -48,7 +48,7 @@ import { usePasswordShow } from "../composables/passwordHide";
 import { useVuelidate } from "@vuelidate/core";
 import { useStore } from "vuex";
 
-const state = reactive({
+const data = reactive({
   email: "",
   phone: "",
   password: "",
@@ -59,12 +59,13 @@ const { passwordFieldIcon, passwordFieldType, showPassword } =
 
 const rules = useValidationRules();
 
-const v$ = useVuelidate(rules, state);
+const v$ = useVuelidate(rules, data);
 
 const store = useStore();
 
 const sendRegistrationData = () => {
-  store.commit("userAuth/SET_REGISTRATION_STEP", 2);
+  store.commit("userAuth/SET_REGISTER_USER_DATA", data);
+  store.commit("userAuth/SET_REGISTER_STEP", 2);
 };
 </script>
 

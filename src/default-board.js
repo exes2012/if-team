@@ -5,6 +5,7 @@ export default {
     columns:[
         {
             name:'Todo',
+            color:'aqua',
             tasks:[
                 {
                     description:'123123',
@@ -28,6 +29,7 @@ export default {
         },
         {
             name:'In Progress',
+            color:'red',
             tasks:[
                 {
                     description:'',
@@ -51,6 +53,7 @@ export default {
         },
         {
             name:'Done',
+            color:'green',
             tasks:[
                 {
                     description:'',
