@@ -1,13 +1,14 @@
 <template>
 	<the-header-navigation :routes="routes"/>
 	<v-search class="field field-search h-10 w-90 ml-auto"/>
-	<v-button class="btn-primary h-12 w-32 ml-10">+ Add</v-button>
+	<the-header-add-button/>
 	<the-header-notifications/>
 	<the-header-avatar/>
 </template>
 <script>
 import TheHeaderNavigation from "./TheHeaderNavigation.vue";
 import TheHeaderNotifications from "./TheHeaderNotifications.vue";
+import TheHeaderAddButton from "./TheHeaderAddButton.vue";
 import TheHeaderAvatar from "./TheHeaderAvatar.vue";
 import VSearch from "./VSearch.vue";
 import VButton from "./VButton.vue";
@@ -19,6 +20,7 @@ export default {
 		TheHeaderNavigation,
 		TheHeaderNotifications,
 		TheHeaderAvatar,
+		TheHeaderAddButton,
 		VSearch,
 		VButton,
 		VIcon

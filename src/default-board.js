@@ -11,7 +11,7 @@ export default {
                     description:'123123',
                     name: 'Дополнить информацию о себе для резюме и сайта',
                     id: uuid(),
-                    userAssigned:null
+                    userAssigned:null,
                 },
                 {
                     description:'4123125215',
