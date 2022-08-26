@@ -27,7 +27,6 @@
         </ul>
         <v-dropzone @drop.prevent="drop" @change="selectedFile"></v-dropzone>
         <span>File: {{ dropzoneFile.name }}</span>
-	      <v-cropper/>
       </v-card>
     </v-container>
   </div>
@@ -35,14 +34,13 @@
 
 <script>
 import VDropzone from "../components/VDropzone.vue";
-import VCropper from "../components/VCropper.vue";
+import VCropper from "../components/RegisterFormPhotoCrop.vue";
 import { ref } from "vue";
 
 export default {
   name: "ViewPayments",
   components: {
     VDropzone,
-	  VCropper
   },
   setup() {
     let dropzoneFile = ref("");
@@ -60,6 +58,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

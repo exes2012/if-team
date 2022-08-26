@@ -19,6 +19,7 @@ import VContainer from "./components/VContainer.vue";
 import VCheckbox from "./components/VCheckbox.vue";
 import VButton from "./components/VButton.vue";
 import VInput from "./components/VInput.vue";
+import { CircleStencil } from "vue-advanced-cropper";
 
 const app = createApp(App);
 
@@ -29,5 +30,6 @@ app.component("v-checkbox", VCheckbox);
 app.component("v-input", VInput);
 app.component("v-button", VButton);
 app.component("Datepicker", Datepicker);
+app.component("circle-stencil", CircleStencil);
 
 app.use(PrimeVue).use(store).use(router).use(useVuelidate).mount("#app");

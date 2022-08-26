@@ -12,11 +12,11 @@
     >
       <input-error v-if="v$.email.$error" :errors="v$.email.$errors" />
     </v-input>
-    <v-datepicker label="Birthday" @selectDate="getDateOfBirth"/>
+    <v-datepicker label="Birthday" @selectDate="getDateOfBirth" />
 
     <v-button
       class="btn-primary w-full h-15 mt-12"
-      @click.prevent="register"
+      @click.prevent="setRegistrationData"
       >Next</v-button
     >
   </form>
@@ -33,8 +33,8 @@ import { useStore } from "vuex";
 import router from "../router";
 
 const data = reactive({
-  fullName: "",
-  dateOfBirth:'',
+  full_name: "",
+  date_of_birth: "",
 });
 
 const { passwordFieldIcon, passwordFieldType, showPassword } =
@@ -46,24 +46,12 @@ const v$ = useVuelidate(rules, data);
 
 const store = useStore();
 
-const getDateOfBirth = (selectedDate) =>{
-  data.dateOfBirth = selectedDate
-}
-
-const sendRegistrationData = () => {
-  store.commit('userAuth/SET_REGISTER_USER_MAIN_INFO',data)
-  store.commit("userAuth/SET_REGISTER_STEP", 3);
+const getDateOfBirth = (selectedDate) => {
+  data.dateOfBirth = selectedDate;
 };
 
-const register = () => {
-  sendRegistrationData()
-  store.dispatch("userAuth/register", {
-    name:store.state.userAuth.name,
-    email:store.state.userAuth.email,
-    phone:store.state.userAuth.phone,
-    password:store.state.userAuth.password,
-    dob:store.state.userAuth.dateOfBirth,
-    avatar:store.state.userAuth.avatar,
-  })
+const setRegistrationData = () => {
+  store.commit("userAuth/SET_REGISTER_USER_MAIN_INFO", data);
+  store.commit("userAuth/SET_REGISTER_STEP", 3);
 };
 </script>

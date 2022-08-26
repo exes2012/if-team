@@ -34,7 +34,7 @@
     <v-button
       class="btn-primary w-full h-15 mt-12"
       :disabled="v$.$invalid"
-      @click.prevent="sendRegistrationData"
+      @click.prevent="checkCredentials"
       >Next</v-button
     >
   </form>
@@ -63,9 +63,16 @@ const v$ = useVuelidate(rules, data);
 
 const store = useStore();
 
-const sendRegistrationData = () => {
+const setRegisterUserData = ()=>{
   store.commit("userAuth/SET_REGISTER_USER_DATA", data);
-  store.commit("userAuth/SET_REGISTER_STEP", 2);
+}
+
+const checkCredentials = () => {
+  setRegisterUserData()
+  store.dispatch('userAuth/checkCredentials', {
+    phone:store.state.userAuth.phone,
+    email:store.state.userAuth.email,
+  })
 };
 </script>
 

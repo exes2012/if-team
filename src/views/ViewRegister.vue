@@ -16,6 +16,11 @@
       <register-form-finish v-if="registrationStep === 4" />
     </main>
   </div>
+
+  <register-form-photo-crop
+    @click.self="closeRegisterPhotoCrop"
+    v-if="isRegisterPhotoCropActive"
+  />
 </template>
 
 <script setup>
@@ -23,6 +28,7 @@ import RegisterFormData from "../components/RegisterFormData.vue";
 import RegisterFormMainInfo from "../components/RegisterFormMainInfo.vue";
 import RegisterFormPhoto from "../components/RegisterFormPhoto.vue";
 import RegisterFormFinish from "../components/RegisterFormFinish.vue";
+import RegisterFormPhotoCrop from "../components/RegisterFormPhotoCrop.vue";
 
 import { useStore } from "vuex";
 import { computed, reactive } from "vue";
@@ -60,6 +66,14 @@ const link = reactive({
   label: "login",
   url: "/login",
 });
+
+const isRegisterPhotoCropActive = computed(() => {
+  return store.state.userAuth.isRegisterPhotoCropperActive;
+});
+
+const closeRegisterPhotoCrop = () => {
+  store.commit("userAuth/SET_REGISTER_PHOTO_CROP_STATE", false);
+};
 </script>
 
 <style scoped></style>
