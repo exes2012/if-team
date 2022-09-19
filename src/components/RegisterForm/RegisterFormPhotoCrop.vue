@@ -39,7 +39,7 @@
 <script setup>
 import { Cropper } from "vue-advanced-cropper";
 import "vue-advanced-cropper/dist/style.css";
-import VModal from "./VModal.vue";
+import VModal from "../VModal.vue";
 import { useStore } from "vuex";
 import {ref} from "vue";
 

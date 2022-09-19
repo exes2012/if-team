@@ -23,11 +23,11 @@
 </template>
 
 <script setup>
-import RegisterFormData from "../components/RegisterFormData.vue";
-import RegisterFormMainInfo from "../components/RegisterFormMainInfo.vue";
-import RegisterFormPhoto from "../components/RegisterFormPhoto.vue";
-import RegisterFormFinish from "../components/RegisterFormFinish.vue";
-import RegisterFormPhotoCrop from "../components/RegisterFormPhotoCrop.vue";
+import RegisterFormData from "../components/RegisterForm/RegisterFormData.vue";
+import RegisterFormMainInfo from "../components/RegisterForm/RegisterFormMainInfo.vue";
+import RegisterFormPhoto from "../components/RegisterForm/RegisterFormPhoto.vue";
+import RegisterFormFinish from "../components/RegisterForm/RegisterFormFinish.vue";
+import RegisterFormPhotoCrop from "../components/RegisterForm/RegisterFormPhotoCrop.vue";
 
 import { useStore } from "vuex";
 import { computed, reactive } from "vue";

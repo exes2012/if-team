@@ -1,7 +1,7 @@
 <template>
   <form
-    method="post"
-    class="max-w-[910px] w-full pt-12 border-t-2 border-solid border-gray-100"
+      method="post"
+      class="max-w-[910px] w-full pt-12 border-t-2 border-solid border-gray-100"
   >
     <div class="flex">
       <avatar-drop-zone @drop.prevent="drop"/>
@@ -12,28 +12,29 @@
       </div>
     </div>
     <v-button class="btn-primary w-full h-15 mt-12" @click.prevent="register"
-      >Complete the registration</v-button
+    >Complete the registration
+    </v-button
     >
   </form>
 </template>
 
 <script setup>
 import {computed, ref} from "vue";
-import { useStore } from "vuex";
-import AvatarDropZone from "./AvatarDropZone.vue";
+import {useStore} from "vuex";
+import AvatarDropZone from "../AvatarDropZone.vue";
 
 const store = useStore();
 
-let dropzoneFile= ref('')
+let dropzoneFile = ref('')
 
-const drop =(e)=>{
-  dropzoneFile.value= e.dataTransfer.files[0]
+const drop = (e) => {
+  dropzoneFile.value = e.dataTransfer.files[0]
   setPhotoToCrop()
   openRegisterPhotoCrop()
 }
 
-const setPhotoToCrop=()=>{
-  store.commit('userAuth/SET_REGISTER_PHOTO',dropzoneFile)
+const setPhotoToCrop = () => {
+  store.commit('userAuth/SET_REGISTER_PHOTO', dropzoneFile)
 }
 
 const openRegisterPhotoCrop = () => {
@@ -43,12 +44,14 @@ const openRegisterPhotoCrop = () => {
 
 const register = () => {
   const formData = new FormData()
-  formData.append('phone',store.state.userAuth.phone)
-  formData.append('email',store.state.userAuth.email)
-  formData.append('password',store.state.userAuth.password)
-  formData.append('full_name',store.state.userAuth.full_name)
-  formData.append('date_of_birth',store.state.userAuth.date_of_birth)
-  formData.append('avatar',store.state.userAuth.avatar)
+  formData.append('phone', store.state.userAuth.phone)
+  formData.append('email', store.state.userAuth.email)
+  formData.append('password', store.state.userAuth.password)
+  formData.append('full_name', store.state.userAuth.full_name)
+  formData.append('date_of_birth', store.state.userAuth.date_of_birth)
+  if (store.state.userAuth.avatar) {
+    formData.append('avatar',)
+  }
   store.dispatch("userAuth/register", formData)
 };
 </script>

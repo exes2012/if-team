@@ -53,14 +53,14 @@
 </template>
 
 <script setup>
-import InputError from "../components/InputError.vue";
-import LoginFormHeader from "./AuthFormHeader.vue";
+import InputError from "../InputError.vue";
+import LoginFormHeader from "../AuthFormHeader.vue";
 import { reactive } from "vue";
-import { usePasswordShow } from "../composables/passwordHide";
+import { usePasswordShow } from "../../composables/passwordHide";
 import { useVuelidate } from "@vuelidate/core";
 import { useStore } from "vuex";
-import router from "../router";
-import { useValidationRules } from "../composables/validationRules";
+import router from "../../router";
+import { useValidationRules } from "../../composables/validationRules";
 import { email, helpers, required } from "@vuelidate/validators";
 
 const link = reactive({
