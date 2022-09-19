@@ -17,7 +17,8 @@ export default {
 	px-5
 	cursor-pointer
 	hover:bg-gray-100
-	transition;
+	transition
+  flex;
 }
 
 .list-item:hover div {

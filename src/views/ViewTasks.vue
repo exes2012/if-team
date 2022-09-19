@@ -1,25 +1,21 @@
 <template>
-  <div class="bg-gray-100 w-full h-screen">
-    <v-container>
-      <div class="flex flex-row items-start overflow-auto mt-32">
-        <kanban-column
-          v-for="(column, $columnIndex) of board.columns"
-          :key="$columnIndex"
-          :column="column"
-          :columnIndex="$columnIndex"
-          :board="board"
-        />
-        <div class="column flex">
-          <input
-            type="text"
-            v-model="newColumnName"
-            class="p-2 mr-2 flex-grow"
-            placeholder="New Column Name"
-            @keyup.enter="createColumn"
-          />
-        </div>
-      </div>
-    </v-container>
+  <div class="flex flex-row items-start overflow-auto">
+    <kanban-column
+      v-for="(column, $columnIndex) of board.columns"
+      :key="$columnIndex"
+      :column="column"
+      :columnIndex="$columnIndex"
+      :board="board"
+    />
+    <div class="column flex">
+      <input
+        type="text"
+        v-model="newColumnName"
+        class="p-2 mr-2 flex-grow"
+        placeholder="New Column Name"
+        @keyup.enter="createColumn"
+      />
+    </div>
   </div>
   <div
     class="task-bg w-screen h-screen"

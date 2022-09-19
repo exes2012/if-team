@@ -1,5 +1,7 @@
 <template>
-  <div class="flex h-[100px] w-full bg-white border-b-2 border-b-gray-100 fixed">
+  <div
+    class="flex h-[100px] w-full bg-white border-b-2 border-b-gray-100 fixed z-10"
+  >
     <v-container class="items-center">
       <the-header-logo class="mr-14 shrink-0" />
       <slot></slot>

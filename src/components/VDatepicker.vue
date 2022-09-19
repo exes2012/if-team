@@ -83,9 +83,21 @@ const monthName = computed(() => {
 
 const selectDate = () => {
   dp.value.selectDate();
-  emit('selectDate', date.value.toLocaleDateString());
-  console.log(date.value.toLocaleDateString())
+  emit('selectDate', formatDate.value);
+  console.log(formatDate.value)
 };
+
+const padTo2Digits = (num)=> {
+  return num.toString().padStart(2, '0');
+}
+
+const formatDate = computed(()=>{
+  return [
+    date.value.getFullYear(),
+    padTo2Digits(date.value.getMonth() + 1),
+    padTo2Digits(date.value.getDate()),
+  ].join('-');
+})
 
 const closeMenu = () => {
   dp.value.closeMenu();

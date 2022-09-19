@@ -1,26 +1,39 @@
 <template>
-	<ul class="dropdown absolute" :style="{'width': width +'px'}">
-		<slot/>
-	</ul>
+  <ul
+    class="dropdown absolute"
+    :class="{ left: left, right: right }"
+    :style="{ width: width + 'px' }"
+  >
+    <slot />
+  </ul>
 </template>
 
 <script setup>
-const props =defineProps({
-	width:String
-})
+const props = defineProps({
+  width: String,
+  left: Boolean,
+  right: Boolean,
+});
 </script>
 
 <style scoped>
 .dropdown {
-	@apply absolute
+  @apply absolute
 	top-full
-	left-0
 	z-20
 	mt-[5px]
 	py-[15px]
 	bg-white
 	rounded-md
-	shadow-dropdown;
+	shadow-dropdown
+  w-full;
 }
 
+.left {
+  @apply left-0;
+}
+
+.right {
+  @apply right-0;
+}
 </style>

@@ -3,13 +3,12 @@
     <div class="flex flex-col w-[700px] h-[578px] mx-auto mt-36">
       <div class="w-full h-[408px] overflow-hidden rounded rounded-t-md">
         <cropper
-            ref="photo"
+          ref="photo"
           class="cropper"
           :src="imgSrc"
           :stencil-props="{
-            aspectRatio: 12 / 12,
+            aspectRatio: 42 / 12,
           }"
-          stencil-component="circle-stencil"
         />
       </div>
       <div class="w-full h-[170px] bg-white flex flex-col rounded-b-md">
@@ -22,8 +21,8 @@
           /></v-button>
         </div>
         <div class="flex mx-auto mt-8">
-          <v-button class="btn-primary w-[188px] h-[50px] mr-2.5"
-            @click="crop">Load</v-button
+          <v-button class="btn-primary w-[188px] h-[50px] mr-2.5" @click="crop"
+            >Load</v-button
           >
           <v-button
             class="btn-secondary w-[188px] h-[50px] ml-2.5"
@@ -41,24 +40,23 @@ import { Cropper } from "vue-advanced-cropper";
 import "vue-advanced-cropper/dist/style.css";
 import VModal from "./VModal.vue";
 import { useStore } from "vuex";
-import {ref} from "vue";
+import { ref } from "vue";
 
 const store = useStore();
 
-let imgSrc =store.state.userAuth.photoForAvatar;
+let imgSrc = store.state.teams.photoForLogo;
 
-const photo=ref(null)
+const photo = ref(null);
 
+const crop = () => {
+  const { canvas } = photo.value.getResult();
+  store.commit("teams/SET_CROPPED_PHOTO", canvas);
 
-const crop =() =>{
-  const { canvas } = photo.value.getResult()
-  store.commit('userAuth/SET_CROPPED_PHOTO',canvas)
-
-  store.commit("userAuth/SET_REGISTER_PHOTO_CROP_STATE", false);
-}
+  store.commit("teams/SET_TEAM_PHOTO_CROP_STATE", false);
+};
 
 const closeRegisterPhotoCrop = () => {
-  store.commit("userAuth/SET_REGISTER_PHOTO_CROP_STATE", false);
+  store.commit("teams/SET_TEAM_PHOTO_CROP_STATE", false);
 };
 </script>
 

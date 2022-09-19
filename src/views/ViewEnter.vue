@@ -4,19 +4,7 @@
     <the-aside label="Здесь может быть какая-то справочная инфа" />
     <main class="p-24">
       <div class="w-[445px]" v-if="isOpen">
-        <div class="flex items-center gap-x-5 mb-20">
-          <v-button
-            @click="closeCreateTeam"
-            class="p-1 pl-[3px] rounded-full bg-gray-100 [&:hover>svg]:fill-blue-400 transition"
-          >
-            <v-icon
-              name="arrowLeft"
-              viewBox="0 0 20 20"
-              class="fill-gray-500"
-            ></v-icon>
-          </v-button>
-          <h1>Creating a team</h1>
-        </div>
+        <div class="flex items-center gap-x-5 mb-20"></div>
 
         <v-input label="Team name" placeholder="Enter team name"> </v-input>
 

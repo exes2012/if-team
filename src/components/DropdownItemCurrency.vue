@@ -5,13 +5,12 @@
       <div class="text-gray-900">
         {{ value }}
       </div>
-      <div class="text-gray-500">({{ symbol }})</div>
+      <div class="text-gray-500" v-if="symbol">({{ symbol }})</div>
     </div>
   </dropdown-item>
 </template>
 
 <script setup>
-import DropdownItem from "./DropdownItem.vue";
 const props = defineProps({
   icon: {
     type: String,

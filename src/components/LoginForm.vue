@@ -39,7 +39,7 @@
       </div>
       <p class="text-3 mb-8 text-red-800 md:mb-6">Неверный логин и пароль</p>
       <v-button
-          type="submit"
+        type="submit"
         class="btn-primary w-full h-15 mb-10 md:mb-7"
         :disabled="v$.$invalid"
         >Войти</v-button
@@ -61,7 +61,7 @@ import { useVuelidate } from "@vuelidate/core";
 import { useStore } from "vuex";
 import router from "../router";
 import { useValidationRules } from "../composables/validationRules";
-import {email, helpers, required} from "@vuelidate/validators";
+import { email, helpers, required } from "@vuelidate/validators";
 
 const link = reactive({
   label: "зарегистрируйтесь",
@@ -91,9 +91,13 @@ const v$ = useVuelidate(rules, state);
 const store = useStore();
 
 const login = () => {
-  console.log('submitted')
-  store.dispatch("userAuth/register", { state }).then(() => {
-    router.push({ name: "projects" });
-  });
+  store
+    .dispatch("userAuth/login", {
+      email: state.email,
+      password: state.password,
+    })
+    .then(() => {
+      router.push({ name: "TeamsListView" });
+    });
 };
 </script>

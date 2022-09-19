@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 import tableColumns from "./modules/tablesColumns";
 import projects from "./modules/projects";
 import userAuth from "./modules/userAuth";
+import teams from "./modules/teams";
 import defaultBoard from "../default-board";
 import { saveStatePlugin, uuid } from "../utils";
 
@@ -11,6 +12,7 @@ export default createStore({
     tableColumns,
     projects,
     userAuth,
+    teams,
   },
   plugins: [saveStatePlugin],
   state() {

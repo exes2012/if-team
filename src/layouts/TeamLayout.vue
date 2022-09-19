@@ -1,21 +1,23 @@
 <template>
   <the-header>
-    <the-header-avatar class="ml-auto" />
+    <the-header-bar />
   </the-header>
-  <v-main>
-    <router-view />
-  </v-main>
+  <div class="bg-gray-100 w-full h-screen pt-[150px]">
+    <v-container>
+      <router-view />
+    </v-container>
+  </div>
 </template>
 
 <script>
 import TheHeader from "../components/TheHeader.vue";
-import TheHeaderAvatar from "../components/TheHeaderAvatar.vue";
+import TheHeaderBar from "../components/TheHeaderBar.vue";
 
 export default {
   name: "MainLayout",
   components: {
     TheHeader,
-    TheHeaderAvatar,
+    TheHeaderBar,
   },
 };
 </script>

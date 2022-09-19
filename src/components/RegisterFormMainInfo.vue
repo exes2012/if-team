@@ -6,7 +6,7 @@
     <v-input
       label="Full Name"
       placeholder="Enter your full name"
-      v-model="data.fullName"
+      v-model="data.full_name"
       @onBlur="v$.email.$touch"
       :class="{ 'field-error': v$.email.$error }"
     >
@@ -47,7 +47,7 @@ const v$ = useVuelidate(rules, data);
 const store = useStore();
 
 const getDateOfBirth = (selectedDate) => {
-  data.dateOfBirth = selectedDate;
+  data.date_of_birth = selectedDate;
 };
 
 const setRegistrationData = () => {

@@ -7,17 +7,13 @@
       @keyup.esc="hideSelect"
       >+ Add
     </v-button>
-    <v-select-dropdown width="166" v-if="isActive">
-      <dropdown-item>Add project</dropdown-item>
-      <dropdown-item>Add task</dropdown-item>
-    </v-select-dropdown>
+    <v-select-dropdown width="166" v-if="isActive"> </v-select-dropdown>
   </div>
 </template>
 
 <script setup>
 import { onBeforeUnmount, onMounted, reactive, ref } from "vue";
 import VSelectDropdown from "./VSelectDropdown.vue";
-import DropdownItem from "./DropdownItem.vue";
 
 const emit = defineEmits(["select"]);
 

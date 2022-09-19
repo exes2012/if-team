@@ -1,23 +1,14 @@
 <template>
-  <div class="bg-gray-100 w-full h-screen">
-    <v-container>
-      <v-card class="w-full mt-32">
-        <div class="flex mt-14 mx-8">
-          <h2>All projects</h2>
-          <span class="ml-2.5 text-gray-400 text-base">15</span>
-          <v-search class="field field-search h-10 w-90 ml-auto" />
-        </div>
-        <div class="mx-8 mt-7.5">
-          <v-checkbox label="checkbox" />
-          <vtable :columns="columns" :table-data="projects" />
-        </div>
-        <v-select-btn />
-        <div class="m-8">
-          <link-responsible></link-responsible>
-        </div>
-      </v-card>
-    </v-container>
-  </div>
+  <v-card class="w-full p-8">
+    <div class="flex">
+      <h2>All projects</h2>
+      <span class="ml-2.5 text-gray-400 text-base">15</span>
+      <v-search class="field field-search h-10 w-90 ml-auto" />
+    </div>
+    <div class="mt-7.5">
+      <vtable :columns="columns" :table-data="projects" />
+    </div>
+  </v-card>
 </template>
 
 <script setup>

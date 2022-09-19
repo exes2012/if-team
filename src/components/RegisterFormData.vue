@@ -72,6 +72,7 @@ const checkCredentials = () => {
   store.dispatch('userAuth/checkCredentials', {
     phone:store.state.userAuth.phone,
     email:store.state.userAuth.email,
+    password:store.state.userAuth.password,
   })
 };
 </script>

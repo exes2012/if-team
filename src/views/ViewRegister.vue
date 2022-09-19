@@ -1,21 +1,20 @@
 <template>
-  <the-header />
-  <div class="container flex lg:flex-col-reverse">
     <the-aside label="Здесь может быть что угодно" />
-    <main class="m-28 w-[445px]">
+    <the-main>
       <login-form-header
         company-name="If.Team"
         link-label="Register or"
         :link="link"
       />
-      <v-stepper :steps="steps" :step="registrationStep" />
-      <!-- Step 1 -->
-      <register-form-data v-if="registrationStep === 1" />
-      <register-form-main-info v-if="registrationStep === 2" />
-      <register-form-photo v-if="registrationStep === 3" />
-      <register-form-finish v-if="registrationStep === 4" />
-    </main>
-  </div>
+      <div class="w-[445px] flex flex-col">
+        <v-stepper :steps="steps" :step="registrationStep" />
+        <!-- Step 1 -->
+        <register-form-data v-if="registrationStep === 1" />
+        <register-form-main-info v-if="registrationStep === 2" />
+        <register-form-photo v-if="registrationStep === 3" />
+        <register-form-finish v-if="registrationStep === 4" />
+      </div>
+    </the-main>
 
   <register-form-photo-crop
     @click.self="closeRegisterPhotoCrop"

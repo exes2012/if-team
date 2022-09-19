@@ -7,7 +7,6 @@
 		        :field="column.field"
 		        :header="column.header"
 		        :footer="column.footer">
-
 		</column>
 	</data-table>
 </template>
