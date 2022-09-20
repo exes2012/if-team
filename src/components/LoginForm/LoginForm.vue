@@ -1,103 +1,144 @@
 <template>
   <div
-    class="max-w-[600px] w-full pt-[140px] px-[90px] pb-[90px] 2xl:max-w-[400px] 2xl:px-10 lg:max-w-[600px] md:px-[15px] md:pb-20"
+      class="max-w-[600px] w-full pt-[140px] px-[90px] pb-[90px] 2xl:max-w-[400px] 2xl:px-10 lg:max-w-[600px] md:px-[15px] md:pb-20"
   >
     <login-form-header
-      company-name="If.Team"
-      link-label="Войдите или"
-      :link="link"
+        company-name="If.Team"
+        link-label="Войдите или"
+        :link="link"
     />
-    <form @submit.prevent="login" method="post" class="mt-16">
+    <form @submit.prevent="login()" method="post" class="mt-16">
       <div class="relative mb-2 md:mb-1">
+        <!--        <v-input-->
+        <!--            label="E-mail"-->
+        <!--            placeholder="Your e-mail"-->
+        <!--            v-model="email"-->
+        <!--            @onBlur="v$.email.$touch"-->
+        <!--            :class="{ 'field-error': v$.email.$error }"-->
+        <!--        >-->
         <v-input
-          label="E-mail"
-          placeholder="Your e-mail"
-          v-model="state.email"
-          @onBlur="v$.email.$touch"
-          :class="{ 'field-error': v$.email.$error }"
+            label="E-mail"
+            placeholder="Your e-mail"
+            v-model="email.value"
+            @input="removeError(email.errors)"
+            :class="{ 'field-error': email.errors.length }"
         >
-          <input-error v-if="v$.email.$error" :errors="v$.email.$errors" />
+          <input-error v-if="email.errors.length" :errors="email.errors"/>
         </v-input>
         <v-input
-          v-model="state.password"
-          label="Password"
-          placeholder="Enter your password"
-          :icon="passwordFieldIcon"
-          :type="passwordFieldType"
-          @iconClick="showPassword"
-          @onBlur="v$.password.$touch"
-          :class="{ 'field-error': v$.password.$error }"
+            v-model="password.value"
+            label="Password"
+            placeholder="Enter your password"
+            :icon="passwordFieldIcon"
+            :type="passwordFieldType"
+            @iconClick="showPassword()"
+            @input="removeError(password.errors)"
+            :class="{ 'field-error': password.errors.length }"
         >
-          <input-error
-            v-if="v$.password.$error"
-            :errors="v$.password.$errors"
-          />
+          <input-error v-if="password.errors.length" :errors="password.errors"/>
           <router-link v-else to="/reset" class="link-2"
-            >Забыли пароль?</router-link
+          >Забыли пароль?
+          </router-link
           >
         </v-input>
       </div>
-      <p class="text-3 mb-8 text-red-800 md:mb-6">Неверный логин и пароль</p>
+      <p v-if="false" class="text-3 mb-8 text-red-800 md:mb-6">Неверный логин и пароль</p>
       <v-button
-        type="submit"
-        class="btn-primary w-full h-15 mb-10 md:mb-7"
-        :disabled="v$.$invalid"
-        >Войти</v-button
+          type="submit"
+          class="btn-primary w-full h-15 mb-10 md:mb-7"
+          :class="{'cursor-wait' : disabled}"
+          :disabled="disabled"
+      >Войти
+      </v-button
       >
       <p class="text-3 text-center mb-10 md:mb-7">или войдите с помощью</p>
       <v-button class="btn-secondary w-full h-15">
-        <v-icon name="google" class="mr-2" />Google
+        <v-icon name="google" class="mr-2"/>
+        Google
       </v-button>
     </form>
   </div>
 </template>
 
-<script setup>
-import InputError from "../InputError.vue";
-import LoginFormHeader from "../AuthFormHeader.vue";
-import { reactive } from "vue";
-import { usePasswordShow } from "../../composables/passwordHide";
-import { useVuelidate } from "@vuelidate/core";
-import { useStore } from "vuex";
-import router from "../../router";
-import { useValidationRules } from "../../composables/validationRules";
-import { email, helpers, required } from "@vuelidate/validators";
+<script>
+import InputError from "../InputError.vue"
+import LoginFormHeader from "../AuthFormHeader.vue"
+import {passwordHide} from "../../mixins/passwordHide";
+import {removeErrors} from "../../mixins/removeErrors";
+import router from "../../router"
+// import {useVuelidate} from "@vuelidate/core"
+// import { useValidationRules } from "../../composables/validationRules"
+// import {email, helpers, required} from "@vuelidate/validators"
 
-const link = reactive({
-  label: "зарегистрируйтесь",
-  url: "/register",
-});
-
-const state = reactive({
-  email: "",
-  password: "",
-});
-
-const { passwordFieldIcon, passwordFieldType, showPassword } =
-  usePasswordShow();
-
-const rules = {
-  email: {
-    required: helpers.withMessage("Поле не может быть пустым", required),
-    email: helpers.withMessage("Неверный формат электронной почты", email),
+export default {
+  components: {
+    InputError,
+    LoginFormHeader,
   },
-  password: {
-    required: helpers.withMessage("Поле не может быть пустым", required),
+  mixins: [
+    passwordHide,
+    removeErrors,
+  ],
+  data() {
+    return {
+      link: {
+        label: "зарегистрируйтесь",
+        url: "/register",
+      },
+      email: {
+        value: '',
+        errors: []
+      },
+      password: {
+        value: '',
+        errors: []
+      },
+      disabled: false
+    }
   },
-};
 
-const v$ = useVuelidate(rules, state);
+// const {passwordFieldIcon, passwordFieldType, showPassword} =
+//     usePasswordShow();
 
-const store = useStore();
+  // const rules = {
+  //   email: {
+  //     required: helpers.withMessage("Поле не может быть пустым", required),
+  //     email: helpers.withMessage("Неверный формат электронной почты", email),
+  //   },
+  //   password: {
+  //     required: helpers.withMessage("Поле не может быть пустым", required),
+  //   },
+  // }
 
-const login = () => {
-  store
-    .dispatch("userAuth/login", {
-      email: state.email,
-      password: state.password,
-    })
-    .then(() => {
-      router.push({ name: "TeamsListView" });
-    });
-};
+  // const v$ = useVuelidate(rules, state)
+  //
+  // const store = useStore()
+  //
+  methods: {
+    login() {
+      this.disabled = true
+      this.$store.dispatch("userAuth/login", {
+        email: this.email,
+        password: this.password,
+      })
+          .then(() => {
+            router.push({name: "TeamsListView"})
+          })
+          .catch(err => {
+
+            if (Object.keys(err).length) {
+              for (const key in err) {
+                if (this[key] && err[key].constraints && err[key].constraints.length) {
+                  this[key].errors = err[key].constraints
+                }
+              }
+            }
+
+          })
+          .finally(() => {
+            this.disabled = false
+          })
+    }
+  }
+}
 </script>

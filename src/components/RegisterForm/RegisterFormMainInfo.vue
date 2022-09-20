@@ -35,7 +35,7 @@ import InputError from "../InputError.vue";
 import VDatepicker from "../VDatepicker.vue";
 import {useValidationRules} from "../../composables/validationRules";
 import {reactive, ref} from "vue";
-import {usePasswordShow} from "../../composables/passwordHide";
+// import {usePasswordShow} from "../../composables/passwordHide";
 import {useVuelidate} from "@vuelidate/core";
 import {useStore} from "vuex";
 import router from "../../router";
@@ -48,8 +48,8 @@ const data = reactive({
   date_of_birth: "",
 });
 
-const {passwordFieldIcon, passwordFieldType, showPassword} =
-    usePasswordShow();
+// const {passwordFieldIcon, passwordFieldType, showPassword} =
+// usePasswordShow();
 
 const rules = useValidationRules();
 

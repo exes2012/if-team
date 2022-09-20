@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <span v-for="error of errors" :key="error.$uid" class="message-invalid">
+    <span v-for="(error, i) in errors" :key="i" class="message-invalid">
       <template v-if="error && error.$message"></template>
       <template v-else>{{ error }}</template>
     </span>
