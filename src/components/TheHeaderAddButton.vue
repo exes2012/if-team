@@ -11,29 +11,16 @@
   </div>
 </template>
 
-<script setup>
-import { onBeforeUnmount, onMounted, reactive, ref } from "vue";
+<script>
 import VSelectDropdown from "./VSelectDropdown.vue";
-
-const emit = defineEmits(["select"]);
-
-const isActive = ref(false);
-
-const changeState = () => {
-  isActive.value = !isActive.value;
+import changeDropdownComponentStateMixin from "../mixins/changeDropdownComponentStateMixin";
+export default {
+  name: "TheHeaderAddButton",
+  components: {
+    VSelectDropdown,
+  },
+  mixins: [changeDropdownComponentStateMixin],
 };
-
-const hideSelect = () => {
-  isActive.value = false;
-};
-
-onMounted(() => {
-  document.addEventListener("click", hideSelect, true);
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener("click", hideSelect);
-});
 </script>
 
 <style scoped></style>

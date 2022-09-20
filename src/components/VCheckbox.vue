@@ -5,23 +5,28 @@
       type="checkbox"
       v-model="value"
       value="vuex"
-      @click="console.log(1)"
+      @click="$emit('check')"
     />
     <span class="checkmark"></span>
-    {{ props.label }}
+    {{ label }}
   </label>
 </template>
 
-<script setup>
-import { ref } from "vue";
-const props = defineProps({
-  label: {
-    type: String,
-    default: "",
+<script>
+export default {
+  data() {
+    return {
+      value: "",
+    };
   },
-});
-
-const value = ref("");
+  props: {
+    label: {
+      type: String,
+      default: "",
+    },
+  },
+  emits: ["check"],
+};
 </script>
 
 <style scoped lang="css">

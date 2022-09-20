@@ -21,9 +21,16 @@
   >
 </template>
 
-<script setup>
+<script>
 import teamsList from "./TeamsList.vue";
 import teamsListItem from "./TeamsListItem.vue";
+export default {
+  name: "TeamListView",
+  components: {
+    teamsList,
+    teamsListItem,
+  },
+};
 </script>
 
 <style scoped></style>
