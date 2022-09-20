@@ -15,9 +15,6 @@
 import { useStore } from "vuex";
 import Vtable from "../components/Vtable.vue";
 import VSearch from "../components/VSearch.vue";
-import VSelectBtn from "../components/VSelectBtn.vue";
-import LinkResponsible from "../components/LinkResponsible.vue";
-import VModal from "../components/VModal.vue";
 
 const store = useStore();
 const projects = store.state.projects.projectsList;

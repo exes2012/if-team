@@ -16,6 +16,7 @@ import TeamsListView from "../components/TeamsListView.vue";
 import TeamsCreateTeam from "../components/TeamsCreateTeam.vue";
 import ViewRole from "../views/ViewRole.vue";
 import ViewProject from "../views/ViewProject.vue";
+import ViewAdmin from "../views/ViewAdmin.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -31,6 +32,12 @@ const router = createRouter({
       name: "project",
       meta: { layout: "team" },
       component: ViewProject,
+    },
+    {
+      path: "/admin",
+      name: "admin",
+      meta: { layout: "team" },
+      component: ViewAdmin,
     },
     {
       path: "/role",

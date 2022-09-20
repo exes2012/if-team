@@ -26,7 +26,9 @@ const props = defineProps({
 	bg-white
 	rounded-md
 	shadow-dropdown
-  w-full;
+  w-full
+  flex
+  flex-col;
 }
 
 .left {
