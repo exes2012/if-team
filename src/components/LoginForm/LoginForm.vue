@@ -65,7 +65,6 @@ import InputError from "../InputError.vue"
 import LoginFormHeader from "../AuthFormHeader.vue"
 import {passwordHide} from "../../mixins/passwordHide";
 import {removeErrors} from "../../mixins/removeErrors";
-import router from "../../router"
 // import {useVuelidate} from "@vuelidate/core"
 // import { useValidationRules } from "../../composables/validationRules"
 // import {email, helpers, required} from "@vuelidate/validators"
@@ -116,7 +115,7 @@ export default {
         password: this.password,
       })
           .then(() => {
-            router.push({name: "TeamsListView"})
+            this.$router.push({name: "TeamsListView"})
           })
           .catch(err => {
 

@@ -29,6 +29,7 @@ export default {
   text-1
   transition;
 }
+
 .link.active {
   @apply bg-gray-100 text-blue-400
 }

@@ -19,28 +19,24 @@
 </template>
 
 <script>
-import {ref} from "vue";
-import {useStore} from "vuex";
-import {computed} from "vue";
 
 export default {
   name: "AvatarDropZone",
-  components: {},
-
-  setup() {
-    const store = useStore();
-    const active = ref(false);
-
-    let croppedPhoto = computed(() => {
-      return store.state.userAuth.photoForAvatarCropped;
-    });
-
-    const toggleActive = () => {
-      active.value = !active.value;
-    };
-
-    return {active, toggleActive, croppedPhoto};
+  data() {
+    return {
+      active: false
+    }
   },
+  computed: {
+    croppedPhoto() {
+      return this.$store.state.userAuth.photoForAvatarCropped
+    }
+  },
+  methods: {
+    toggleActive() {
+      this.active = !this.active
+    }
+  }
 };
 </script>
 

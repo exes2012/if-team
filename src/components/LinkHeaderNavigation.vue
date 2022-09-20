@@ -2,9 +2,9 @@
   <li>
     <router-link :to="route.url" class="link" active-class="active">
       <v-icon
-        :name="route.icon"
-        viewBox="0 0 20 20"
-        class="fill-gray-500 mr-2.5"
+          :name="route.icon"
+          viewBox="0 0 20 20"
+          class="fill-gray-500 mr-2.5"
       />
       <p class="text-3">{{ route.name }}</p>
     </router-link>
@@ -33,6 +33,7 @@ export default {
   hover:bg-gray-100
   transition;
 }
+
 .link.active {
   @apply bg-gray-100
   [&>svg]:fill-blue-400;

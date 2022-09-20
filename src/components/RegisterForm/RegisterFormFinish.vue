@@ -16,12 +16,11 @@
 </template>
 
 <script>
-import router from "../../router"
 
 export default {
   methods: {
     signUp() {
-      router.push({name: "login"})
+      this.$router.push({name: "login"})
     }
   }
 }

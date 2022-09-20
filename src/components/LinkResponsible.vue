@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center gap-x-2.5">
     <div class="w-[30px] h-[30px] rounded-full overflow-hidden">
-      <img :src="photo" alt="photo" class="w-full h-full object-cover" />
+      <img :src="photo" alt="photo" class="w-full h-full object-cover"/>
     </div>
     <a href="#" class="link-3">{{ name }}</a>
   </div>

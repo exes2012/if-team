@@ -1,7 +1,7 @@
 <template>
   <dropdown-item>
     <div class="flex items-center">
-      <v-icon :name="icon" height="13" class="mr-2.5" />
+      <v-icon :name="icon" height="13" class="mr-2.5"/>
       <div class="text-gray-900">
         {{ value }}
       </div>
@@ -10,18 +10,19 @@
   </dropdown-item>
 </template>
 
-<script setup>
-const props = defineProps({
-  icon: {
-    type: String,
+<script>
+import DropdownItem from "./DropdownItem.vue";
+
+export default {
+  components: {
+    DropdownItem
   },
-  value: {
-    type: String,
-  },
-  symbol: {
-    type: String,
-  },
-});
+  props: {
+    icon: String,
+    value: String,
+    symbol: String,
+  }
+}
 </script>
 
 <style scoped></style>

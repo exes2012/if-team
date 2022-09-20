@@ -57,7 +57,6 @@ export default {
   },
   mounted() {
     this.photo = this.$refs.photo
-    console.log(this.photo)
   },
   computed: {
     imgSrc() {
