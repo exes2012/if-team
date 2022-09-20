@@ -20,7 +20,7 @@
             label="E-mail"
             placeholder="Your e-mail"
             v-model="email.value"
-            @input="removeError(email.errors)"
+            @input="removeErrors(email.errors)"
             :class="{ 'field-error': email.errors.length }"
         >
           <input-error v-if="email.errors.length" :errors="email.errors"/>
@@ -32,7 +32,7 @@
             :icon="passwordFieldIcon"
             :type="passwordFieldType"
             @iconClick="showPassword()"
-            @input="removeError(password.errors)"
+            @input="removeErrors(password.errors)"
             :class="{ 'field-error': password.errors.length }"
         >
           <input-error v-if="password.errors.length" :errors="password.errors"/>
@@ -97,9 +97,6 @@ export default {
     }
   },
 
-// const {passwordFieldIcon, passwordFieldType, showPassword} =
-//     usePasswordShow();
-
   // const rules = {
   //   email: {
   //     required: helpers.withMessage("Поле не может быть пустым", required),
@@ -111,9 +108,6 @@ export default {
   // }
 
   // const v$ = useVuelidate(rules, state)
-  //
-  // const store = useStore()
-  //
   methods: {
     login() {
       this.disabled = true

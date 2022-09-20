@@ -77,21 +77,35 @@ export default {
     },
     actions: {
         register({commit}, credentials) {
-            return EventService.postEvent("/auth/register", credentials, {
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
-            }).then(({data}) => {
-                commit("SET_USER_DATA", data);
-                commit("SET_REGISTER_STEP", 4);
-            });
+            return new Promise((resolve, reject) => {
+                return EventService.postEvent("/auth/register", credentials, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                })
+                    .then(({data}) => {
+                        commit("SET_USER_DATA", data)
+                        commit("SET_REGISTER_STEP", 4)
+                        resolve({data})
+                    })
+                    .catch(error => {
+                        reject(error.response.data.errors)
+                        console.log(error.response.data.errors)
+                    })
+            })
         },
         login({commit}, credentials) {
-            return EventService.postEvent("/auth/login", credentials).then(
-                ({data}) => {
-                    commit("SET_USER_DATA", data);
-                }
-            );
+            return new Promise((resolve, reject) => {
+                return EventService.postEvent("/auth/login", credentials)
+                    .then(({data}) => {
+                        commit("SET_USER_DATA", data)
+                        resolve({data})
+                    })
+                    .catch(error => {
+                        reject(error.response.data.errors)
+                        console.log(error.response.data.errors)
+                    })
+            })
         },
         logout({commit}) {
             commit("CLEAR_USER_DATA");

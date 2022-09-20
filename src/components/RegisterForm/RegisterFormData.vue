@@ -8,7 +8,7 @@
         placeholder="Your e-mail"
         v-model="email.value"
         :class="{ 'field-error': email.errors.length }"
-        @input="removeError(email.errors)"
+        @input="removeErrors(email.errors)"
     >
       <!--      <v-input-->
       <!--          label="E-mail"-->
@@ -31,7 +31,7 @@
         placeholder="+38 000 00 00 000"
         v-model="phone.value"
         :class="{ 'field-error': phone.errors.length }"
-        @input="removeError(phone.errors)"
+        @input="removeErrors(phone.errors)"
     >
       <input-error v-if="phone.errors.length" :errors="phone.errors"/>
     </v-input>
@@ -53,7 +53,7 @@
         :type="passwordFieldType"
         @iconClick="showPassword()"
         :class="{ 'field-error': password.errors.length }"
-        @input="removeError(password.errors)"
+        @input="removeErrors(password.errors)"
     >
       <input-error v-if="password.errors.length" :errors="password.errors"/>
     </v-input>
