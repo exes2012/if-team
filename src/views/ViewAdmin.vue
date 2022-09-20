@@ -42,6 +42,7 @@
         >
       </v-card>
     </div>
+    <VSelectBtn />
   </div>
 </template>
 
@@ -49,6 +50,7 @@
 import Vtable from "../components/Vtable.vue";
 import VSearch from "../components/VSearch.vue";
 import RoleListItem from "../components/RoleListItem.vue";
+import VSelectBtn from "../components/VSelectBtn.vue";
 
 export default {
   data() {
@@ -64,6 +66,7 @@ export default {
     Vtable,
     VSearch,
     RoleListItem,
+    VSelectBtn,
   },
   methods: {
     departmentSelect(option) {
