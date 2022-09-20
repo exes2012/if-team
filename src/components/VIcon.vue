@@ -7,28 +7,49 @@
   ></svg>
 </template>
 
-<script setup>
+<script>
 import icons from "../assets/icons/icons";
-import { computed } from "vue";
 
-const props = defineProps({
-  name: {
-    type: String,
-    default: "apply",
+export default {
+  props: {
+    name: {
+      type: String,
+      default: "apply",
+    },
+    width: {
+      type: String,
+      default: "20",
+    },
+    height: {
+      type: String,
+      default: "20",
+    },
   },
-  width: {
-    type: String,
-    default: "20",
+  computed: {
+    icon() {
+      return icons[this.name];
+    },
   },
-  height: {
-    type: String,
-    default: "20",
-  },
-});
+};
 
-const icon = computed(() => {
-  return icons[props.name];
-});
+// const props = defineProps({
+//   name: {
+//     type: String,
+//     default: "apply",
+//   },
+//   width: {
+//     type: String,
+//     default: "20",
+//   },
+//   height: {
+//     type: String,
+//     default: "20",
+//   },
+// });
+//
+// const icon = computed(() => {
+//   return icons[props.name];
+// });
 </script>
 
 <style></style>

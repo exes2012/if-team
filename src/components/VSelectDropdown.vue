@@ -8,12 +8,14 @@
   </ul>
 </template>
 
-<script setup>
-const props = defineProps({
-  width: String,
-  left: Boolean,
-  right: Boolean,
-});
+<script>
+export default {
+  props: {
+    width: String,
+    left: Boolean,
+    right: Boolean,
+  },
+};
 </script>
 
 <style scoped>
