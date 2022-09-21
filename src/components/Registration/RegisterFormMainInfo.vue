@@ -6,8 +6,9 @@
     <v-input
         label="Full Name"
         placeholder="Enter your full name"
-        v-model="full_name.value"
-        :class="{ 'field-error': full_name.errors.length }"
+        v-model="fullName.value"
+        :class="{ 'field-error': v$.fullName.value.$error }"
+        @onBlur="v$.fullName.$touch"
     >
       <!--      <v-input-->
       <!--          label="Full Name"-->
@@ -17,9 +18,12 @@
       <!--          :class="{ 'field-error': v$.email.$error }"-->
       <!--      >-->
       <!--        <input-error v-if="v$.email.$error" :errors="v$.email.$errors"/>-->
-      <input-error v-if="full_name.errors.length" :errors="full_name.errors"/>
+      <input-error v-if="v$.fullName.value.$errors.length" :errors="v$.fullName.value.$errors"/>
     </v-input>
-    <v-datepicker label="Birthday" @selectDate="getDateOfBirth"/>
+    <v-datepicker label="Birthday" @selectDate="getDateOfBirth">
+      <input-error v-if="dateOfBirth.errors.length" :errors="dateOfBirth.errors"/>
+    </v-datepicker>
+
 
     <v-button
         class="btn-primary w-full h-15 mt-12"
@@ -33,42 +37,64 @@
 </template>
 
 <script>
+import {useVuelidate} from "@vuelidate/core";
+
 import InputError from "../InputError.vue";
 import VDatepicker from "../VDatepicker.vue";
-// import {useVuelidate} from "@vuelidate/core";
+import validationRules from "../../mixins/validationRules";
+
 export default {
   components: {
     InputError,
     VDatepicker
   },
+  mixins: [
+    validationRules
+  ],
+  setup() {
+    return {v$: useVuelidate()}
+  },
   data() {
     return {
-      full_name: {
+      fullName: {
         value: '',
         errors: []
       },
-      date_of_birth: {
+      dateOfBirth: {
         value: '',
         errors: []
       },
-      disabled: false
+      disabled: false,
     }
   },
   methods: {
     getDateOfBirth(selectedDate) {
-      this.date_of_birth.value = selectedDate
+      this.removeErrors(this.dateOfBirth.errors)
+      this.dateOfBirth.value = selectedDate
+    },
+    testDate(date) {
+      if (!date) {
+        this.dateOfBirth.errors.push('DD/MM/YYYY')
+      }
     },
     setRegistrationData() {
-      this.$store.commit("userAuth/SET_REGISTER_USER_MAIN_INFO", {
-        full_name: this.full_name.value,
-        date_of_birth: this.date_of_birth.value
-      })
-      this.$store.commit("userAuth/SET_REGISTER_STEP", 3)
+      this.v$.fullName.$touch()
+      this.testDate(this.dateOfBirth.value)
+      if (!this.v$.fullName.value.$errors.length) {
+        this.$store.commit("userAuth/SET_REGISTER_USER_MAIN_INFO", {
+          full_name: this.fullName.value,
+          date_of_birth: this.dateOfBirth.value
+        })
+        this.$store.commit("userAuth/SET_REGISTER_STEP", 3)
+      }
+    }
+  },
+  validations() {
+    return {
+      fullName: {
+        value: this.rules.fullName
+      },
     }
   }
-
-// const rules = useValidationRules()
-
-// const v$ = useVuelidate(rules, data)
 }
 </script>

@@ -1,41 +1,47 @@
 <template>
-  <label class="label">{{ label }}</label>
-  <Datepicker
-      v-model="date"
-      :enableTimePicker="false"
-      :format="format"
-      :clearable="false"
-      class="mt-2.5"
-      ref="dp"
-      :textInput="true"
-      :textInputOptions="textInputOptions"
-  >
-    <template #input-icon>
-      <v-icon name="calendar" class="mr-3"></v-icon>
-    </template>
-    <template #action-preview="{ value }">
-      <div class="flex justify-between">
-        <p>{{ label }}</p>
-        <p class="font-medium text-blue-400 text-sm">{{ getDate(value) }}</p>
-      </div>
-    </template>
-    <template #action-select>
-      <div class="flex justify-end">
-        <p
-            class="font-medium text-gray-500 text-sm cursor-pointer mr-2"
-            @click="closeMenu"
-        >
-          Cancel
-        </p>
-        <p
-            class="font-medium text-blue-400 text-sm cursor-pointer"
-            @click="selectDate"
-        >
-          Select
-        </p>
-      </div>
-    </template>
-  </Datepicker>
+  <div class="mb-7 md:mb-5">
+    <div class="flex justify-between">
+      <label class="label mb-2.5">{{ label }}</label>
+      <slot/>
+    </div>
+
+    <Datepicker
+        v-model="date"
+        :enableTimePicker="false"
+        :format="format"
+        :clearable="false"
+        class="mt-2.5"
+        ref="dp"
+        :textInput="true"
+        :textInputOptions="textInputOptions"
+    >
+      <template #input-icon>
+        <v-icon name="calendar" class="mr-3"></v-icon>
+      </template>
+      <template #action-preview="{ value }">
+        <div class="flex justify-between">
+          <p>{{ label }}</p>
+          <p class="font-medium text-blue-400 text-sm">{{ getDate(value) }}</p>
+        </div>
+      </template>
+      <template #action-select>
+        <div class="flex justify-end">
+          <p
+              class="font-medium text-gray-500 text-sm cursor-pointer mr-2"
+              @click="closeMenu"
+          >
+            Cancel
+          </p>
+          <p
+              class="font-medium text-blue-400 text-sm cursor-pointer"
+              @click="selectDate"
+          >
+            Select
+          </p>
+        </div>
+      </template>
+    </Datepicker>
+  </div>
 </template>
 
 <script>

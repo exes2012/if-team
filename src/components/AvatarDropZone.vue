@@ -82,7 +82,7 @@ export default {
 }
 
 .dropzone-file {
-  @apply w-full h-[75px] absolute opacity-0;
+  @apply w-full h-[100%] absolute opacity-0;
 }
 
 .dropzone.active {
