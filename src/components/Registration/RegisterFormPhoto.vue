@@ -4,7 +4,7 @@
       class="max-w-[910px] w-full pt-12 border-t-2 border-solid border-gray-100"
   >
     <div class="flex">
-      <avatar-drop-zone @drop.prevent="drop"/>
+      <avatar-drop-zone @drop="drop" @upload="upload"/>
       <div class="flex flex-col justify-center ml-10">
         <div class="text-3 mb-2.5">Just a little bit left. Add a photo, and complete your registration</div>
         <div class="text-4 text-gray-400 mt-2.5">No more than 5 Mb</div>
@@ -40,6 +40,14 @@ export default {
   methods: {
     drop(e) {
       this.avatar.value = e.dataTransfer.files[0]
+      this.crop()
+
+    },
+    upload(file) {
+      this.avatar.value = file
+      this.crop()
+    },
+    crop() {
       this.setPhotoToCrop()
       this.openRegisterPhotoCrop()
     },
@@ -51,6 +59,7 @@ export default {
     },
     register() {
       this.disabled = true
+      this.removeErrors(this.errors)
       const formData = new FormData()
       formData.append('phone', this.$store.state.userAuth.phone)
       formData.append('email', this.$store.state.userAuth.email)

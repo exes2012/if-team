@@ -76,7 +76,6 @@
 <script>
 import InputError from "../InputError.vue"
 import {passwordHide} from "../../mixins/passwordHide"
-import {removeErrors} from "../../mixins/removeErrors"
 // import {useValidationRules} from "../../composables/validationRules"
 // import {useVuelidate} from "@vuelidate/core"
 
@@ -86,7 +85,6 @@ export default {
   },
   mixins: [
     passwordHide,
-    removeErrors
   ],
   data() {
     return {

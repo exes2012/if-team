@@ -64,7 +64,6 @@
 import InputError from "../InputError.vue"
 import LoginFormHeader from "../AuthFormHeader.vue"
 import {passwordHide} from "../../mixins/passwordHide";
-import {removeErrors} from "../../mixins/removeErrors";
 // import {useVuelidate} from "@vuelidate/core"
 // import { useValidationRules } from "../../composables/validationRules"
 // import {email, helpers, required} from "@vuelidate/validators"
@@ -76,7 +75,6 @@ export default {
   },
   mixins: [
     passwordHide,
-    removeErrors,
   ],
   data() {
     return {

@@ -1,17 +1,25 @@
 //Main
-import { createApp } from "vue";
+import {createApp} from "vue";
 import App from "./App.vue";
 import store from "./store/store";
 import router from "./router";
+
+//Mixins
+import removeErrors from "./mixins/removeErrors";
+
 //Validation
-import { useVuelidate } from "@vuelidate/core";
+import {useVuelidate} from "@vuelidate/core";
+
 //PrimeVue (Table)
 import PrimeVue from "primevue/config";
+
 //DatePicker
 import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
+
 //Styles
 import "./assets/css/style.scss";
+
 //Components
 import VIcon from "./components/VIcon.vue";
 import VCard from "./components/VCard.vue";
@@ -23,9 +31,10 @@ import VMain from "./components/VMain.vue";
 import TheMain from "./components/TheMain.vue";
 import VInput from "./components/VInput.vue";
 import VSelect from "./components/VSelect.vue";
-import { CircleStencil } from "vue-advanced-cropper";
+import {CircleStencil} from "vue-advanced-cropper";
 
 const app = createApp(App);
+
 
 app.component("v-icon", VIcon);
 app.component("v-card", VCard);
@@ -40,4 +49,10 @@ app.component("v-button", VButton);
 app.component("Datepicker", Datepicker);
 app.component("circle-stencil", CircleStencil);
 
-app.use(PrimeVue).use(store).use(router).use(useVuelidate).mount("#app");
+app.mixin(removeErrors);
+
+app.use(PrimeVue)
+    .use(store)
+    .use(router)
+    .use(useVuelidate)
+    .mount("#app");

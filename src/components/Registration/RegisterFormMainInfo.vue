@@ -35,16 +35,12 @@
 <script>
 import InputError from "../InputError.vue";
 import VDatepicker from "../VDatepicker.vue";
-import {removeErrors} from "../../mixins/removeErrors"
 // import {useVuelidate} from "@vuelidate/core";
 export default {
   components: {
     InputError,
     VDatepicker
   },
-  mixins: [
-    removeErrors,
-  ],
   data() {
     return {
       full_name: {
@@ -60,10 +56,13 @@ export default {
   },
   methods: {
     getDateOfBirth(selectedDate) {
-      this.date_of_birth = selectedDate
+      this.date_of_birth.value = selectedDate
     },
     setRegistrationData() {
-      this.$store.commit("userAuth/SET_REGISTER_USER_MAIN_INFO", data)
+      this.$store.commit("userAuth/SET_REGISTER_USER_MAIN_INFO", {
+        full_name: this.full_name.value,
+        date_of_birth: this.date_of_birth.value
+      })
       this.$store.commit("userAuth/SET_REGISTER_STEP", 3)
     }
   }

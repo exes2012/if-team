@@ -8,8 +8,8 @@
 
 <script setup>
 import TheHeader from "../components/TheHeader.vue";
-import LoginForm from "../components/LoginForm/LoginForm.vue";
-import LoginWallpapers from "../components/LoginForm/LoginWallpapers.vue";
+import LoginForm from "../components/Login/LoginForm.vue";
+import LoginWallpapers from "../components/Login/LoginWallpapers.vue";
 import { useScreenSize } from "../composables/screenSize";
 
 const screenSize = useScreenSize();

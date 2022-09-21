@@ -8,6 +8,7 @@ import MainLayout from "./layouts/MainLayout.vue";
 import TeamLayout from "./layouts/TeamLayout.vue";
 import UnauthorizedLayout from "./layouts/UnauthorizedLayout.vue";
 
+
 export default {
   components: {
     EmptyLayout,
