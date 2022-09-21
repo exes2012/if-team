@@ -2,7 +2,7 @@
   <div class="flex flex-col w-[445px]">
     <div class="flex">
       <v-button
-        @click="$router.push('/')"
+        @click="this.$router.push('/')"
         class="p-1 pl-[3px] rounded-full bg-gray-100 [&:hover>svg]:fill-blue-400 transition w-10"
       >
         <v-icon
@@ -48,46 +48,80 @@
     </div>
 
     <v-button class="btn-primary w-full h-15" @click="createTeam"
-      >Create</v-button
-    >
+      >Create
+    </v-button>
   </div>
 </template>
 
-<script setup>
-import { computed, ref } from "vue";
-import { useStore } from "vuex";
+<script>
 import TeamAvatarDropZone from "./TeamAvatarDropZone.vue";
 
-const store = useStore();
-
-const teamName = ref("");
-const teamAddressName = ref("");
-const teamAddress = computed(() => {
-  return teamAddressName.value + "if.team";
-});
-let dropzoneFile = ref("");
-
-const drop = (e) => {
-  dropzoneFile.value = e.dataTransfer.files[0];
-  setPhotoToCrop();
-  openRegisterPhotoCrop();
+export default {
+  name: "TeamsCreateTeam",
+  data() {
+    return {
+      teamName: "",
+      teamAddressName: "",
+      dropzoneFile: "",
+    };
+  },
+  methods: {
+    drop(e) {
+      this.dropzoneFile = e.dataTransfer.files[0];
+      this.setPhotoToCrop();
+      this.openRegisterPhotoCrop();
+    },
+    setPhotoToCrop() {
+      this.$store.commit("teams/SET_TEAM_PHOTO", this.dropzoneFile);
+    },
+    openRegisterPhotoCrop() {
+      this.$store.commit("teams/SET_TEAM_PHOTO_CROP_STATE", true);
+    },
+    createTeam() {
+      const formData = new FormData();
+      formData.append("name", this.teamName.value);
+      formData.append("address", this.teamAddress.value);
+      formData.append("logo", this.$store.state.teams.logo);
+      this.$store.dispatch("teams/createTeam", formData);
+    },
+  },
+  computed: {
+    teamAddress() {
+      return this.teamAddressName.value + "if.team";
+    },
+  },
 };
-
-const setPhotoToCrop = () => {
-  store.commit("teams/SET_TEAM_PHOTO", dropzoneFile);
-};
-
-const openRegisterPhotoCrop = () => {
-  store.commit("teams/SET_TEAM_PHOTO_CROP_STATE", true);
-};
-
-const createTeam = () => {
-  const formData = new FormData();
-  formData.append("name", teamName.value);
-  formData.append("address", teamAddress.value);
-  formData.append("logo", store.state.teams.logo);
-  store.dispatch("teams/createTeam", formData);
-};
+//
+// const store = useStore();
+//
+// const teamName = ref("");
+// const teamAddressName = ref("");
+// const teamAddress = computed(() => {
+//   return teamAddressName.value + "if.team";
+// });
+// let dropzoneFile = ref("");
+//
+// const drop = (e) => {
+//   dropzoneFile.value = e.dataTransfer.files[0];
+//   setPhotoToCrop();
+//   openRegisterPhotoCrop();
+// };
+//
+// const setPhotoToCrop = () => {
+//   store.commit("teams/SET_TEAM_PHOTO", dropzoneFile);
+// };
+//
+// const openRegisterPhotoCrop = () => {
+//   store.commit("teams/SET_TEAM_PHOTO_CROP_STATE", true);
+// };
+//
+// const createTeam = () => {
+//   const formData = new FormData();
+//   formData.append("name", teamName.value);
+//   formData.append("address", teamAddress.value);
+//   formData.append("logo", store.state.teams.logo);
+//   store.dispatch("teams/createTeam", formData);
+// };
 </script>
 
 <style scoped></style>

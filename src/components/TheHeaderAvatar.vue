@@ -18,54 +18,86 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import VSelectDropdown from "./VSelectDropdown.vue";
-import { useStore } from "vuex";
-import { onBeforeUnmount, onMounted, ref } from "vue";
 import DropdownItem from "./DropdownItem.vue";
-import router from "../router";
-
-const store = useStore();
-
-const avatar = store.state.userAuth.user.user.avatar;
-
-const goToProfile = () => {
-  router.push("/profile");
-  isActive.value = false;
-};
-
-const logout = () => {
-  store.dispatch("userAuth/logout").then(() => router.push("/login"));
-};
-
-const changeState = () => {
-  isActive.value = !isActive.value;
-};
-
-const hideSelect = () => {
-  isActive.value = false;
-};
-
-const isActive = ref(false);
-
-const items = [
-  {
-    icon: "profile",
-    value: "Profile",
+import changeDropdownComponentStateMixin from "../mixins/changeDropdownComponentStateMixin";
+export default {
+  name: "TheHeaderAvatar",
+  components: {
+    VSelectDropdown,
+    DropdownItem,
   },
-  {
-    icon: "flagUA",
-    value: "Log out",
+  mixins: [changeDropdownComponentStateMixin],
+  data() {
+    return {
+      avatar: this.store.state.userAuth.user.user.avatar,
+      items: [
+        {
+          icon: "profile",
+          value: "Profile",
+        },
+        {
+          icon: "flagUA",
+          value: "Log out",
+        },
+      ],
+    };
   },
-];
+  methods: {
+    goToProfile() {
+      this.$router.push("/profile");
+      this.isActive = false;
+    },
+    logout() {
+      this.$store
+        .dispatch("userAuth/logout")
+        .then(() => this.$router.push("/login"));
+    },
+  },
+};
 
-onMounted(() => {
-  document.addEventListener("click", hideSelect, true);
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener("click", hideSelect);
-});
+// const store = useStore();
+//
+// const avatar = store.state.userAuth.user.user.avatar;
+//
+// const goToProfile = () => {
+//   router.push("/profile");
+//   isActive.value = false;
+// };
+//
+// const logout = () => {
+//   store.dispatch("userAuth/logout").then(() => router.push("/login"));
+// };
+//
+// const changeState = () => {
+//   isActive.value = !isActive.value;
+// };
+//
+// const hideSelect = () => {
+//   isActive.value = false;
+// };
+//
+// const isActive = ref(false);
+//
+// const items = [
+//   {
+//     icon: "profile",
+//     value: "Profile",
+//   },
+//   {
+//     icon: "flagUA",
+//     value: "Log out",
+//   },
+// ];
+//
+// onMounted(() => {
+//   document.addEventListener("click", hideSelect, true);
+// });
+//
+// onBeforeUnmount(() => {
+//   document.removeEventListener("click", hideSelect);
+// });
 </script>
 
 <style scoped>
