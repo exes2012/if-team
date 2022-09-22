@@ -10,14 +10,6 @@
         :class="{ 'field-error': v$.fullName.value.$error }"
         @onBlur="v$.fullName.$touch"
     >
-      <!--      <v-input-->
-      <!--          label="Full Name"-->
-      <!--          placeholder="Enter your full name"-->
-      <!--          v-model="data.full_name"-->
-      <!--          @onBlur="v$.email.$touch"-->
-      <!--          :class="{ 'field-error': v$.email.$error }"-->
-      <!--      >-->
-      <!--        <input-error v-if="v$.email.$error" :errors="v$.email.$errors"/>-->
       <input-error v-if="v$.fullName.value.$errors.length" :errors="v$.fullName.value.$errors"/>
     </v-input>
     <v-datepicker label="Birthday" @selectDate="getDateOfBirth">
@@ -28,8 +20,11 @@
     <v-button
         class="btn-primary w-full h-15 mt-12"
         @click.prevent="setRegistrationData"
-        :class="{'cursor-wait' : disabled}"
-        :disabled="disabled"
+        :class="[
+            {'cursor-not-allowed' : v$.$invalid},
+            {'cursor-wait' : disabled},
+        ]"
+        :disabled="disabled || v$.$invalid"
     >Next
     </v-button
     >

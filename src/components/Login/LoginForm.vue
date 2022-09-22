@@ -9,21 +9,15 @@
     />
     <form @submit.prevent="login()" method="post" class="mt-16">
       <div class="relative mb-2 md:mb-1">
-        <!--        <v-input-->
-        <!--            label="E-mail"-->
-        <!--            placeholder="Your e-mail"-->
-        <!--            v-model="email"-->
-        <!--            @onBlur="v$.email.$touch"-->
-        <!--            :class="{ 'field-error': v$.email.$error }"-->
-        <!--        >-->
         <v-input
             label="E-mail"
             placeholder="Your e-mail"
             v-model="email.value"
+            :class="{ 'field-error': emailErrors && emailErrors.length }"
             @input="removeErrors(email.errors)"
-            :class="{ 'field-error': email.errors.length }"
+            @onBlur="v$.email.$touch"
         >
-          <input-error v-if="email.errors.length" :errors="email.errors"/>
+          <input-error v-if="emailErrors && emailErrors.length" :errors="emailErrors"/>
         </v-input>
         <v-input
             v-model="password.value"
@@ -32,22 +26,26 @@
             :icon="passwordFieldIcon"
             :type="passwordFieldType"
             @iconClick="showPassword()"
+            :class="{ 'field-error': passwordErrors && passwordErrors.length }"
             @input="removeErrors(password.errors)"
-            :class="{ 'field-error': password.errors.length }"
+            @onBlur="v$.password.$touch"
         >
-          <input-error v-if="password.errors.length" :errors="password.errors"/>
+          <input-error v-if="passwordErrors && passwordErrors.length" :errors="passwordErrors"/>
           <router-link v-else to="/reset" class="link-2"
           >Забыли пароль?
           </router-link
           >
         </v-input>
       </div>
-      <p v-if="false" class="text-3 mb-8 text-red-800 md:mb-6">Неверный логин и пароль</p>
+      <input-error v-if="errors && errors.length" :errors="errors"/>
       <v-button
           type="submit"
           class="btn-primary w-full h-15 mb-10 md:mb-7"
-          :class="{'cursor-wait' : disabled}"
-          :disabled="disabled"
+          :class="[
+            {'cursor-not-allowed' : v$.$invalid},
+            {'cursor-wait' : disabled},
+        ]"
+          :disabled="disabled || v$.$invalid"
       >Войти
       </v-button
       >
@@ -61,12 +59,11 @@
 </template>
 
 <script>
+import {useVuelidate} from "@vuelidate/core"
+import {passwordHide} from "../../mixins/passwordHide";
 import InputError from "../InputError.vue"
 import LoginFormHeader from "../AuthFormHeader.vue"
-import {passwordHide} from "../../mixins/passwordHide";
-// import {useVuelidate} from "@vuelidate/core"
-// import { useValidationRules } from "../../composables/validationRules"
-// import {email, helpers, required} from "@vuelidate/validators"
+import validationRules from "../../mixins/validationRules"
 
 export default {
   components: {
@@ -75,6 +72,7 @@ export default {
   },
   mixins: [
     passwordHide,
+    validationRules
   ],
   data() {
     return {
@@ -90,27 +88,45 @@ export default {
         value: '',
         errors: []
       },
+      errors: [],
       disabled: false
     }
   },
-
-  // const rules = {
-  //   email: {
-  //     required: helpers.withMessage("Поле не может быть пустым", required),
-  //     email: helpers.withMessage("Неверный формат электронной почты", email),
-  //   },
-  //   password: {
-  //     required: helpers.withMessage("Поле не может быть пустым", required),
-  //   },
-  // }
-
-  // const v$ = useVuelidate(rules, state)
+  setup() {
+    return {v$: useVuelidate()}
+  },
+  computed: {
+    emailErrors() {
+      if (this.v$.email.value.$error) {
+        return this.v$.email.value.$errors
+      } else if (this.email.errors.length) {
+        return this.email.errors
+      }
+    },
+    passwordErrors() {
+      if (this.v$.password.value.$error) {
+        return this.v$.password.value.$errors
+      } else if (this.password.errors.length) {
+        return this.password.errors
+      }
+    }
+  },
   methods: {
+    testErrors() {
+      this.v$.email.$touch()
+      this.v$.password.$touch()
+    },
     login() {
+      this.removeErrors(this.errors)
+      this.testErrors()
+      if (this.v$.email.value.$error || this.v$.password.value.$error) {
+        return false
+      }
+
       this.disabled = true
       this.$store.dispatch("userAuth/login", {
-        email: this.email,
-        password: this.password,
+        email: this.email.value,
+        password: this.password.value,
       })
           .then(() => {
             this.$router.push({name: "TeamsListView"})
@@ -121,6 +137,10 @@ export default {
               for (const key in err) {
                 if (this[key] && err[key].constraints && err[key].constraints.length) {
                   this[key].errors = err[key].constraints
+                } else if (err[key].constraints && err[key].constraints.length) {
+                  err[key].constraints.forEach(error => {
+                    this.errors.push(error)
+                  })
                 }
               }
             }
@@ -129,6 +149,16 @@ export default {
           .finally(() => {
             this.disabled = false
           })
+    }
+  },
+  validations() {
+    return {
+      email: {
+        value: this.rules.email
+      },
+      password: {
+        value: this.rules.password
+      }
     }
   }
 }
