@@ -14,26 +14,22 @@
       </div>
       <div class="w-full h-[170px] bg-white flex flex-col rounded-b-md">
         <div class="flex items-center mx-auto mt-8">
-          <v-button>
+          <v-button @click="rotate()">
             <v-icon name="previewRotate" width="28" height="24" class="mr-3"/>
           </v-button>
-          <v-button
-          >
-            <v-icon name="previewMirror" width="30" height="30" class="ml-3"
-            />
+          <v-button @click="flip()">
+            <v-icon name="previewMirror" width="30" height="30" class="ml-3"/>
           </v-button>
         </div>
         <div class="flex mx-auto mt-8">
           <v-button class="btn-primary w-[188px] h-[50px] mr-2.5"
                     @click="crop">Load
-          </v-button
-          >
+          </v-button>
           <v-button
               class="btn-secondary w-[188px] h-[50px] ml-2.5"
               @click="closeRegisterPhotoCrop"
           >Cancel
-          </v-button
-          >
+          </v-button>
         </div>
       </div>
     </div>
@@ -64,6 +60,12 @@ export default {
     }
   },
   methods: {
+    rotate() {
+      this.photo.rotate(-90)
+    },
+    flip() {
+      this.photo.flip(-1)
+    },
     crop() {
       const {canvas} = this.photo.getResult()
       this.$store.commit('userAuth/SET_CROPPED_PHOTO', canvas)

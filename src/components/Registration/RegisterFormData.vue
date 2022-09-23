@@ -27,7 +27,7 @@
     <!--        :class="{ 'field-error': v$.phone.$error }"-->
     <!--    >-->
     <v-input
-        label="Phone"
+        :label="$t('input.phone')"
         placeholder="+38 000 00 00 000"
         v-model="phone.value"
         :class="{ 'field-error': phone.errors.length }"
@@ -46,7 +46,7 @@
     <!--        :class="{ 'field-error': v$.password.$error }"-->
     <!--    >-->
     <v-input
-        label="Password"
+        :label="$t('input.password')"
         v-model="password.value"
         placeholder="******"
         :icon="passwordFieldIcon"
@@ -68,7 +68,7 @@
         @click.prevent="checkCredentials"
         :class="{'cursor-wait' : disabled}"
         :disabled="disabled"
-    >Next
+    >{{ $t('button.next') }}
     </v-button>
   </form>
 </template>
@@ -76,7 +76,6 @@
 <script>
 import InputError from "../InputError.vue"
 import {passwordHide} from "../../mixins/passwordHide"
-import {removeErrors} from "../../mixins/removeErrors"
 // import {useValidationRules} from "../../composables/validationRules"
 // import {useVuelidate} from "@vuelidate/core"
 
@@ -86,7 +85,6 @@ export default {
   },
   mixins: [
     passwordHide,
-    removeErrors
   ],
   data() {
     return {

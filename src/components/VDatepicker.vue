@@ -1,50 +1,58 @@
 <template>
-  <label class="label">{{ props.label }}</label>
-  <Datepicker
-    v-model="date"
-    :enableTimePicker="false"
-    :format="format"
-    :clearable="false"
-    class="mt-2.5"
-    ref="dp"
-    :textInput="true"
-    :textInputOptions="textInputOptions"
-  >
-    <template #input-icon>
-      <v-icon name="calendar" class="mr-3"></v-icon>
-    </template>
-    <template #action-preview="{ value }">
-      <div class="flex justify-between">
-        <p>{{ props.label }}</p>
-        <p class="font-medium text-blue-400 text-sm">{{ getDate(value) }}</p>
-      </div>
-    </template>
-    <template #action-select>
-      <div class="flex justify-end">
-        <p
-          class="font-medium text-gray-500 text-sm cursor-pointer mr-2"
-          @click="closeMenu"
-        >
-          Cancel
-        </p>
-        <p
-          class="font-medium text-blue-400 text-sm cursor-pointer"
-          @click="selectDate"
-        >
-          Select
-        </p>
-      </div>
-    </template>
-  </Datepicker>
+  <div class="mb-7 md:mb-5">
+    <div class="flex justify-between">
+      <label class="label mb-2.5">{{ label }}</label>
+      <slot/>
+    </div>
+
+    <Datepicker
+        v-model="date"
+        :enableTimePicker="false"
+        :format="format"
+        :clearable="false"
+        class="mt-2.5"
+        ref="dp"
+        :textInput="true"
+        :textInputOptions="textInputOptions"
+    >
+      <template #input-icon>
+        <v-icon name="calendar" class="mr-3"></v-icon>
+      </template>
+      <template #action-preview="{ value }">
+        <div class="flex justify-between">
+          <p>{{ label }}</p>
+          <p class="font-medium text-blue-400 text-sm">{{ getDate(value) }}</p>
+        </div>
+      </template>
+      <template #action-select>
+        <div class="flex justify-end">
+          <p
+              class="font-medium text-gray-500 text-sm cursor-pointer mr-2"
+              @click="closeMenu"
+          >
+            Cancel
+          </p>
+          <p
+              class="font-medium text-blue-400 text-sm cursor-pointer"
+              @click="selectDate"
+          >
+            Select
+          </p>
+        </div>
+      </template>
+    </Datepicker>
+  </div>
 </template>
 
 <script>
-import { useFormatDate } from "../composables/formatDatepicker";
+import {formatDatepicker} from "../mixins/formatDatepicker";
 
 export default {
   name: "VDatepicker",
   data() {
     return {
+      format: null,
+      dp: null,
       date: new Date(),
       textInputOptions: {
         format: "dd.MM.yyyy",
@@ -72,27 +80,35 @@ export default {
     },
   },
   emits: ["selectDate"],
+  mixins: [
+    formatDatepicker
+  ],
+  mounted() {
+    this.dp = this.$refs.dp
+    this.format = this.useFormatDate(this.date)
+    this.$emit("selectDate", this.formatDate);
+  },
   methods: {
     getDate(dateVal) {
       const newDate = new Date(dateVal);
       return `${newDate.getDate()} ${this.monthNames[newDate.getMonth()]}`;
     },
     selectDate() {
-      dp.value.selectDate();
+      this.dp.selectDate();
       this.$emit("selectDate", this.formatDate);
-      console.log(this.formatDate.value);
+      console.log(this.formatDate)
     },
     padTo2Digits(num) {
       return num.toString().padStart(2, "0");
     },
     closeMenu() {
-      dp.closeMenu();
+      this.dp.closeMenu();
     },
   },
   computed: {
-    monthName() {
-      return this.monthNames[this.date.getMonth()];
-    },
+    // monthName() {
+    //   return this.monthNames[this.date.getMonth()];
+    // },
     formatDate() {
       return [
         this.date.getFullYear(),

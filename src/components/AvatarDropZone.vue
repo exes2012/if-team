@@ -7,7 +7,7 @@
       :class="{ active: active }"
       class="dropzone"
   >
-    <input type="file" id="dropzone" class="dropzone-file" accept="image/*"/>
+    <input type="file" id="dropzone" class="dropzone-file" accept="image/*" @change="upload($event)"/>
     <v-icon
         name="cameraAvatar"
         width="41px"
@@ -24,7 +24,8 @@ export default {
   name: "AvatarDropZone",
   data() {
     return {
-      active: false
+      active: false,
+      file: null
     }
   },
   computed: {
@@ -35,6 +36,12 @@ export default {
   methods: {
     toggleActive() {
       this.active = !this.active
+    },
+    upload(e) {
+      if (e.target.files[0]) {
+        this.file = e.target.files[0]
+        this.$emit('upload', this.file)
+      }
     }
   }
 };
@@ -75,7 +82,7 @@ export default {
 }
 
 .dropzone-file {
-  @apply w-full h-[75px] absolute opacity-0;
+  @apply w-full h-[100%] absolute opacity-0;
 }
 
 .dropzone.active {

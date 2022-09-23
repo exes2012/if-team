@@ -1,4 +1,4 @@
-export const removeErrors = {
+export default {
     methods: {
         removeErrors(array) {
             array.length = 0
