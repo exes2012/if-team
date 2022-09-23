@@ -4,8 +4,12 @@
   >
     <login-form-header
         company-name="If.Team"
-        link-label="Войдите или"
-        :link="link"
+        :link-label="$t('login.login')"
+        :link="
+        {
+        label: $t('login.register'),
+        url: '/register',
+        }"
     />
     <form @submit.prevent="login()" method="post" class="mt-16">
       <div class="relative mb-2 md:mb-1">
@@ -76,10 +80,6 @@ export default {
   ],
   data() {
     return {
-      link: {
-        label: "зарегистрируйтесь",
-        url: "/register",
-      },
       email: {
         value: '',
         errors: []

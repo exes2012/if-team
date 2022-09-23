@@ -47,6 +47,10 @@ const i18n = createI18n({
                 mainInformation: 'Main information',
                 completeRegistration: 'Complete registration',
             },
+            login: {
+                login: 'Login or',
+                register: 'register'
+            },
             input: {
                 phone: 'Phone',
                 password: 'Password'
@@ -63,6 +67,10 @@ const i18n = createI18n({
                 mainInformation: 'Основная информация',
                 completeRegistration: 'Завершить регистрацию',
             },
+            login: {
+                login: 'Войдите или',
+                register: 'зарегистрируйтесь'
+            },
             input: {
                 phone: 'Телефон',
                 password: 'Пароль'
@@ -78,6 +86,10 @@ const i18n = createI18n({
                 data: 'Дані',
                 mainInformation: 'Основна інформація',
                 completeRegistration: 'Повна реєстрація',
+            },
+            login: {
+                login: 'Увійдіть або',
+                register: 'зареєструйтесь'
             },
             input: {
                 phone: 'Телефон',
