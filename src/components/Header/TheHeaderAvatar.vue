@@ -1,11 +1,11 @@
 <template>
   <div
-    class="w-12 h-12 rounded-full bg-gray-500 flex justify-center items-center relative min-w-[48px] cursor-pointer"
-    @click="changeState"
+      class="w-12 h-12 rounded-full bg-gray-500 flex justify-center items-center relative min-w-[48px] cursor-pointer"
+      @click="changeState"
   >
     <!--    <img :src="avatar" alt="" v-if="avatar" />-->
-    <v-icon name="people" width="20" height="20" class="fill-white" />
-    <the-header-avatar-menu-main />
+    <v-icon name="people" width="20" height="20" class="fill-white"/>
+    <the-header-avatar-menu-main/>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
   mixins: [changeDropdownComponentStateMixin],
   data() {
     return {
-      avatar: this.store.state.userAuth.user.user.avatar,
+      avatar: this.$store.state.userAuth.user.avatar,
     };
   },
   methods: {},
