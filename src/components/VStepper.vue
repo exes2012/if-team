@@ -14,7 +14,17 @@
         <v-icon name="success" width="28" height="28" class="fill-white" />
       </div>
       <div class="register-progress bg-blue-100" v-else></div>
-      <span class="step-label">{{ item.label }}</span>
+      <span class="step-label">
+        <template v-if="item.number === 1">
+          {{ $t('reg.data') }}
+        </template>
+        <template v-else-if="item.number === 2">
+          {{ $t('reg.mainInformation') }}
+        </template>
+        <template v-else-if="item.number === 3">
+          {{ $t('reg.completeRegistration') }}
+        </template>
+      </span>
     </div>
   </div>
 </template>

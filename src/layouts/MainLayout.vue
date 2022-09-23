@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import TheHeader from "../components/TheHeader.vue";
-import TheHeaderAvatar from "../components/TheHeaderAvatar.vue";
+import TheHeader from "../components/Header/TheHeader.vue";
+import TheHeaderAvatar from "../components/Header/TheHeaderAvatar.vue";
 
 export default {
   name: "MainLayout",

@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import VSelectDropdown from "./VSelectDropdown.vue";
-import changeDropdownComponentStateMixin from "../mixins/changeDropdownComponentStateMixin";
+import VSelectDropdown from "../VSelectDropdown.vue";
+import changeDropdownComponentStateMixin from "../../mixins/changeDropdownComponentStateMixin.js";
 export default {
   name: "TheHeaderAddButton",
   components: {
