@@ -17,6 +17,8 @@ import TeamsCreateTeam from "../components/TeamsCreateTeam.vue";
 import ViewRole from "../views/ViewRole.vue";
 import ViewProject from "../views/ViewProject.vue";
 import ViewAdmin from "../views/ViewAdmin.vue";
+import ResetForm from "../components/Reset/ResetForm.vue";
+import ResetSuccess from "../components/Reset/ResetSuccess.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -109,8 +111,20 @@ const router = createRouter({
     {
       path: "/reset",
       name: "reset",
-      meta: { layout: "main" },
+      meta: { layout: "unauthorized"},
       component: ViewReset,
+      children: [
+        {
+          path: "",
+          name: "reset",
+          component: ResetForm,
+        },
+        {
+          path: "success",
+          name: "success",
+          component: ResetSuccess,
+        },
+      ]
     },
     {
       path: "/profile",
