@@ -7,44 +7,22 @@
         label="E-mail"
         placeholder="Your e-mail"
         v-model="email.value"
-        :class="{ 'field-error': email.errors.length }"
+        :class="{ 'field-error': emailErrors && emailErrors.length }"
         @input="removeErrors(email.errors)"
+        @onBlur="v$.email.$touch"
     >
-      <!--      <v-input-->
-      <!--          label="E-mail"-->
-      <!--          placeholder="Your e-mail"-->
-      <!--          v-model="data.email"-->
-      <!--          @onBlur="v$.email.$touch"-->
-      <!--          :class="{ 'field-error': v$.email.$error }"-->
-      <!--      >-->
-      <input-error v-if="email.errors.length" :errors="email.errors"/>
+      <input-error v-if="emailErrors && emailErrors.length" :errors="emailErrors"/>
     </v-input>
-    <!--    <v-input-->
-    <!--        label="Phone"-->
-    <!--        placeholder="+38 000 00 00 000"-->
-    <!--        v-model="data.phone"-->
-    <!--        @onBlur="v$.phone.$touch"-->
-    <!--        :class="{ 'field-error': v$.phone.$error }"-->
-    <!--    >-->
     <v-input
         :label="$t('input.phone')"
         placeholder="+38 000 00 00 000"
         v-model="phone.value"
-        :class="{ 'field-error': phone.errors.length }"
+        :class="{ 'field-error': phoneErrors && phoneErrors.length }"
         @input="removeErrors(phone.errors)"
+        @onBlur="v$.phone.$touch"
     >
-      <input-error v-if="phone.errors.length" :errors="phone.errors"/>
+      <input-error v-if="phoneErrors && phoneErrors.length" :errors="phoneErrors"/>
     </v-input>
-    <!--    <v-input-->
-    <!--        label="Password"-->
-    <!--        v-model="data.password"-->
-    <!--        placeholder="******"-->
-    <!--        :icon="passwordFieldIcon"-->
-    <!--        :type="passwordFieldType"-->
-    <!--        @iconClick="showPassword"-->
-    <!--        @onBlur="v$.password.$touch"-->
-    <!--        :class="{ 'field-error': v$.password.$error }"-->
-    <!--    >-->
     <v-input
         :label="$t('input.password')"
         v-model="password.value"
@@ -52,32 +30,30 @@
         :icon="passwordFieldIcon"
         :type="passwordFieldType"
         @iconClick="showPassword()"
-        :class="{ 'field-error': password.errors.length }"
+        :class="{ 'field-error': passwordErrors && passwordErrors.length }"
         @input="removeErrors(password.errors)"
+        @onBlur="v$.password.$touch"
     >
-      <input-error v-if="password.errors.length" :errors="password.errors"/>
+      <input-error v-if="passwordErrors && passwordErrors.length" :errors="passwordErrors"/>
     </v-input>
-    <!--    <v-button-->
-    <!--        class="btn-primary w-full h-15 mt-12"-->
-    <!--        @click.prevent="checkCredentials"-->
-    <!--        :disable="v$.$invalid"-->
-    <!--    >Next-->
-    <!--    </v-button>-->
     <v-button
         class="btn-primary w-full h-15 mt-12"
         @click.prevent="checkCredentials"
-        :class="{'cursor-wait' : disabled}"
-        :disabled="disabled"
+        :class="[
+            {'cursor-not-allowed' : v$.$invalid},
+            {'cursor-wait' : disabled},
+        ]"
+        :disabled="disabled || v$.$invalid"
     >{{ $t('button.next') }}
     </v-button>
   </form>
 </template>
 
 <script>
-import InputError from "../InputError.vue"
+import {useVuelidate} from "@vuelidate/core"
 import {passwordHide} from "../../mixins/passwordHide"
-// import {useValidationRules} from "../../composables/validationRules"
-// import {useVuelidate} from "@vuelidate/core"
+import InputError from "../InputError.vue"
+import validationRules from "../../mixins/validationRules"
 
 export default {
   components: {
@@ -85,7 +61,34 @@ export default {
   },
   mixins: [
     passwordHide,
+    validationRules
   ],
+  setup() {
+    return {v$: useVuelidate()}
+  },
+  computed: {
+    emailErrors() {
+      if (this.v$.email.value.$error) {
+        return this.v$.email.value.$errors
+      } else if (this.email.errors.length) {
+        return this.email.errors
+      }
+    },
+    phoneErrors() {
+      if (this.v$.phone.value.$error) {
+        return this.v$.phone.value.$errors
+      } else if (this.phone.errors.length) {
+        return this.phone.errors
+      }
+    },
+    passwordErrors() {
+      if (this.v$.password.value.$error) {
+        return this.v$.password.value.$errors
+      } else if (this.password.errors.length) {
+        return this.password.errors
+      }
+    }
+  },
   data() {
     return {
       email: {
@@ -100,7 +103,7 @@ export default {
         value: '',
         errors: []
       },
-      disabled: false
+      disabled: false,
     }
   },
 
@@ -112,7 +115,17 @@ export default {
         password: this.password.value
       })
     },
+    testErrors() {
+      this.v$.email.$touch()
+      this.v$.phone.$touch()
+      this.v$.password.$touch()
+    },
     checkCredentials() {
+      this.testErrors()
+      if (this.v$.email.value.$error || this.v$.phone.value.$error || this.v$.password.value.$error) {
+        return false
+      }
+
       this.disabled = true
       this.setRegisterUserData()
       this.$store.dispatch('userAuth/checkCredentials', {
@@ -137,6 +150,19 @@ export default {
           .finally(() => {
             this.disabled = false
           })
+    }
+  },
+  validations() {
+    return {
+      email: {
+        value: this.rules.email
+      },
+      phone: {
+        value: this.rules.phone
+      },
+      password: {
+        value: this.rules.password
+      }
     }
   }
 
