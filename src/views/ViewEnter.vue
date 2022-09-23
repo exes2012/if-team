@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import TheHeader from "../components/TheHeader.vue";
+import TheHeader from "../components/Header/TheHeader.vue";
 import TheAside from "../components/TheAside.vue";
 import TheUploadPhoto from "../components/TheUploadPhoto.vue";
 import EnterCompaniesList from "../components/EnterCompaniesList.vue";

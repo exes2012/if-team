@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import TheHeader from "../components/TheHeader.vue";
+import TheHeader from "../components/Header/TheHeader.vue";
 import LoginForm from "../components/LoginForm/LoginForm.vue";
 import LoginWallpapers from "../components/LoginForm/LoginWallpapers.vue";
 import { useScreenSize } from "../composables/screenSize";

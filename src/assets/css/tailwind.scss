@@ -162,10 +162,9 @@
   }
 
   .label {
-    @apply font-sans
-    font-normal
-    text-sm
-    text-gray-500;
+    @apply
+    text-3
+    text-gray-400;
   }
 
   .label-star {

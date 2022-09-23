@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import LinkHeaderNavigation from "./LinkHeaderNavigation.vue";
+import LinkHeaderNavigation from "../LinkHeaderNavigation.vue";
 
 export default {
   name: "TheHeaderNavigation",

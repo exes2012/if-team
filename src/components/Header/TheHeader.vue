@@ -10,7 +10,7 @@
 </template>
 <script>
 import TheHeaderLogo from "./TheHeaderLogo.vue";
-import VContainer from "./VContainer.vue";
+import VContainer from "../VContainer.vue";
 
 export default {
   name: "TheHeader",

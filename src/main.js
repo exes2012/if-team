@@ -23,6 +23,7 @@ import VMain from "./components/VMain.vue";
 import TheMain from "./components/TheMain.vue";
 import VInput from "./components/VInput.vue";
 import VSelect from "./components/VSelect.vue";
+import VModalCard from "./components/VModalCard.vue";
 import { CircleStencil } from "vue-advanced-cropper";
 
 const app = createApp(App);
@@ -37,6 +38,7 @@ app.component("v-checkbox", VCheckbox);
 app.component("v-input", VInput);
 app.component("v-select", VSelect);
 app.component("v-button", VButton);
+app.component("v-modal-card", VModalCard);
 app.component("Datepicker", Datepicker);
 app.component("circle-stencil", CircleStencil);
 

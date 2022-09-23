@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import TheHeader from "../components/TheHeader.vue";
-import TheHeaderBar from "../components/TheHeaderBar.vue";
+import TheHeader from "../components/Header/TheHeader.vue";
+import TheHeaderBar from "../components/Header/TheHeaderBar.vue";
 
 export default {
   name: "MainLayout",

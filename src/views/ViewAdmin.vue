@@ -19,8 +19,8 @@
         placeholder="Оберіть посаду"
       />
       <v-button class="btn-primary ml-auto w-[188px] h-[50px]"
-        >+ Invite an employee</v-button
-      >
+        >+ Invite an employee
+      </v-button>
     </div>
     <v-divider-horizontal class="mt-7 mb-10" />
     <div class="flex">
@@ -38,12 +38,18 @@
         <h2 class="mb-10">Role</h2>
         <role-list-item />
         <v-button class="w-[188px] h-[50px] btn-primary mt-7"
-          >Add role</v-button
-        >
+          >Add role
+        </v-button>
       </v-card>
     </div>
-    <VSelectBtn />
   </div>
+  <admin-deactivate-popup
+    @close="closeDeactivatePopup"
+    employee-name="Мирослава Маляр"
+    employee-position="UI/UX Designer"
+    v-if="isDeactivatePopupActive"
+  />
+  <admin-invite-popup />
 </template>
 
 <script>
@@ -51,10 +57,15 @@ import Vtable from "../components/Vtable.vue";
 import VSearch from "../components/VSearch.vue";
 import RoleListItem from "../components/RoleListItem.vue";
 import VSelectBtn from "../components/VSelectBtn.vue";
+import VToggle from "../components/VToggle.vue";
+import AdminDeactivatePopup from "../components/Admin/AdminDeactivatePopup.vue";
+import AdminInvitePopup from "../components/Admin/AdminInvitePopup.vue";
 
 export default {
+  name: "ViewAdmin",
   data() {
     return {
+      isDeactivatePopupActive: false,
       departments: [
         { name: "Design", id: 1 },
         { name: "Frontend", id: 2 },
@@ -67,10 +78,16 @@ export default {
     VSearch,
     RoleListItem,
     VSelectBtn,
+    VToggle,
+    AdminDeactivatePopup,
+    AdminInvitePopup,
   },
   methods: {
     departmentSelect(option) {
       this.selectedDepartment = option.name;
+    },
+    closeDeactivatePopup() {
+      this.isDeactivatePopupActive = false;
     },
   },
 };
