@@ -4,7 +4,10 @@
     <login-form-header
         company-name="If.Team"
         :link-label="$t('reg.registerOr')"
-        :link="link"
+        :link="{
+          label: $t('reg.login'),
+          url: '/login',
+        }"
     />
     <div class="w-[445px] flex flex-col">
       <v-stepper :steps="steps" :step="registrationStep"/>
@@ -32,7 +35,6 @@ import RegisterFormPhotoCrop from "../components/Registration/RegisterFormPhotoC
 import {useStore} from "vuex";
 import {computed, reactive} from "vue";
 import VStepper from "../components/VStepper.vue";
-import TheHeader from "../components/Header/TheHeader.vue";
 import TheAside from "../components/TheAside.vue";
 import LoginFormHeader from "../components/AuthFormHeader.vue";
 
@@ -57,11 +59,6 @@ const steps = reactive([
     description: "Здесь может быть описание",
   },
 ]);
-
-const link = reactive({
-  label: "login",
-  url: "/login",
-});
 
 const isRegisterPhotoCropActive = computed(() => {
   return store.state.userAuth.isRegisterPhotoCropperActive;
