@@ -79,7 +79,7 @@ const i18n = createI18n({
                 next: 'Дальше'
             }
         },
-        ua: {
+        uk: {
             reg: {
                 registerOr: 'Реєстрація або',
                 login: 'вхід',

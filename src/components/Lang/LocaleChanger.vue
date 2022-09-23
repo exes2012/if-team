@@ -16,7 +16,7 @@ export default {
       locale: [
         'en',
         'ru',
-        'ua'
+        'uk'
       ]
     }
   },
