@@ -2,7 +2,7 @@
   <h1>Welcome</h1>
   <h1>to the platform <span class="text-blue-400">If.Team!</span></h1>
 
-  <teams-list>
+  <teams-list class="mt-20">
     <teams-list-item teamName="Webnauts" />
     <teams-list-item teamName="Webnauts" />
     <teams-list-item teamName="Webnauts" />

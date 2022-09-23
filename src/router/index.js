@@ -12,7 +12,7 @@ import TaskItem from "../components/TaskItem.vue";
 import ProfileFormData from "../components/ProfileFormData.vue";
 import ProfileTeams from "../components/ProfileTeams.vue";
 import ViewMain from "../views/ViewMain.vue";
-import TeamsListView from "../components/TeamsListView.vue";
+import TeamsListView from "../components/Main/TeamsListView.vue";
 import TeamsCreateTeam from "../components/TeamsCreateTeam.vue";
 import ViewRole from "../views/ViewRole.vue";
 import ViewProject from "../views/ViewProject.vue";
