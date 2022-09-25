@@ -51,9 +51,8 @@ export default {
   name: "VDatepicker",
   data() {
     return {
-      format: null,
+      changeDate: null,
       dp: null,
-      date: new Date(),
       textInputOptions: {
         format: "dd.MM.yyyy",
       },
@@ -71,21 +70,26 @@ export default {
         "November",
         "December",
       ],
-    };
+    }
   },
   props: {
     label: {
       type: String,
       default: "",
     },
+    date: {
+      type: String,
+      default: () => ''
+    }
   },
   emits: ["selectDate"],
   mixins: [
     formatDatepicker
   ],
   mounted() {
+    console.log(this.date)
+    this.changeDate = this.date ? new Date(this.date) : new Date()
     this.dp = this.$refs.dp
-    this.format = this.useFormatDate(this.date)
     this.$emit("selectDate", this.formatDate);
   },
   methods: {
@@ -111,9 +115,9 @@ export default {
     // },
     formatDate() {
       return [
-        this.date.getFullYear(),
-        this.padTo2Digits(this.date.getMonth() + 1),
-        this.padTo2Digits(this.date.getDate()),
+        this.changeDate.getFullYear(),
+        this.padTo2Digits(this.changeDate.getMonth() + 1),
+        this.padTo2Digits(this.changeDate.getDate()),
       ].join("-");
     },
   },

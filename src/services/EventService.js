@@ -13,7 +13,7 @@ export default {
     postEvent(url, credentials, headers) {
         return apiClient.post(url, credentials, headers);
     },
-    getEvent(url, credentials) {
-        return apiClient.get(url, credentials);
+    getEvent(url) {
+        return apiClient.get(url);
     },
 };

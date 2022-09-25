@@ -25,7 +25,7 @@ export default {
   mixins: [changeDropdownComponentStateMixin],
   data() {
     return {
-      avatar: this.$store.state.userAuth.user.avatar,
+      avatar: this.$store.state.userAuth.user?.avatar,
     };
   },
   methods: {},

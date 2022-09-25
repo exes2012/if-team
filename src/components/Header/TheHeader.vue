@@ -5,19 +5,19 @@
     <v-container class="items-center">
       <the-header-logo class="mr-14 shrink-0"/>
       <slot></slot>
-      <locale-changer/>
+      <!--      <locale-changer/>-->
     </v-container>
   </div>
 </template>
 <script>
 import TheHeaderLogo from "./TheHeaderLogo.vue";
 import VContainer from "../VContainer.vue";
-import LocaleChanger from "../Lang/LocaleChanger.vue";
+// import LocaleChanger from "../Lang/LocaleChanger.vue";
 
 export default {
   name: "TheHeader",
   components: {
-    LocaleChanger,
+    // LocaleChanger,
     VContainer,
     TheHeaderLogo,
   },

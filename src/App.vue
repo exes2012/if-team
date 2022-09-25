@@ -22,13 +22,11 @@ export default {
     },
   },
   beforeCreate() {
-    if (localStorage.getItem('lang')) {
-      if (this.$i18n.locale !== localStorage.getItem('lang')) {
-        this.$i18n.locale = localStorage.getItem('lang')
-      }
-    } else {
-      localStorage.setItem('lang', this.$i18n.locale)
+    if (this.$store.state.language.siteLang !== this.$i18n.locale) {
+      this.$i18n.locale = this.$store.state.language.siteLang
     }
+
+    this.$store.dispatch('language/getLanguages')
   }
 };
 </script>

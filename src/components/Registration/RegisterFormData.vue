@@ -36,14 +36,14 @@
     >
       <input-error v-if="passwordErrors && passwordErrors.length" :errors="passwordErrors"/>
     </v-input>
+    <v-select label="Language" :options="languages"/>
     <v-button
         class="btn-primary w-full h-15 mt-12"
         @click.prevent="checkCredentials"
         :class="[
-            {'cursor-not-allowed' : v$.$invalid},
             {'cursor-wait' : disabled},
         ]"
-        :disabled="disabled || v$.$invalid"
+        :disabled="disabled"
     >{{ $t('button.next') }}
     </v-button>
   </form>
@@ -63,9 +63,6 @@ export default {
     passwordHide,
     validationRules
   ],
-  setup() {
-    return {v$: useVuelidate()}
-  },
   computed: {
     emailErrors() {
       if (this.v$.email.value.$error) {
@@ -87,10 +84,14 @@ export default {
       } else if (this.password.errors.length) {
         return this.password.errors
       }
+    },
+    languages() {
+      return this.$store.state.language.languages
     }
   },
   data() {
     return {
+      v$: useVuelidate(),
       email: {
         value: '',
         errors: []
@@ -103,7 +104,7 @@ export default {
         value: '',
         errors: []
       },
-      disabled: false,
+      disabled: false
     }
   },
 

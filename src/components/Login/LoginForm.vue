@@ -46,10 +46,9 @@
           type="submit"
           class="btn-primary w-full h-15 mb-10 md:mb-7"
           :class="[
-            {'cursor-not-allowed' : v$.$invalid},
             {'cursor-wait' : disabled},
         ]"
-          :disabled="disabled || v$.$invalid"
+          :disabled="disabled"
       >Войти
       </v-button
       >
