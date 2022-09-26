@@ -6,7 +6,7 @@ import store from "./store/store"
 import router from "./router"
 
 //Mixins
-import removeErrors from "./mixins/removeErrors"
+import removeErrors from "./mixins/globalMixins"
 
 //Validation
 import {useVuelidate} from "@vuelidate/core"
@@ -53,7 +53,9 @@ const i18n = createI18n({
             },
             input: {
                 phone: 'Phone',
-                password: 'Password'
+                password: 'Password',
+                language: 'Language',
+                chooseAnOption: 'Choose an option'
             },
             button: {
                 next: 'Next'
@@ -73,7 +75,9 @@ const i18n = createI18n({
             },
             input: {
                 phone: 'Телефон',
-                password: 'Пароль'
+                password: 'Пароль',
+                language: 'Язык',
+                chooseAnOption: 'Выберите из списка'
             },
             button: {
                 next: 'Дальше'
@@ -93,7 +97,9 @@ const i18n = createI18n({
             },
             input: {
                 phone: 'Телефон',
-                password: 'Пароль'
+                password: 'Пароль',
+                language: 'Мова',
+                chooseAnOption: 'Виберіть зі списку'
             },
             button: {
                 next: 'Далі'

@@ -24,7 +24,6 @@ export default {
     mutations: {
         SET_SITE_LANG(state, lang) {
             state.siteLang = lang
-            this.$i18n.locale = lang
             localStorage.setItem("lang", JSON.stringify(lang))
         },
         SET_LANGUAGES(state, data) {
@@ -43,4 +42,9 @@ export default {
                 })
         },
     },
+    getters: {
+        languageActiveObj(state) {
+            return state.languages.find(lang => lang.key === state.siteLang)
+        }
+    }
 }

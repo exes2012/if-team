@@ -36,7 +36,19 @@
     >
       <input-error v-if="passwordErrors && passwordErrors.length" :errors="passwordErrors"/>
     </v-input>
-    <v-select label="Language" :options="languages"/>
+
+    <div class="mb-7 md:mb-5">
+      <div class="flex justify-between">
+        <label class="label mb-2.5">{{ $t('input.language') }}</label>
+      </div>
+      <SelectComponent
+          :list="languages"
+          :value="languageActiveObj"
+          :placeholder="$t('input.chooseAnOption')"
+          @change="changeValue($event)"/>
+
+    </div>
+
     <v-button
         class="btn-primary w-full h-15 mt-12"
         @click.prevent="checkCredentials"
@@ -54,15 +66,35 @@ import {useVuelidate} from "@vuelidate/core"
 import {passwordHide} from "../../mixins/passwordHide"
 import InputError from "../InputError.vue"
 import validationRules from "../../mixins/validationRules"
+import SelectComponent from "../UI/Select.vue";
 
 export default {
   components: {
+    SelectComponent,
     InputError,
   },
   mixins: [
     passwordHide,
     validationRules
   ],
+  data() {
+    return {
+      v$: useVuelidate(),
+      email: {
+        value: '',
+        errors: []
+      },
+      phone: {
+        value: '',
+        errors: []
+      },
+      password: {
+        value: '',
+        errors: []
+      },
+      disabled: false,
+    }
+  },
   computed: {
     emailErrors() {
       if (this.v$.email.value.$error) {
@@ -87,28 +119,22 @@ export default {
     },
     languages() {
       return this.$store.state.language.languages
-    }
+    },
+    languageActiveObj() {
+      if (this.$store.getters['language/languageActiveObj']) {
+        return this.$store.getters['language/languageActiveObj']
+      }
+      return {}
+    },
   },
-  data() {
-    return {
-      v$: useVuelidate(),
-      email: {
-        value: '',
-        errors: []
-      },
-      phone: {
-        value: '',
-        errors: []
-      },
-      password: {
-        value: '',
-        errors: []
-      },
-      disabled: false
-    }
+  created() {
+    console.log('languageActiveObj', this.languageActiveObj)
   },
-
   methods: {
+    changeValue(data) {
+      this.$i18n.locale = data.key
+      this.$store.commit('language/SET_SITE_LANG', data.key)
+    },
     setRegisterUserData() {
       this.$store.commit("userAuth/SET_REGISTER_USER_DATA", {
         email: this.email.value,
