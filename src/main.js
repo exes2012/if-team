@@ -34,78 +34,28 @@ import VInput from "./components/UI/VInput.vue"
 import VSelect from "./components/UI/VSelect.vue"
 import {CircleStencil} from "vue-advanced-cropper"
 
+//Languages
+import en from './locales/en.json'
+import ru from './locales/ru.json'
+import uk from './locales/uk.json'
+
 const app = createApp(App)
+
+function loadLocaleMessages() {
+    const locales = [
+        en, ru, uk
+    ]
+    const messages = {}
+    locales.forEach(lang => {
+        const key = Object.keys(lang)
+        messages[key] = lang[key]
+    })
+    return messages
+}
 
 const i18n = createI18n({
     locale: 'en',
-    messages: {
-        en: {
-            reg: {
-                registerOr: 'Register or',
-                login: 'login',
-                data: 'Data',
-                mainInformation: 'Main information',
-                completeRegistration: 'Complete registration',
-            },
-            login: {
-                login: 'Login or',
-                register: 'register'
-            },
-            input: {
-                phone: 'Phone',
-                password: 'Password',
-                language: 'Language',
-                chooseAnOption: 'Choose an option'
-            },
-            button: {
-                next: 'Next'
-            }
-        },
-        ru: {
-            reg: {
-                registerOr: 'Регистрация или',
-                login: 'вход',
-                data: 'Данные',
-                mainInformation: 'Основная информация',
-                completeRegistration: 'Завершить регистрацию',
-            },
-            login: {
-                login: 'Войдите или',
-                register: 'зарегистрируйтесь'
-            },
-            input: {
-                phone: 'Телефон',
-                password: 'Пароль',
-                language: 'Язык',
-                chooseAnOption: 'Выберите из списка'
-            },
-            button: {
-                next: 'Дальше'
-            }
-        },
-        uk: {
-            reg: {
-                registerOr: 'Реєстрація або',
-                login: 'вхід',
-                data: 'Дані',
-                mainInformation: 'Основна інформація',
-                completeRegistration: 'Повна реєстрація',
-            },
-            login: {
-                login: 'Увійдіть або',
-                register: 'зареєструйтесь'
-            },
-            input: {
-                phone: 'Телефон',
-                password: 'Пароль',
-                language: 'Мова',
-                chooseAnOption: 'Виберіть зі списку'
-            },
-            button: {
-                next: 'Далі'
-            }
-        }
-    }
+    messages: loadLocaleMessages()
 })
 
 app.component("v-icon", VIcon)
