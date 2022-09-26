@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import icons from "../assets/icons/icons";
+import icons from "../../assets/icons/icons";
 
 export default {
   props: {

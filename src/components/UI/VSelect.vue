@@ -29,8 +29,8 @@
 
 <script>
 import VSelectDropdown from "./VSelectDropdown.vue";
-import DropdownItem from "./DropdownItem.vue";
-import changeSelectComponentStateMixin from "../mixins/changeSelectComponentStateMixin";
+import DropdownItem from "../DropdownItem.vue";
+import changeSelectComponentStateMixin from "../../mixins/changeSelectComponentStateMixin";
 
 export default {
   name: "VSelect",

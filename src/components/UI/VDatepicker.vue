@@ -8,7 +8,6 @@
     <Datepicker
         v-model="date"
         :enableTimePicker="false"
-        :format="format"
         :clearable="false"
         class="mt-2.5"
         ref="dp"
@@ -45,7 +44,7 @@
 </template>
 
 <script>
-import {formatDatepicker} from "../mixins/formatDatepicker";
+import {formatDatepicker} from "../../mixins/formatDatepicker";
 
 export default {
   name: "VDatepicker",
@@ -78,8 +77,8 @@ export default {
       default: "",
     },
     date: {
-      type: String,
-      default: () => ''
+      type: Date,
+      default: () => new Date()
     }
   },
   emits: ["selectDate"],

@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import DropdownItem from "./DropdownItemCurrency.vue";
+import DropdownItem from "../DropdownItemCurrency.vue";
 import VSelectDropdown from "./VSelectDropdown.vue";
-import changeSelectComponentStateMixin from "../mixins/changeSelectComponentStateMixin";
+import changeSelectComponentStateMixin from "../../mixins/changeSelectComponentStateMixin";
 
 export default {
   name: "VSelectBtn",
