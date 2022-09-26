@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import VSelectDropdown from "../VSelectDropdown.vue";
+import VSelectDropdown from "../UI/VSelectDropdown.vue";
 import DropdownItem from "../DropdownItem.vue";
 export default {
   name: "TheHeaderAvatarMenuMain",

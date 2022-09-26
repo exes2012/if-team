@@ -38,7 +38,7 @@
 <script>
 import { Cropper } from "vue-advanced-cropper";
 import "vue-advanced-cropper/dist/style.css";
-import VModal from "./VModal.vue";
+import VModal from "./UI/VModal.vue";
 
 export default {
   name: "TeamCreatePhotoCrop",

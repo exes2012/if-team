@@ -69,6 +69,11 @@ export default {
       if (this.$store.state.userAuth.avatar) {
         formData.append('avatar', this.$store.state.userAuth.avatar)
       }
+      if (this.$store.getters['language/languageActiveObj']) {
+        formData.append('language_id', (this.$store.getters['language/languageActiveObj'].id))
+      } else {
+        formData.append('language_id', (1))
+      }
       this.$store.dispatch("userAuth/register", formData)
           .then(res => {
             console.log(res)

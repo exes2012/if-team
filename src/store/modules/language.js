@@ -35,7 +35,6 @@ export default {
             return EventService.getEvent("/languages")
                 .then(({data}) => {
                     commit("SET_LANGUAGES", data)
-                    console.log(data)
                 })
                 .catch(error => {
                     console.log(error)

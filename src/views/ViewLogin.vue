@@ -1,18 +1,25 @@
 <template>
-  <the-header v-if="screenSize === 'sm'" />
+  <the-header v-if="screenSize === 'sm'"/>
   <main class="flex min-h-screen lg:h-auto lg:justify-center">
-    <login-form />
-    <login-wallpapers />
+    <login-form/>
+    <login-wallpapers/>
   </main>
 </template>
 
-<script setup>
+<script>
 import TheHeader from "../components/Header/TheHeader.vue";
 import LoginForm from "../components/Login/LoginForm.vue";
 import LoginWallpapers from "../components/Login/LoginWallpapers.vue";
-import { useScreenSize } from "../composables/screenSize";
+import screenSizeMixin from "../mixins/screenSize";
 
-const screenSize = useScreenSize();
+export default {
+  components: {
+    TheHeader,
+    LoginForm,
+    LoginWallpapers,
+  },
+  mixins: [screenSizeMixin],
+}
 </script>
 
 <style scoped></style>

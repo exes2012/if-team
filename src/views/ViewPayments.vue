@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import VDropzone from "../components/VDropzone.vue";
-import VCropper from "../components/Registration/RegisterFormPhotoCrop.vue";
+import VDropzone from "../components/UI/VDropzone.vue";
+// import VCropper from "../components/Registration/RegisterFormPhotoCrop.vue";
 import {ref} from "vue";
 
 export default {

@@ -25,7 +25,7 @@
         </v-input>
         <v-input
             v-model="password.value"
-            label="Password"
+            :label="$t('input.password')"
             placeholder="Enter your password"
             :icon="passwordFieldIcon"
             :type="passwordFieldType"

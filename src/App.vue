@@ -1,5 +1,5 @@
 <template>
-  <component :is="layout" class="h-screen"></component>
+  <component :is="layout"></component>
 </template>
 
 <script>

@@ -99,7 +99,7 @@
 <script>
 import RolePermissionsContainer from "../components/Role/RolePermissionsContainer.vue";
 import RolePermissionsContainerBlock from "../components/Role/RolePermissionsContainerBlock.vue";
-import VToggle from "../components/VToggle.vue";
+import VToggle from "../components/UI/VToggle.vue";
 
 export default {
   name: "ViewRole",

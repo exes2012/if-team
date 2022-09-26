@@ -5,6 +5,7 @@ import projects from "./modules/projects";
 import userAuth from "./modules/userAuth";
 import teams from "./modules/teams";
 import defaultBoard from "../default-board";
+import resetPassword from "./modules/api/resetPassword";
 import {saveStatePlugin, uuid} from "../utils";
 
 const board = JSON.parse(localStorage.getItem("board")) || defaultBoard;
@@ -15,6 +16,7 @@ export default createStore({
         projects,
         userAuth,
         teams,
+        resetPassword
     },
     plugins: [saveStatePlugin],
     state() {

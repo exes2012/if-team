@@ -2945,8 +2945,8 @@
 </template>
 
 <script>
-import VButton from "../components/VButton.vue";
-import VSearch from "../components/VSearch.vue";
+import VButton from "../components/UI/VButton.vue";
+import VSearch from "../components/UI/VSearch.vue";
 
 export default {
   name: "ViewPeople",

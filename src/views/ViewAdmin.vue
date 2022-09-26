@@ -53,11 +53,11 @@
 </template>
 
 <script>
-import Vtable from "../components/Vtable.vue";
-import VSearch from "../components/VSearch.vue";
+import Vtable from "../components/UI/Vtable.vue";
+import VSearch from "../components/UI/VSearch.vue";
 import RoleListItem from "../components/RoleListItem.vue";
-import VSelectBtn from "../components/VSelectBtn.vue";
-import VToggle from "../components/VToggle.vue";
+import VSelectBtn from "../components/UI/VSelectBtn.vue";
+import VToggle from "../components/UI/VToggle.vue";
 import AdminDeactivatePopup from "../components/Admin/AdminDeactivatePopup.vue";
 import AdminInvitePopup from "../components/Admin/AdminInvitePopup.vue";
 

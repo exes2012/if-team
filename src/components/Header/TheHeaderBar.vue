@@ -9,9 +9,9 @@ import TheHeaderNavigation from "./TheHeaderNavigation.vue";
 import TheHeaderNotifications from "./TheHeaderNotifications.vue";
 import TheHeaderAddButton from "./TheHeaderAddButton.vue";
 import TheHeaderAvatar from "./TheHeaderAvatar.vue";
-import VSearch from "../VSearch.vue";
-import VButton from "../VButton.vue";
-import VIcon from "../VIcon.vue";
+import VSearch from "../UI/VSearch.vue";
+import VButton from "../UI/VButton.vue";
+import VIcon from "../UI/VIcon.vue";
 
 export default {
   name: "TheHeaderBar",

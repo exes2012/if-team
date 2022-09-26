@@ -33,8 +33,8 @@
 import KanbanColumnTask from "./KanbanColumnTask.vue";
 import KanbanColumnStatus from "./KanbanColumnStatus.vue";
 import movingTaskAndColumnsMixin from "../mixins/movingTaskAndColumnsMixin";
-import VDrag from "../components/VDrag.vue";
-import VDrop from "./VDrop.vue";
+import VDrag from "./UI/VDrag.vue";
+import VDrop from "./UI/VDrop.vue";
 
 
 export default {
