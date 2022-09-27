@@ -9,7 +9,7 @@
 
 <script>
 import TheHeader from "../components/Header/TheHeader.vue";
-import TheHeaderAvatar from "../components/Header/TheHeaderAvatar.vue";
+import TheHeaderAvatar from "../components/Header/TheHeaderAvatarMain.vue";
 
 export default {
   name: "MainLayout",

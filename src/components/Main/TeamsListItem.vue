@@ -5,7 +5,7 @@
     >
       <h1 class="text-gray-500">{{ teamName }}</h1>
     </div>
-    <v-icon name="star" width="26" height="24" class="ml-6" />
+    <v-icon name="star" class="ml-6" viewBox="0 0 25 25" />
   </div>
 </template>
 

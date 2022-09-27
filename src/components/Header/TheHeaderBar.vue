@@ -8,7 +8,7 @@
 import TheHeaderNavigation from "./TheHeaderNavigation.vue";
 import TheHeaderNotifications from "./TheHeaderNotifications.vue";
 import TheHeaderAddButton from "./TheHeaderAddButton.vue";
-import TheHeaderAvatar from "./TheHeaderAvatar.vue";
+import TheHeaderAvatar from "./TheHeaderAvatarMain.vue";
 import VSearch from "../VSearch.vue";
 import VButton from "../VButton.vue";
 import VIcon from "../VIcon.vue";
@@ -27,9 +27,21 @@ export default {
   data() {
     return {
       routes: [
-        { name: "Projects", url: "/projects", icon: "projects" },
-        { name: "Tasks", url: "/tasks", icon: "apply" },
-        { name: "Payments", url: "/payments", icon: "payments" },
+        {
+          name: "Projects",
+          url: "/projects",
+          icon: "projects",
+        },
+        {
+          name: "Tasks",
+          url: "/tasks",
+          icon: "apply",
+        },
+        {
+          name: "Payments",
+          url: "/payments",
+          icon: "payments",
+        },
         { name: "People", url: "/people", icon: "people" },
       ],
     };
