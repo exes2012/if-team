@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import VSelectDropdown from "../VSelectDropdown.vue";
+import VSelectDropdown from "../UI/VSelectDropdown.vue";
 import DropdownItem from "../DropdownItem.vue";
 import changeDropdownComponentStateMixin from "../../mixins/changeDropdownComponentStateMixin.js";
-import VAvatar from "../VAvatar.vue";
+import VAvatar from "../UI/VAvatar.vue";
 
 export default {
   name: "TheHeaderAvatar",

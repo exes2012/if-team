@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import VDatepicker from "./VDatepicker.vue";
+import VDatepicker from "./UI/VDatepicker.vue";
 import { useVuelidate } from "@vuelidate/core";
 import { passwordHide } from "../mixins/passwordHide.js";
 import validationRules from "../mixins/validationRules.js";
-import VAvatar from "./VAvatar.vue";
+import VAvatar from "./UI/VAvatar.vue";
 
 export default {
   name: "ProfileFormData",
