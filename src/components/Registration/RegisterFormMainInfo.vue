@@ -40,7 +40,7 @@
 import {useVuelidate} from "@vuelidate/core";
 
 import InputError from "../InputError.vue";
-import VDatepicker from "../VDatepicker.vue";
+import VDatepicker from "../UI/VDatepicker.vue";
 import validationRules from "../../mixins/validationRules";
 
 export default {

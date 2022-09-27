@@ -34,7 +34,7 @@ import RegisterFormPhotoCrop from "../components/Registration/RegisterFormPhotoC
 
 import {useStore} from "vuex";
 import {computed, reactive} from "vue";
-import VStepper from "../components/VStepper.vue";
+import VStepper from "../components/UI/VStepper.vue";
 import TheAside from "../components/TheAside.vue";
 import LoginFormHeader from "../components/AuthFormHeader.vue";
 

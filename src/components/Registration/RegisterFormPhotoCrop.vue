@@ -39,7 +39,7 @@
 <script>
 import "vue-advanced-cropper/dist/style.css"
 import {Cropper} from "vue-advanced-cropper"
-import VModal from "../VModal.vue"
+import VModal from "../UI/VModal.vue"
 
 export default {
   components: {

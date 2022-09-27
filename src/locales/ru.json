@@ -1,0 +1,24 @@
+{
+  "ru": {
+    "reg": {
+      "registerOr": "Регистрация или",
+      "login": "вход",
+      "data": "Данные",
+      "mainInformation": "Основная информация",
+      "completeRegistration": "Завершить регистрацию"
+    },
+    "login": {
+      "login": "Войдите или",
+      "register": "зарегистрируйтесь"
+    },
+    "input": {
+      "phone": "Телефон",
+      "password": "Пароль",
+      "language": "Язык",
+      "chooseAnOption": "Выберите из списка"
+    },
+    "button": {
+      "next": "Дальше"
+    }
+  }
+}

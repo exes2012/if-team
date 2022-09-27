@@ -1,0 +1,24 @@
+{
+  "en": {
+    "reg": {
+      "registerOr": "Register or",
+      "login": "login",
+      "data": "Data",
+      "mainInformation": "Main information",
+      "completeRegistration": "Complete registration"
+    },
+    "login": {
+      "login": "Login or",
+      "register": "register"
+    },
+    "input": {
+      "phone": "Phone",
+      "password": "Password",
+      "language": "Language",
+      "chooseAnOption": "Choose an option"
+    },
+    "button": {
+      "next": "Next"
+    }
+  }
+}

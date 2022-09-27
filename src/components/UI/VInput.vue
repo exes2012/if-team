@@ -25,9 +25,9 @@
 </template>
 
 <script setup>
-import { useVModelWrapper } from "../composables/vModelWrapper";
+import { useVModelWrapper } from "../../composables/vModelWrapper";
 import { computed, watch, ref, reactive, toRefs, toRef } from "vue";
-import { useIconSize } from "../composables/computeIconSize";
+import { useIconSize } from "../../composables/computeIconSize";
 
 const props = defineProps({
   label: {

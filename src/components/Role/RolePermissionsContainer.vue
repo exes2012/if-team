@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import VToggle from "../VToggle.vue";
+import VToggle from "../UI/VToggle.vue";
 export default {
   name: "RolePermissionsContainer",
   components: {

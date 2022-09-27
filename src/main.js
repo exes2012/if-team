@@ -6,7 +6,7 @@ import store from "./store/store"
 import router from "./router"
 
 //Mixins
-import removeErrors from "./mixins/removeErrors"
+import removeErrors from "./mixins/globalMixins"
 
 //Validation
 import {useVuelidate} from "@vuelidate/core"
@@ -22,84 +22,40 @@ import "@vuepic/vue-datepicker/dist/main.css"
 import "./assets/css/style.scss"
 
 //Components
-import VIcon from "./components/VIcon.vue"
-import VCard from "./components/VCard.vue"
-import VDivideHorizontal from "./components/VDivideHorizontal.vue"
-import VContainer from "./components/VContainer.vue"
-import VCheckbox from "./components/VCheckbox.vue"
-import VButton from "./components/VButton.vue"
-import VMain from "./components/VMain.vue"
+import VIcon from "./components/UI/VIcon.vue"
+import VCard from "./components/UI/VCard.vue"
+import VDivideHorizontal from "./components/UI/VDivideHorizontal.vue"
+import VContainer from "./components/UI/VContainer.vue"
+import VCheckbox from "./components/UI/VCheckbox.vue"
+import VButton from "./components/UI/VButton.vue"
+import VMain from "./components/UI/VMain.vue"
 import TheMain from "./components/TheMain.vue"
-import VInput from "./components/VInput.vue"
-import VSelect from "./components/VSelect.vue"
+import VInput from "./components/UI/VInput.vue"
+import VSelect from "./components/UI/VSelect.vue"
 import {CircleStencil} from "vue-advanced-cropper"
+
+//Languages
+import en from './locales/en.json'
+import ru from './locales/ru.json'
+import uk from './locales/uk.json'
 
 const app = createApp(App)
 
+function loadLocaleMessages() {
+    const locales = [
+        en, ru, uk
+    ]
+    const messages = {}
+    locales.forEach(lang => {
+        const key = Object.keys(lang)
+        messages[key] = lang[key]
+    })
+    return messages
+}
+
 const i18n = createI18n({
     locale: 'en',
-    messages: {
-        en: {
-            reg: {
-                registerOr: 'Register or',
-                login: 'login',
-                data: 'Data',
-                mainInformation: 'Main information',
-                completeRegistration: 'Complete registration',
-            },
-            login: {
-                login: 'Login or',
-                register: 'register'
-            },
-            input: {
-                phone: 'Phone',
-                password: 'Password'
-            },
-            button: {
-                next: 'Next'
-            }
-        },
-        ru: {
-            reg: {
-                registerOr: 'Регистрация или',
-                login: 'вход',
-                data: 'Данные',
-                mainInformation: 'Основная информация',
-                completeRegistration: 'Завершить регистрацию',
-            },
-            login: {
-                login: 'Войдите или',
-                register: 'зарегистрируйтесь'
-            },
-            input: {
-                phone: 'Телефон',
-                password: 'Пароль'
-            },
-            button: {
-                next: 'Дальше'
-            }
-        },
-        uk: {
-            reg: {
-                registerOr: 'Реєстрація або',
-                login: 'вхід',
-                data: 'Дані',
-                mainInformation: 'Основна інформація',
-                completeRegistration: 'Повна реєстрація',
-            },
-            login: {
-                login: 'Увійдіть або',
-                register: 'зареєструйтесь'
-            },
-            input: {
-                phone: 'Телефон',
-                password: 'Пароль'
-            },
-            button: {
-                next: 'Далі'
-            }
-        }
-    }
+    messages: loadLocaleMessages()
 })
 
 app.component("v-icon", VIcon)

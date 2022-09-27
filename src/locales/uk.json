@@ -1,0 +1,24 @@
+{
+  "uk": {
+    "reg": {
+      "registerOr": "Реєстрація або",
+      "login": "вхід",
+      "data": "Дані",
+      "mainInformation": "Основна інформація",
+      "completeRegistration": "Повна реєстрація"
+    },
+    "login": {
+      "login": "Увійдіть або",
+      "register": "зареєструйтесь"
+    },
+    "input": {
+      "phone": "Телефон",
+      "password": "Пароль",
+      "language": "Мова",
+      "chooseAnOption": "Виберіть зі списку"
+    },
+    "button": {
+      "next": "Далі"
+    }
+  }
+}

@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import VModal from "../components/VModal.vue";
-import Vtable from "../components/Vtable.vue";
-import VModalCard from "../components/VModalCard.vue";
+import VModal from "../components/UI/VModal.vue";
+import Vtable from "../components/UI/Vtable.vue";
+import VModalCard from "../components/UI/VModalCard.vue";
 export default {
   name:'ViewProjects',
   components:{

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import VSelectDropdown from "../VSelectDropdown.vue";
+import VSelectDropdown from "../UI/VSelectDropdown.vue";
 import DropdownItem from "../DropdownItem.vue";
 import TheHeaderAvatarMenuMain from "./TheHeaderAvatarMenuMain.vue";
 import changeDropdownComponentStateMixin from "../../mixins/changeDropdownComponentStateMixin.js";
